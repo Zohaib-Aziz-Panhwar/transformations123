@@ -1,0 +1,67 @@
+# Transformations123 — Website
+
+Static HTML/CSS/JS site built from the client's home-page template.
+
+## Run locally
+
+Any static server works. From this folder:
+
+```
+python -m http.server 8080
+```
+
+then open http://localhost:8080
+
+(Or just double-click `index.html` — no build step required.)
+
+## Structure
+
+```
+index.html            Home page (matches client template)
+about.html            ABOUT AMY      – placeholder until client supplies content
+blog.html             BLOG           – placeholder
+testimonials.html     TESTIMONIALS   – placeholder
+services.html         Full services  – placeholder
+contact.html          Discovery call – placeholder
+assets/css/style.css  All styling; brand colours are CSS variables at the top
+assets/js/main.js     Mobile nav + image fallbacks
+assets/images/        Drop the client's photos here (see below)
+```
+
+## Images
+
+All images are currently **cropped straight out of the client's template screenshot** (`assets/images/template.jpg`, 1024px wide), so they are pixel-identical to the mockup but low resolution. Replace them with the client's originals (same filenames) when she sends them:
+
+| File | Where it shows | Note |
+|---|---|---|
+| `hero-bg.jpg` | Hero background (Amy + swoosh) | headline area was erased so the live text sits on top |
+| `government-leaders.jpg` | Who I Help card 1 | 225x194 - ask for a ~800px original |
+| `ses-leaders.jpg` | Who I Help card 2 | " |
+| `military-leaders.jpg` | Who I Help card 3 | " |
+| `corporate-executives.jpg` | Who I Help card 4 | " |
+| `logo-butterfly.png` | Header logo | ask for the real logo file (SVG/PNG) |
+| `footer-butterfly.png` | Footer | " |
+| `footer-swoosh.jpg` | Footer right side | URL text was erased; live link sits on top |
+
+## Audience landing pages (from the client Google Doc mockups)
+
+| Page | Links to |
+|---|---|
+| `ses.html` | OPM SES guidance PDF (external), `ses-samples.html`, `ses-articles.html`, `contact.html` |
+| `military.html` | `military-strategy.html` (3 articles), `military-samples.html` (3 transitions), `contact.html` |
+| `government.html` | `government-strategy.html` (3 articles), `government-samples.html`, `contact.html` |
+| `corporate.html` | `executive-strategy.html` (3 articles), `executive-samples.html`, `contact.html` |
+
+The four "Who I Help" cards on the home page link to these. Landing pages use `assets/css/landing.css`; their artwork lives in `assets/images/landing/` and was cropped from the mockups (butterflies keyed to transparent PNG, hero photos with baked-in text removed). Article pages carry the outlines from the doc; full article text and resume samples are still to come from the client.
+
+## Brand colours (from template)
+
+| Token | Hex | Use |
+|---|---|---|
+| `--navy` | `#000E21` | header, hero, card captions, footer |
+| `--navy-text` | `#0A1230` | headings on light sections |
+| `--orange` | `#F36205` | buttons, rules, dashes |
+| `--orange-text` | `#E24900` | headline / accent copy |
+| `--light` | `#EBEBEB` | light section background |
+
+Fonts: **Oswald** (display/headings) and **Poppins** (body) via Google Fonts.
