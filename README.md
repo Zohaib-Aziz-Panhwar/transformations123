@@ -1,32 +1,33 @@
-# Transformations123 — Website
+# Transformations123 - website (React)
 
-Static HTML/CSS/JS site built from the client's home-page template.
+Vite + React 18 + React Router. The original static HTML build is kept in `legacy-static/` for reference.
 
 ## Run locally
 
-Any static server works. From this folder:
-
 ```
-python -m http.server 8080
+npm install
+npm run dev      # http://127.0.0.1:5173
+npm run build    # production build -> dist/
 ```
-
-then open http://localhost:8080
-
-(Or just double-click `index.html` — no build step required.)
 
 ## Structure
 
 ```
-index.html            Home page (matches client template)
-about.html            ABOUT AMY      – placeholder until client supplies content
-blog.html             BLOG           – placeholder
-testimonials.html     TESTIMONIALS   – placeholder
-services.html         Full services  – placeholder
-contact.html          Discovery call – placeholder
-assets/css/style.css  All styling; brand colours are CSS variables at the top
-assets/js/main.js     Mobile nav + image fallbacks
-assets/images/        Drop the client's photos here (see below)
+src/main.jsx                app entry (loads styles)
+src/App.jsx                 routes
+src/components/             Header (nav), Layout, LandingShell, FooterBand, SiteFooter, PageHero, PageCta
+src/pages/                  Home, Ses, Military, Government, Corporate, ArticleHub, Samples, Placeholder
+src/data/content.js         contact details, article outlines, sample-page copy
+src/styles/style.css        global + home + sub-page styles
+src/styles/landing.css      audience landing pages
+public/assets/images/       all images (cropped from the client mockups)
 ```
+
+## Client feedback applied (14 Sept 2026)
+
+- Phone hero: Amy's portrait and the big butterfly sit above the headline so her face is never covered.
+- Contact: amysindicic@gmail.com, 410-441-5056; address line removed.
+- Home hero matches the template (extra buttons/glow removed).
 
 ## Images
 

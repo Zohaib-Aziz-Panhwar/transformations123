@@ -1,2 +1,4 @@
+node_modules/
+dist/
 .publish/
-assets/images/template.jpg
+public/assets/images/template.jpg
