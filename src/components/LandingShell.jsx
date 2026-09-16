@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Header from './Header.jsx';
 import SiteFooter from './SiteFooter.jsx';
 import useReveal from '../hooks/useReveal.js';
+const A = import.meta.env.BASE_URL;
 
 export const Arrow = ({ className = 'lp-arrow', width = 2 }) => (
   <svg className={className} viewBox="0 0 40 16" aria-hidden="true">
@@ -56,7 +57,7 @@ export default function LandingShell({ variant, title, art, artIsPhoto, eyebrows
                 <span className="lp-logo-rule"></span>
                 <span className="lp-tagline">CAREER STRATEGY FOR WHAT&rsquo;S NEXT</span>
               </Link>
-              <img className="lp-logo-butterfly" src={`/assets/images/landing/${variant}-butterfly-logo.png`} alt="" />
+              <img className="lp-logo-butterfly" src={`${A}assets/images/landing/${variant}-butterfly-logo.png`} alt="" />
               <BackLink />
             </div>
           </header>

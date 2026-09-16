@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import LandingShell, { Arrow } from '../components/LandingShell.jsx';
+const A = import.meta.env.BASE_URL;
 
 const pillars = [
   ['TRANSLATE', 'YOUR VALUE', 'Turn military experience into business-relevant leadership value.'],
@@ -60,12 +61,12 @@ export default function Military() {
     <LandingShell
       variant="mil"
       title="Military Leaders"
-      art="/assets/images/landing/mil-hero.jpg"
+      art={A + "assets/images/landing/mil-hero.jpg"}
       artIsPhoto
       eyebrows={[{ pos: 'is-tr', lines: ['Same', 'Leadership.', 'New', 'Opportunities.'] }]}
       footer={{
         left: ['Service.', 'Leadership.', 'What’s Next.'],
-        butterfly: '/assets/images/landing/mil-butterfly-footer.png',
+        butterfly: A + 'assets/images/landing/mil-butterfly-footer.png',
         right: ['Same', 'Purpose.', 'Bigger', 'Possibilities.'],
       }}
     >

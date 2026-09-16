@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout.jsx';
+const A = import.meta.env.BASE_URL;
 
 const audiences = [
   { to: '/government', img: 'government-leaders.jpg', alt: 'Government leaders', lines: ['GOVERNMENT', 'LEADERS'] },
@@ -23,11 +24,11 @@ export default function Home() {
       <section className="hero">
         {/* Phone layout: Amy's portrait and the big butterfly sit above the headline so nothing covers her face */}
         <div className="hero-mobile" aria-hidden="true">
-          <img className="hero-mobile-amy" src="/assets/images/amy-mobile.jpg" alt="" />
-          <img className="hero-mobile-butterfly" src="/assets/images/landing/ses-butterfly-hero.png" alt="" />
+          <img className="hero-mobile-amy" src={A + "assets/images/amy-mobile.jpg"} alt="" />
+          <img className="hero-mobile-butterfly" src={A + "assets/images/landing/ses-butterfly-hero.png"} alt="" />
         </div>
 
-        <img className="hero-butterfly" src="/assets/images/landing/ses-butterfly-hero.png" alt="" aria-hidden="true" />
+        <img className="hero-butterfly" src={A + "assets/images/landing/ses-butterfly-hero.png"} alt="" aria-hidden="true" />
 
         <div className="container hero-inner">
           <h1 className="hero-title">
@@ -60,7 +61,7 @@ export default function Home() {
           <div className="who-grid">
             {audiences.map((a, i) => (
               <Link className="who-card" to={a.to} key={a.to} state={{ from: '/#who' }} data-reveal style={{ transitionDelay: `${i * 90}ms` }}>
-                <div className="who-img"><img src={`/assets/images/${a.img}`} alt={a.alt} /><span className="who-more">Explore <i>&rarr;</i></span></div>
+                <div className="who-img"><img src={`${A}assets/images/${a.img}`} alt={a.alt} /><span className="who-more">Explore <i>&rarr;</i></span></div>
                 <div className="who-caption">
                   <h3>{a.lines[0]}<br />{a.lines[1]}</h3>
                   <span className="dash"></span>
@@ -97,7 +98,7 @@ export default function Home() {
       <section className="cta-strip">
         <div className="container">
           <div className="cta-strip-inner" data-reveal>
-            <img className="cta-strip-butterfly" src="/assets/images/landing/ses-butterfly-hero.png" alt="" aria-hidden="true" />
+            <img className="cta-strip-butterfly" src={A + "assets/images/landing/ses-butterfly-hero.png"} alt="" aria-hidden="true" />
             <div className="cta-strip-text">
               <p className="cta-strip-eyebrow">READY FOR WHAT&rsquo;S NEXT?</p>
               <h2>Let&rsquo;s build the strategy behind your next move.</h2>

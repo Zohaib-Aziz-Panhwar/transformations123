@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import LandingShell, { Arrow, Lines } from '../components/LandingShell.jsx';
+const A = import.meta.env.BASE_URL;
 
 export default function Government() {
   const hero = (
@@ -31,7 +32,7 @@ export default function Government() {
           <p>YOUR EXPERIENCE<br /><span className="o">GOT YOU HERE.</span></p>
           <p>YOUR STRATEGY<br /><span className="o">DETERMINES WHAT<br />COMES NEXT.</span></p>
         </div>
-        <img className="lp-mid-butterfly" src="/assets/images/landing/gov-butterfly-mid.png" alt="" />
+        <img className="lp-mid-butterfly" src={A + "assets/images/landing/gov-butterfly-mid.png"} alt="" />
         <Link className="lp-cta" to="/contact">
           <span>BOOK A<br />DISCOVERY CALL</span>
           <Arrow width={2.4} />
@@ -44,7 +45,7 @@ export default function Government() {
     <LandingShell
       variant="gov"
       title="Government Leaders"
-      art="/assets/images/landing/gov-hero.jpg"
+      art={A + "assets/images/landing/gov-hero.jpg"}
       artIsPhoto
       eyebrows={[{ pos: 'is-tr', lines: ['Public', 'Service.', 'Leadership.', 'Bigger', 'Opportunities.'] }]}
       footer={{

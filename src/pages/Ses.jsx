@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import LandingShell, { Lines } from '../components/LandingShell.jsx';
 import { OPM_PDF } from '../data/content.js';
+const A = import.meta.env.BASE_URL;
 
 export default function Ses() {
   const hero = (
@@ -33,7 +34,7 @@ export default function Ses() {
           <p>YOUR EXPERIENCE<br /><span className="o">GOT YOU HERE.</span></p>
           <p>YOUR STRATEGY<br /><span className="o">DETERMINES WHAT<br />COMES NEXT.</span></p>
         </div>
-        <img className="lp-mid-butterfly" src="/assets/images/landing/ses-butterfly-mid.png" alt="" />
+        <img className="lp-mid-butterfly" src={A + "assets/images/landing/ses-butterfly-mid.png"} alt="" />
         <Link className="lp-cta" to="/contact">BOOK A<br />DISCOVERY CALL</Link>
       </section>
 
@@ -45,8 +46,8 @@ export default function Ses() {
     <LandingShell
       variant="ses"
       title="SES Leaders and Candidates"
-      art="/assets/images/landing/ses-butterfly-hero.png"
-      footer={{ butterfly: '/assets/images/landing/ses-butterfly-footer.png' }}
+      art={A + "assets/images/landing/ses-butterfly-hero.png"}
+      footer={{ butterfly: A + 'assets/images/landing/ses-butterfly-footer.png' }}
     >
       {{ hero, actions, body }}
     </LandingShell>

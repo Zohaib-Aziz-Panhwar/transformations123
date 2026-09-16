@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import LandingShell, { Arrow } from '../components/LandingShell.jsx';
+const A = import.meta.env.BASE_URL;
 
 const pillars = [
   ['CLARIFY', 'YOUR VALUE', 'Articulate the leadership, results and expertise that set you apart.'],
@@ -60,7 +61,7 @@ export default function Corporate() {
     <LandingShell
       variant="corp"
       title="Corporate Executives"
-      art="/assets/images/landing/corp-hero.jpg"
+      art={A + "assets/images/landing/corp-hero.jpg"}
       artIsPhoto
       eyebrows={[
         { pos: 'is-tr', lines: ['Leadership.', 'Experience.', 'Impact.', 'What’s Next.'] },
@@ -68,7 +69,7 @@ export default function Corporate() {
       ]}
       footer={{
         left: ['Experience.', 'Strategy.', 'What’s Next.'],
-        butterfly: '/assets/images/landing/corp-butterfly-footer.png',
+        butterfly: A + 'assets/images/landing/corp-butterfly-footer.png',
         right: ['Same', 'Purpose.', 'Bigger', 'Possibilities.'],
       }}
     >
