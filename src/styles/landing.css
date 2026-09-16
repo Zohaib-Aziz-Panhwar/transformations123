@@ -42,19 +42,19 @@ body.landing {
 }
 .lp-art img { width: 100%; height: auto; }
 .lp-art.is-photo img {
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 26%),
+  -webkit-mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.35) 30%, #000 60%),
                       linear-gradient(to bottom, #000 78%, transparent 100%);
-          mask-image: linear-gradient(to right, transparent 0, #000 26%),
+          mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.35) 30%, #000 60%),
                       linear-gradient(to bottom, #000 78%, transparent 100%);
   -webkit-mask-composite: source-in;
           mask-composite: intersect;
 }
 .landing-ses  .lp-art { width: 45%; top: 3%; }
 .landing-mil  .lp-art { width: 60%; }
-.landing-gov  .lp-art { width: 42.5%; }
+.landing-gov  .lp-art { width: 50%; }
 .landing-gov  .lp-art.is-photo img {
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 20%), linear-gradient(to bottom, #000 84%, transparent 100%);
-          mask-image: linear-gradient(to right, transparent 0, #000 20%), linear-gradient(to bottom, #000 84%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.35) 32%, #000 62%), linear-gradient(to bottom, #000 84%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.35) 32%, #000 62%), linear-gradient(to bottom, #000 84%, transparent 100%);
 }
 .landing-corp .lp-art { width: 54%; }
 
@@ -350,7 +350,12 @@ body.landing {
 /* ---------- desktop: fit hero + buttons in one screen ---------- */
 @media (min-width: 901px) {
   .lp-page { zoom: .72; }
-  .lp-container { max-width: none; padding: 0 clamp(24px, 3vw, 56px); }
+  .lp-container { max-width: 1760px; padding: 0 clamp(32px, 4vw, 80px); }
+  .landing .lp-btn-blue { min-height: clamp(78px, 7vw, 112px); font-size: clamp(1.05rem, 1.7vw, 1.65rem); border-radius: 10px; }
+  .landing-gov .lp-btn-row { max-width: 980px; }
+  .lp-btn-row { max-width: 1300px; }
+  .lp-card { min-height: clamp(150px, 16vw, 200px); }
+  .lp-cta { min-height: clamp(80px, 8vw, 110px); font-size: clamp(1.2rem, 2.2vw, 2rem); }
   .lp-header { padding-top: clamp(22px, 2.6vw, 40px); }
   .lp-hero-inner { padding-top: clamp(20px, 3vw, 48px); }
   .lp-cards + .lp-pillars { margin-top: clamp(28px, 3.5vw, 56px); }
@@ -359,8 +364,7 @@ body.landing {
 /* ---------- polish ---------- */
 .lp-top::before {
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background: radial-gradient(55% 70% at 78% 35%, rgba(243,98,5,.16) 0%, rgba(243,98,5,0) 70%),
-              radial-gradient(40% 40% at 10% 90%, rgba(30,80,160,.18) 0%, rgba(30,80,160,0) 70%);
+  background: radial-gradient(55% 70% at 78% 35%, rgba(243,98,5,.14) 0%, rgba(243,98,5,0) 70%);
 }
 .landing .lp-btn-blue { position: relative; overflow: hidden; }
 .landing .lp-btn-blue::after {
@@ -384,3 +388,8 @@ body.landing {
 .lp-art img { animation: floatY 9s ease-in-out infinite; }
 .lp-art.is-photo img { animation: none; }
 @media (prefers-reduced-motion: reduce) { .lp-mid-butterfly, .lp-art img { animation: none; } }
+
+/* soften the bottom edge of hero photos */
+.lp-top::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 22%; z-index: 2; pointer-events: none;
+  background: linear-gradient(to top, var(--lp-navy) 0%, rgba(0,21,45,0) 100%); }
+.landing-ses .lp-top::after { display: none; }
