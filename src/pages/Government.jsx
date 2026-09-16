@@ -3,18 +3,18 @@ import LandingShell, { Arrow, Lines } from '../components/LandingShell.jsx';
 
 export default function Government() {
   const hero = (
-    <section className="lp-hero">
-      <div className="lp-container lp-hero-inner">
-        <h1 className="lp-h1">YOUR<br />GOVERNMENT<br />EXPERIENCE<br /><span className="o">HAS VALUE.</span></h1>
-        <p className="lp-sub">Make the Market Understand It.</p>
-        <span className="lp-rule" aria-hidden="true"></span>
+    <>
+      <h1 className="lp-h1">YOUR<br />GOVERNMENT<br />EXPERIENCE<br /><span className="o">HAS VALUE.</span></h1>
+      <p className="lp-sub">Make the Market Understand It.</p>
+      <span className="lp-rule" aria-hidden="true"></span>
+    </>
+  );
 
-        <div className="lp-btn-row" data-reveal>
-          <Link className="lp-btn-blue" to="/government-strategy"><Lines items={['GOVERNMENT', 'CAREER STRATEGY']} /></Link>
-          <Link className="lp-btn-blue" to="/government-samples"><Lines items={['GOVERNMENT', 'RESUME SAMPLES']} /></Link>
-        </div>
-      </div>
-    </section>
+  const actions = (
+    <div className="lp-btn-row">
+      <Link className="lp-btn-blue" to="/government-strategy"><Lines items={['GOVERNMENT', 'CAREER STRATEGY']} /></Link>
+      <Link className="lp-btn-blue" to="/government-samples"><Lines items={['GOVERNMENT', 'RESUME SAMPLES']} /></Link>
+    </div>
   );
 
   const body = (
@@ -52,7 +52,7 @@ export default function Government() {
         right: ['Same', 'Purpose.', 'Bigger', 'Possibilities.'],
       }}
     >
-      {{ hero, body }}
+      {{ hero, actions, body }}
     </LandingShell>
   );
 }

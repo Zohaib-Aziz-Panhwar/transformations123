@@ -59,7 +59,7 @@ export default function Home() {
           <h2 className="section-heading" data-reveal><span>WHO I HELP</span></h2>
           <div className="who-grid">
             {audiences.map((a, i) => (
-              <Link className="who-card" to={a.to} key={a.to} data-reveal style={{ transitionDelay: `${i * 90}ms` }}>
+              <Link className="who-card" to={a.to} key={a.to} state={{ from: '/#who' }} data-reveal style={{ transitionDelay: `${i * 90}ms` }}>
                 <div className="who-img"><img src={`/assets/images/${a.img}`} alt={a.alt} /><span className="who-more">Explore <i>&rarr;</i></span></div>
                 <div className="who-caption">
                   <h3>{a.lines[0]}<br />{a.lines[1]}</h3>

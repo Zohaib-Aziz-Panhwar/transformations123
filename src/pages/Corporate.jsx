@@ -10,37 +10,37 @@ const pillars = [
 
 export default function Corporate() {
   const hero = (
-    <section className="lp-hero">
-      <div className="lp-container lp-hero-inner">
-        <h1 className="lp-h1">YOU&rsquo;VE BUILT<br />THE EXPERIENCE.<br /><span className="o">WHAT&rsquo;S YOUR<br />NEXT STRATEGIC<br />MOVE?</span></h1>
-        <span className="lp-rule" aria-hidden="true"></span>
-        <p className="lp-intro">I help corporate leaders clarify their value, position their leadership and navigate what&rsquo;s next with a focused, strategic career plan.</p>
-        <p className="lp-motto">EVERYONE HAS AI.<br /><span className="o">NOT EVERYONE HAS A STRATEGY.</span></p>
-      </div>
-    </section>
+    <>
+      <h1 className="lp-h1">YOU&rsquo;VE BUILT<br />THE EXPERIENCE.<br /><span className="o">WHAT&rsquo;S YOUR<br />NEXT STRATEGIC<br />MOVE?</span></h1>
+      <span className="lp-rule" aria-hidden="true"></span>
+      <p className="lp-intro">I help corporate leaders clarify their value, position their leadership and navigate what&rsquo;s next with a focused, strategic career plan.</p>
+      <p className="lp-motto">EVERYONE HAS AI.<br /><span className="o">NOT EVERYONE HAS A STRATEGY.</span></p>
+    </>
+  );
+
+  const actions = (
+    <div className="lp-cards">
+      <Link className="lp-card" to="/executive-strategy">
+        <h3>EXECUTIVE<br />CAREER STRATEGY</h3>
+        <p>Insights, resources and guidance.</p>
+        <Arrow />
+      </Link>
+      <Link className="lp-card" to="/executive-samples">
+        <h3>EXECUTIVE<br />RESUME SAMPLES</h3>
+        <p>Real examples.<br />Real results.</p>
+        <Arrow />
+      </Link>
+      <Link className="lp-card is-orange" to="/contact">
+        <h3>BOOK A<br />DISCOVERY CALL</h3>
+        <p>Let&rsquo;s discuss your next strategic move.</p>
+        <Arrow />
+      </Link>
+    </div>
   );
 
   const body = (
     <>
       <section className="lp-container">
-        <div className="lp-cards" data-reveal>
-          <Link className="lp-card" to="/executive-strategy">
-            <h3>EXECUTIVE<br />CAREER STRATEGY</h3>
-            <p>Insights, resources and guidance.</p>
-            <Arrow />
-          </Link>
-          <Link className="lp-card" to="/executive-samples">
-            <h3>EXECUTIVE<br />RESUME SAMPLES</h3>
-            <p>Real examples.<br />Real results.</p>
-            <Arrow />
-          </Link>
-          <Link className="lp-card is-orange" to="/contact">
-            <h3>BOOK A<br />DISCOVERY CALL</h3>
-            <p>Let&rsquo;s discuss your next strategic move.</p>
-            <Arrow />
-          </Link>
-        </div>
-
         <div className="lp-pillars" data-reveal>
           {pillars.map(([a, b, text]) => (
             <div className="lp-pillar" key={a + b}>
@@ -72,7 +72,7 @@ export default function Corporate() {
         right: ['Same', 'Purpose.', 'Bigger', 'Possibilities.'],
       }}
     >
-      {{ hero, body }}
+      {{ hero, actions, body }}
     </LandingShell>
   );
 }

@@ -4,19 +4,19 @@ import { OPM_PDF } from '../data/content.js';
 
 export default function Ses() {
   const hero = (
-    <section className="lp-hero">
-      <div className="lp-container lp-hero-inner">
-        <h1 className="lp-h1">THE SES<br />RULES HAVE<br /><span className="o">CHANGED.</span></h1>
-        <p className="lp-sub">Is Your Strategy Ready?</p>
-        <span className="lp-rule" aria-hidden="true"></span>
+    <>
+      <h1 className="lp-h1">THE SES<br />RULES HAVE<br /><span className="o">CHANGED.</span></h1>
+      <p className="lp-sub">Is Your Strategy Ready?</p>
+      <span className="lp-rule" aria-hidden="true"></span>
+    </>
+  );
 
-        <div className="lp-btn-row" data-reveal>
-          <a className="lp-btn-blue" href={OPM_PDF} target="_blank" rel="noopener noreferrer"><Lines items={['CURRENT OPM', 'SES GUIDANCE']} /></a>
-          <Link className="lp-btn-blue" to="/ses-samples"><Lines items={['SES RESUME', 'AND ECQ SAMPLES']} /></Link>
-          <Link className="lp-btn-blue" to="/ses-articles"><Lines items={['EXPLORE SES', 'STRATEGY ARTICLES']} /></Link>
-        </div>
-      </div>
-    </section>
+  const actions = (
+    <div className="lp-btn-row">
+      <a className="lp-btn-blue" href={OPM_PDF} target="_blank" rel="noopener noreferrer"><Lines items={['CURRENT OPM', 'SES GUIDANCE']} /></a>
+      <Link className="lp-btn-blue" to="/ses-samples"><Lines items={['SES RESUME', 'AND ECQ SAMPLES']} /></Link>
+      <Link className="lp-btn-blue" to="/ses-articles"><Lines items={['EXPLORE SES', 'STRATEGY ARTICLES']} /></Link>
+    </div>
   );
 
   const body = (
@@ -48,7 +48,7 @@ export default function Ses() {
       art="/assets/images/landing/ses-butterfly-hero.png"
       footer={{ butterfly: '/assets/images/landing/ses-butterfly-footer.png' }}
     >
-      {{ hero, body }}
+      {{ hero, actions, body }}
     </LandingShell>
   );
 }
