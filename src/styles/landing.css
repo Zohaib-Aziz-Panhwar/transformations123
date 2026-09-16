@@ -319,7 +319,11 @@ body.landing {
 @media (max-width: 860px) {
   .lp-container { padding: 0 24px; }
   .lp-art { width: 100% !important; top: 0 !important; opacity: .28; }
-  .landing-ses .lp-art { width: 70% !important; opacity: .55; }
+  .landing-ses .lp-art { width: 60% !important; right: -8%; opacity: .4; }
+  .lp-hero-inner { padding-top: 24px; }
+  .lp-h1 { position: relative; z-index: 2; }
+  .lp-header .lp-container { align-items: center; }
+  .lp-logo-butterfly { margin-top: 0; }
   .lp-h1, .landing-mil .lp-h1, .landing-corp .lp-h1 { max-width: 100%; }
   .lp-intro { max-width: 100%; }
   .lp-eyebrow { display: none; }
@@ -390,6 +394,6 @@ body.landing {
 @media (prefers-reduced-motion: reduce) { .lp-mid-butterfly, .lp-art img { animation: none; } }
 
 /* soften the bottom edge of hero photos */
-.lp-top::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 22%; z-index: 2; pointer-events: none;
+.lp-top::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 22%; z-index: 1; pointer-events: none;
   background: linear-gradient(to top, var(--lp-navy) 0%, rgba(0,21,45,0) 100%); }
 .landing-ses .lp-top::after { display: none; }
