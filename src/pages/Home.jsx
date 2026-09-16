@@ -41,7 +41,7 @@ export default function Home() {
 
       {/* ===== INTRO ===== */}
       <section className="intro">
-        <div className="container">
+        <div className="container" data-reveal>
           <h2 className="intro-title">
             You&rsquo;ve built the experience. <span className="accent">Let&rsquo;s build what&rsquo;s next.</span>
           </h2>
@@ -56,11 +56,11 @@ export default function Home() {
       {/* ===== WHO I HELP ===== */}
       <section className="who" id="who">
         <div className="container">
-          <h2 className="section-heading"><span>WHO I HELP</span></h2>
+          <h2 className="section-heading" data-reveal><span>WHO I HELP</span></h2>
           <div className="who-grid">
-            {audiences.map(a => (
-              <Link className="who-card" to={a.to} key={a.to}>
-                <div className="who-img"><img src={`/assets/images/${a.img}`} alt={a.alt} /></div>
+            {audiences.map((a, i) => (
+              <Link className="who-card" to={a.to} key={a.to} data-reveal style={{ transitionDelay: `${i * 90}ms` }}>
+                <div className="who-img"><img src={`/assets/images/${a.img}`} alt={a.alt} /><span className="who-more">Explore <i>&rarr;</i></span></div>
                 <div className="who-caption">
                   <h3>{a.lines[0]}<br />{a.lines[1]}</h3>
                   <span className="dash"></span>
@@ -74,19 +74,37 @@ export default function Home() {
       {/* ===== SERVICES ===== */}
       <section className="services">
         <div className="container">
-          <h2 className="section-heading"><span>SERVICES</span></h2>
+          <h2 className="section-heading" data-reveal><span>SERVICES</span></h2>
           <div className="services-grid">
-            {services.map(s => (
-              <article className="service" key={s.lines[0] + s.lines[1]}>
+            {services.map((s, i) => (
+              <article className="service" key={s.lines[0] + s.lines[1]} data-reveal style={{ transitionDelay: `${i * 70}ms` }}>
                 <h3>{s.lines[0]}<br />{s.lines[1]}</h3>
                 <span className="dash"></span>
                 <p>{s.text}</p>
               </article>
             ))}
           </div>
-          <div className="services-cta">
+          <div className="services-cta" data-reveal>
             <Link className="btn btn-orange btn-wide" to="/services">
               FOR A FULL LIST OF SERVICES CLICK HERE
+              <svg className="arrow" viewBox="0 0 40 16" aria-hidden="true"><path d="M0 8h34M27 1l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== CTA STRIP ===== */}
+      <section className="cta-strip">
+        <div className="container">
+          <div className="cta-strip-inner" data-reveal>
+            <img className="cta-strip-butterfly" src="/assets/images/landing/ses-butterfly-hero.png" alt="" aria-hidden="true" />
+            <div className="cta-strip-text">
+              <p className="cta-strip-eyebrow">READY FOR WHAT&rsquo;S NEXT?</p>
+              <h2>Let&rsquo;s build the strategy behind your next move.</h2>
+              <p className="cta-strip-copy">A focused conversation about where your experience creates the most value, and how to take it to market.</p>
+            </div>
+            <Link className="btn btn-orange btn-wide cta-strip-btn" to="/contact">
+              BOOK A DISCOVERY CALL
               <svg className="arrow" viewBox="0 0 40 16" aria-hidden="true"><path d="M0 8h34M27 1l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </Link>
           </div>

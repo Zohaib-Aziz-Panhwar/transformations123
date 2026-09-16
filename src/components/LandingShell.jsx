@@ -2,6 +2,7 @@ import { Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header.jsx';
 import SiteFooter from './SiteFooter.jsx';
+import useReveal from '../hooks/useReveal.js';
 
 export const Arrow = ({ className = 'lp-arrow', width = 2 }) => (
   <svg className={className} viewBox="0 0 40 16" aria-hidden="true">
@@ -23,6 +24,7 @@ export const Lines = ({ items }) => (
  * site nav, mockup logo lock-up, hero artwork, signature footer, full site footer.
  */
 export default function LandingShell({ variant, title, art, artIsPhoto, eyebrows = [], footer, children }) {
+  useReveal();
   useEffect(() => {
     document.body.className = `landing landing-${variant}`;
     document.title = `${title} | Transformations123`;
@@ -56,7 +58,7 @@ export default function LandingShell({ variant, title, art, artIsPhoto, eyebrows
 
       {children.body}
 
-      <footer className="lp-footer">
+      <footer className="lp-footer" data-reveal>
         <div className="lp-container">
           {footer.left ? <p className="lp-footer-side is-left"><Lines items={footer.left} /></p> : <div></div>}
           <div className="lp-footer-center">

@@ -2,9 +2,11 @@ import { useEffect } from 'react';
 import Header from './Header.jsx';
 import FooterBand from './FooterBand.jsx';
 import SiteFooter from './SiteFooter.jsx';
+import useReveal from '../hooks/useReveal.js';
 
 /* Standard site chrome: sticky nav, page content, template footer band, full footer */
 export default function Layout({ title, children }) {
+  useReveal();
   useEffect(() => {
     document.body.className = '';
     document.title = title ? `${title} | Transformations123` : 'Transformations123 | Everyone Has AI. Not Everyone Has A Strategy.';

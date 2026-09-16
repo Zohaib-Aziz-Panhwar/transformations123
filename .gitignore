@@ -1,6 +1,5 @@
 node_modules/
 dist/
-dist-preview/
-dist-preview2/
+dist-preview*/
 .publish/
 public/assets/images/template.jpg

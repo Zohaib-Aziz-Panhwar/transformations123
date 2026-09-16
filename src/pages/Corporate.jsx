@@ -23,7 +23,7 @@ export default function Corporate() {
   const body = (
     <>
       <section className="lp-container">
-        <div className="lp-cards">
+        <div className="lp-cards" data-reveal>
           <Link className="lp-card" to="/executive-strategy">
             <h3>EXECUTIVE<br />CAREER STRATEGY</h3>
             <p>Insights, resources and guidance.</p>
@@ -41,7 +41,7 @@ export default function Corporate() {
           </Link>
         </div>
 
-        <div className="lp-pillars">
+        <div className="lp-pillars" data-reveal>
           {pillars.map(([a, b, text]) => (
             <div className="lp-pillar" key={a + b}>
               <span className="lp-dash" aria-hidden="true"></span>

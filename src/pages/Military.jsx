@@ -23,7 +23,7 @@ export default function Military() {
   const body = (
     <>
       <section className="lp-container">
-        <div className="lp-cards">
+        <div className="lp-cards" data-reveal>
           <Link className="lp-card" to="/military-strategy">
             <h3>MILITARY<br />TRANSITION<br />STRATEGY</h3>
             <p>Practical insights and guidance.</p>
@@ -41,7 +41,7 @@ export default function Military() {
           </Link>
         </div>
 
-        <div className="lp-pillars">
+        <div className="lp-pillars" data-reveal>
           {pillars.map(([a, b, text]) => (
             <div className="lp-pillar" key={a + b}>
               <span className="lp-dash" aria-hidden="true"></span>

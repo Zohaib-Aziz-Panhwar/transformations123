@@ -9,7 +9,7 @@ export default function Government() {
         <p className="lp-sub">Make the Market Understand It.</p>
         <span className="lp-rule" aria-hidden="true"></span>
 
-        <div className="lp-btn-row">
+        <div className="lp-btn-row" data-reveal>
           <Link className="lp-btn-blue" to="/government-strategy"><Lines items={['GOVERNMENT', 'CAREER STRATEGY']} /></Link>
           <Link className="lp-btn-blue" to="/government-samples"><Lines items={['GOVERNMENT', 'RESUME SAMPLES']} /></Link>
         </div>
@@ -21,12 +21,12 @@ export default function Government() {
     <>
       <section className="lp-container">
         <div className="lp-divider" aria-hidden="true"></div>
-        <h2 className="lp-big">STRATEGY TURNS<br /><span className="o">PUBLIC SERVICE</span><br />INTO WHAT&rsquo;S NEXT.</h2>
+        <h2 className="lp-big" data-reveal>STRATEGY TURNS<br /><span className="o">PUBLIC SERVICE</span><br />INTO WHAT&rsquo;S NEXT.</h2>
       </section>
 
       <div className="lp-line" aria-hidden="true"></div>
 
-      <section className="lp-container lp-bottom">
+      <section className="lp-container lp-bottom" data-reveal>
         <div className="lp-quote">
           <p>YOUR EXPERIENCE<br /><span className="o">GOT YOU HERE.</span></p>
           <p>YOUR STRATEGY<br /><span className="o">DETERMINES WHAT<br />COMES NEXT.</span></p>

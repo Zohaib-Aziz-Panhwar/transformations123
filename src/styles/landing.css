@@ -355,3 +355,32 @@ body.landing {
   .lp-hero-inner { padding-top: clamp(20px, 3vw, 48px); }
   .lp-cards + .lp-pillars { margin-top: clamp(28px, 3.5vw, 56px); }
 }
+
+/* ---------- polish ---------- */
+.lp-top::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(55% 70% at 78% 35%, rgba(243,98,5,.16) 0%, rgba(243,98,5,0) 70%),
+              radial-gradient(40% 40% at 10% 90%, rgba(30,80,160,.18) 0%, rgba(30,80,160,0) 70%);
+}
+.landing .lp-btn-blue { position: relative; overflow: hidden; }
+.landing .lp-btn-blue::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,.45) 50%, rgba(255,255,255,0) 70%);
+  transform: translateX(-120%); transition: transform .6s ease;
+}
+.landing .lp-btn-blue:hover::after { transform: translateX(120%); }
+.landing .lp-btn-blue:hover { transform: translateY(-4px) scale(1.01); box-shadow: 0 18px 36px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.7); }
+.lp-cta { position: relative; overflow: hidden; }
+.lp-cta::after { content: ""; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,.3) 50%, rgba(255,255,255,0) 70%); transform: translateX(-120%); transition: transform .6s ease; }
+.lp-cta:hover::after { transform: translateX(120%); }
+.lp-pillars { border: 1px solid rgba(143,211,246,.14); position: relative; }
+.lp-pillars::before { content: ""; position: absolute; left: 6%; right: 6%; top: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--lp-orange), transparent); }
+.lp-card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(135deg, rgba(143,211,246,.12), rgba(143,211,246,0) 55%); opacity: 0; transition: opacity .25s; }
+.lp-card:hover::before { opacity: 1; }
+.lp-card .lp-arrow { transition: transform .25s; }
+.lp-card:hover .lp-arrow { transform: translateX(6px); }
+.lp-big { text-shadow: 0 6px 30px rgba(0,0,0,.35); }
+.lp-mid-butterfly { animation: floatY 6s ease-in-out infinite; }
+.lp-art img { animation: floatY 9s ease-in-out infinite; }
+.lp-art.is-photo img { animation: none; }
+@media (prefers-reduced-motion: reduce) { .lp-mid-butterfly, .lp-art img { animation: none; } }
