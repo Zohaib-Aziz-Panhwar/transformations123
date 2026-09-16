@@ -27,6 +27,8 @@ export default function Home() {
           <img className="hero-mobile-butterfly" src="/assets/images/landing/ses-butterfly-hero.png" alt="" />
         </div>
 
+        <img className="hero-butterfly" src="/assets/images/landing/ses-butterfly-hero.png" alt="" aria-hidden="true" />
+
         <div className="container hero-inner">
           <h1 className="hero-title">
             <span className="line-white">EVERYONE HAS AI.</span>

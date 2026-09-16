@@ -33,6 +33,7 @@ export default function LandingShell({ variant, title, art, artIsPhoto, eyebrows
     <>
       <Header />
 
+      <div className="lp-page">
       <div className="lp-top">
         <div className={'lp-art' + (artIsPhoto ? ' is-photo' : '')} aria-hidden="true"><img src={art} alt="" /></div>
         {eyebrows.map((e, i) => (
@@ -70,6 +71,7 @@ export default function LandingShell({ variant, title, art, artIsPhoto, eyebrows
           </div>
         </div>
       </footer>
+      </div>
 
       <SiteFooter />
     </>

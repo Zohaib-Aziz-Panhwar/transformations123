@@ -23,16 +23,6 @@ export default function Military() {
   const body = (
     <>
       <section className="lp-container">
-        <div className="lp-pillars">
-          {pillars.map(([a, b, text]) => (
-            <div className="lp-pillar" key={a + b}>
-              <span className="lp-dash" aria-hidden="true"></span>
-              <h3>{a}<span className="o">{b}</span></h3>
-              <p>{text}</p>
-            </div>
-          ))}
-        </div>
-
         <div className="lp-cards">
           <Link className="lp-card" to="/military-strategy">
             <h3>MILITARY<br />TRANSITION<br />STRATEGY</h3>
@@ -49,6 +39,16 @@ export default function Military() {
             <p>Let&rsquo;s discuss your transition strategy.</p>
             <Arrow />
           </Link>
+        </div>
+
+        <div className="lp-pillars">
+          {pillars.map(([a, b, text]) => (
+            <div className="lp-pillar" key={a + b}>
+              <span className="lp-dash" aria-hidden="true"></span>
+              <h3>{a}<span className="o">{b}</span></h3>
+              <p>{text}</p>
+            </div>
+          ))}
         </div>
       </section>
 

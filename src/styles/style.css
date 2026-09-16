@@ -198,6 +198,18 @@ h1, h2, h3, p { margin: 0; }
 }
 .hero-title span { display: block; }
 .hero-mobile { display: none; } /* phone-only pieces, shown in the responsive block */
+.hero-butterfly {
+  position: absolute;
+  right: 2%;
+  top: 4%;
+  width: 24%;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 10px 30px rgba(243,98,5,.35));
+}
+.hero-inner { padding-right: 20%; }
+.hero-title { font-size: clamp(2.4rem, 5.7vw, 5.4rem); }
 .line-white  { color: var(--white); }
 .line-orange { color: var(--orange-text); }
 
@@ -456,6 +468,8 @@ h1, h2, h3, p { margin: 0; }
     width: 100%;
     overflow: hidden;
   }
+  .hero-butterfly { display: none; }
+  .hero-inner { padding-right: 24px; }
   .hero-mobile-amy { width: 100%; height: auto; display: block; }
   .hero-mobile-butterfly {
     position: absolute;
