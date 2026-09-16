@@ -33,35 +33,38 @@ body.landing {
 /* ---------- top block ---------- */
 .lp-top { position: relative; overflow: hidden; }
 
-/* hero: text left, full artwork right, actions underneath */
-.lp-hero { position: relative; z-index: 2; }
+/* hero: text left, artwork fills the whole right half of the block, actions underneath */
+.lp-hero { position: static; }
 .lp-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: stretch;
-  gap: clamp(16px, 3vw, 48px);
+  grid-template-columns: minmax(0, 52%) minmax(0, 1fr);
+  align-items: center;
+  min-height: clamp(380px, 34vw, 620px);
   padding-top: clamp(16px, 2.4vw, 32px);
 }
-.lp-hero-text { min-width: 0; }
-.lp-art { position: relative; height: clamp(400px, 32vw, 600px); min-width: 0; }
+.lp-hero-text { min-width: 0; position: relative; z-index: 2; }
+.lp-art {
+  position: absolute; top: 0; right: 0; bottom: 0;
+  width: 50%; z-index: 1; min-width: 0;
+}
 .lp-art img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: right 30%; }
-.landing-mil  .lp-art img { object-position: right 28%; }
-.landing-corp .lp-art img { object-position: right 12%; }
-.landing-gov  .lp-art img { object-position: right 6%; }
-.landing-ses  .lp-art img { object-fit: contain; object-position: center; }
-.landing-ses  .lp-art::before { content: ""; position: absolute; inset: 0; background: radial-gradient(55% 55% at 50% 50%, rgba(243,98,5,.22) 0%, rgba(243,98,5,0) 70%); pointer-events: none; }
-.landing-mil .lp-art, .landing-corp .lp-art { height: clamp(400px, 30vw, 580px); }
-.lp-hero-text { display: flex; flex-direction: column; justify-content: center; }
+.landing-mil  .lp-art img { object-position: right 25%; }
+.landing-corp .lp-art img { object-position: right 10%; }
+.landing-gov  .lp-art img { object-position: right 5%; }
+.landing-ses  .lp-art img { object-fit: contain; object-position: center 40%; padding: 4% 2% 10%; }
+.landing-ses  .lp-art::before { content: ""; position: absolute; inset: 0; background: radial-gradient(50% 45% at 55% 42%, rgba(243,98,5,.22) 0%, rgba(243,98,5,0) 70%); pointer-events: none; }
+.lp-art img,
 .lp-art.is-photo img {
-  -webkit-mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.5) 14%, #000 34%),
-                      linear-gradient(to bottom, #000 82%, transparent 100%);
-          mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.5) 14%, #000 34%),
-                      linear-gradient(to bottom, #000 82%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.55) 16%, #000 36%),
+                      linear-gradient(to bottom, #000 62%, rgba(0,0,0,.35) 84%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.55) 16%, #000 36%),
+                      linear-gradient(to bottom, #000 62%, rgba(0,0,0,.35) 84%, transparent 100%);
   -webkit-mask-composite: source-in;
           mask-composite: intersect;
 }
-.lp-actions { margin-top: clamp(18px, 2.6vw, 36px); padding-bottom: clamp(8px, 1.5vw, 20px); }
+.lp-actions { position: relative; z-index: 3; margin-top: clamp(18px, 2.6vw, 36px); padding-bottom: clamp(16px, 2vw, 28px); }
 .lp-actions .lp-btn-row, .lp-actions .lp-cards { margin-top: 0; }
+.lp-header { position: relative; z-index: 4; }
 
 /* back link in the landing header */
 .lp-back {
@@ -336,11 +339,11 @@ body.landing {
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {
   .lp-container { padding: 0 24px; }
-  .lp-hero-grid { grid-template-columns: 1fr; gap: 20px; padding-top: 20px; }
-  .lp-art { height: auto; }
-  .lp-art img, .landing-mil .lp-art img, .landing-corp .lp-art img, .landing-gov .lp-art img { width: 100%; height: auto; object-fit: contain; object-position: center; }
+  .lp-hero-grid { grid-template-columns: 1fr; gap: 20px; padding-top: 20px; min-height: 0; }
+  .lp-art { position: static; width: 100%; height: auto; }
+  .lp-art img, .landing-mil .lp-art img, .landing-corp .lp-art img, .landing-gov .lp-art img, .landing-ses .lp-art img { width: 100%; height: auto; object-fit: contain; object-position: center; padding: 0; }
   .landing-ses .lp-art::before { display: none; }
-  .lp-art.is-photo img {
+  .lp-art img, .lp-art.is-photo img {
     border-radius: 14px;
     -webkit-mask-image: linear-gradient(to bottom, #000 84%, transparent 100%);
             mask-image: linear-gradient(to bottom, #000 84%, transparent 100%);
