@@ -228,7 +228,7 @@ h1, h2, h3, p { margin: 0; }
 .intro {
   background: var(--light);
   text-align: center;
-  padding: clamp(56px, 6vw, 96px) 0 clamp(40px, 4.5vw, 72px);
+  padding: clamp(40px, 4.5vw, 64px) 0 clamp(28px, 3.2vw, 44px);
 }
 .intro-title {
   font-family: var(--font-body);
@@ -261,7 +261,7 @@ h1, h2, h3, p { margin: 0; }
   color: var(--navy-text);
   letter-spacing: .01em;
   text-transform: uppercase;
-  margin-bottom: clamp(30px, 3.2vw, 48px);
+  margin-bottom: clamp(22px, 2.6vw, 36px);
 }
 .section-heading::before,
 .section-heading::after {
@@ -277,7 +277,7 @@ h1, h2, h3, p { margin: 0; }
    ========================================================= */
 .who {
   background: var(--light);
-  padding: clamp(16px, 2vw, 32px) 0 clamp(56px, 6vw, 96px);
+  padding: clamp(12px, 1.6vw, 24px) 0 clamp(40px, 4.5vw, 64px);
 }
 
 .who-grid {
@@ -339,7 +339,7 @@ h1, h2, h3, p { margin: 0; }
    ========================================================= */
 .services {
   background: var(--light);
-  padding: clamp(24px, 3vw, 48px) 0 clamp(64px, 7vw, 110px);
+  padding: clamp(16px, 2.2vw, 32px) 0 clamp(44px, 5vw, 72px);
 }
 
 .services-grid {
@@ -370,7 +370,7 @@ h1, h2, h3, p { margin: 0; }
 
 .services-cta {
   text-align: center;
-  margin-top: clamp(44px, 4.5vw, 70px);
+  margin-top: clamp(32px, 3.4vw, 48px);
 }
 
 /* =========================================================
@@ -397,9 +397,9 @@ h1, h2, h3, p { margin: 0; }
   display: flex;
   align-items: center;
   gap: 26px;
-  min-height: 170px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  min-height: 140px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .footer-butterfly {
@@ -511,23 +511,23 @@ h1, h2, h3, p { margin: 0; }
   .btn-wide { white-space: normal; padding: 14px 22px; font-size: 1rem; }
   .intro-copy br { display: none; }
 }
-.page-placeholder { min-height: 60vh; display: flex; align-items: center; padding: 80px 0; }
+.page-placeholder { min-height: 42vh; display: flex; align-items: center; padding: 40px 0; }
 
 /* =========================================================
    SUB-PAGES (article hubs, samples)
    ========================================================= */
-.page-hero { background: var(--navy); color: var(--white); padding: clamp(64px, 7vw, 110px) 0 clamp(56px, 6vw, 90px); }
+.page-hero { background: var(--navy); color: var(--white); padding: clamp(44px, 5vw, 72px) 0 clamp(36px, 4vw, 56px); }
 .page-back { display: inline-block; font-size: .95rem; color: #9FB3CF; margin-bottom: 18px; }
 .page-back:hover { color: var(--orange); }
 .page-eyebrow { font-size: .85rem; letter-spacing: .3em; color: var(--orange); margin-bottom: 10px; }
 .page-title { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.05; }
 .page-lead { margin-top: 16px; max-width: 760px; font-size: 1.2rem; line-height: 1.5; color: #E6ECF5; }
-.page-intro { background: var(--light); padding: clamp(44px, 5vw, 72px) 0 0; }
+.page-intro { background: var(--light); padding: clamp(28px, 3.4vw, 48px) 0 0; }
 .page-intro p { max-width: 860px; font-size: 1.15rem; line-height: 1.6; color: var(--body); }
 .journey { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .journey span { background: var(--white); border-left: 4px solid var(--orange); padding: 14px 18px; font-size: 1.02rem; color: var(--navy-text); }
 .journey b { display: block; font-family: var(--font-display); letter-spacing: .06em; color: var(--orange-text); margin-bottom: 4px; }
-.posts { background: var(--light); padding: clamp(44px, 5vw, 72px) 0 clamp(30px, 3vw, 48px); }
+.posts { background: var(--light); padding: clamp(28px, 3.4vw, 48px) 0 clamp(16px, 2vw, 28px); }
 .post { background: var(--white); border-radius: var(--radius); padding: 40px 48px 36px; box-shadow: 0 6px 18px rgba(11,29,56,.08); margin-bottom: 30px; }
 .post-head { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
 .post-num { font-family: var(--font-display); letter-spacing: .1em; color: var(--orange-text); font-weight: 600; }
@@ -550,7 +550,7 @@ h1, h2, h3, p { margin: 0; }
 .soon-box h2 { font-family: var(--font-display); font-weight: 600; font-size: 2rem; color: var(--navy-text); }
 .soon-box p { margin: 12px auto 0; max-width: 620px; line-height: 1.6; }
 .soon-link { display: inline-block; margin-top: 18px; color: var(--orange-text); font-weight: 600; }
-.page-cta { background: var(--light); padding: clamp(24px, 3vw, 48px) 0 clamp(72px, 8vw, 120px); text-align: center; }
+.page-cta { background: var(--light); padding: clamp(12px, 1.6vw, 24px) 0 clamp(44px, 5vw, 64px); text-align: center; }
 .cta-line { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.4rem, 3vw, 2.2rem); line-height: 1.15; color: var(--navy-text); margin-bottom: 22px; }
 .cta-line span { display: block; }
 .cta-line .accent { color: var(--orange-text); }
@@ -574,7 +574,7 @@ h1, h2, h3, p { margin: 0; }
 .site-footer { background: #000B1B; color: #C9D3E3; font-family: var(--font-body); border-top: 1px solid rgba(255,255,255,.06); }
 .site-footer a { color: inherit; transition: color .2s; }
 .site-footer a:hover { color: var(--orange-hi); }
-.sf-grid { display: grid; grid-template-columns: 1.6fr 1fr 1.1fr 1.5fr; gap: clamp(32px, 4vw, 64px); padding: clamp(56px, 6vw, 88px) 0 clamp(44px, 5vw, 72px); }
+.sf-grid { display: grid; grid-template-columns: 1.6fr 1fr 1.1fr 1.5fr; gap: clamp(28px, 3.4vw, 52px); padding: clamp(40px, 4.4vw, 60px) 0 clamp(32px, 3.4vw, 48px); }
 .sf-logo { display: flex; align-items: center; gap: 12px; color: var(--white); font-family: "Times New Roman", Georgia, serif; font-size: 1.45rem; letter-spacing: .04em; }
 .sf-logo img { width: 54px; height: 50px; object-fit: contain; }
 .sf-logo b { color: var(--orange); }
