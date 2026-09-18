@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout.jsx';
+import { BOOKING_URL } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
 
 const audiences = [
@@ -104,10 +105,10 @@ export default function Home() {
               <h2>Let&rsquo;s build the strategy behind your next move.</h2>
               <p className="cta-strip-copy">A focused conversation about where your experience creates the most value, and how to take it to market.</p>
             </div>
-            <Link className="btn btn-orange btn-wide cta-strip-btn" to="/contact">
+            <a className="btn btn-orange btn-wide cta-strip-btn" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               BOOK A DISCOVERY CALL
               <svg className="arrow" viewBox="0 0 40 16" aria-hidden="true"><path d="M0 8h34M27 1l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

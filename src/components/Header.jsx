@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { BOOKING_URL } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
 
 const links = [
@@ -40,7 +41,7 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          <Link className="btn btn-orange nav-cta" to="/contact" onClick={close}>BOOK A DISCOVERY CALL</Link>
+          <a className="btn btn-orange nav-cta" href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={close}>BOOK A DISCOVERY CALL</a>
         </nav>
       </div>
     </header>

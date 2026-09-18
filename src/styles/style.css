@@ -698,3 +698,10 @@ h1, h2, h3, p { margin: 0; }
 /* nav polish */
 .nav-cta { box-shadow: 0 8px 20px rgba(243,98,5,.3); }
 .site-header { box-shadow: 0 2px 20px rgba(0,0,0,.25); }
+
+/* footer band: airy in-flight butterfly */
+.footer-butterfly { width: 190px; height: 150px; margin-right: 6px; }
+.footer-butterfly img { animation: floatY 6s ease-in-out infinite; filter: drop-shadow(0 6px 22px rgba(243,98,5,.35)); }
+@media (prefers-reduced-motion: reduce) { .footer-butterfly img { animation: none; } }
+.post-soon { margin-top: 16px; font-size: .9rem; letter-spacing: .12em; text-transform: uppercase; color: #6B7280; }
+.contact-btn { margin-top: 26px; }

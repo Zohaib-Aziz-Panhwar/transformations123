@@ -5,6 +5,8 @@ export const contact = {
   phoneTel: '+14104415056',
 };
 
+export const BOOKING_URL = 'https://amysindicic.simplybook.me/v2/#book';
+
 export const OPM_PDF = 'https://www.opm.gov/chcoc/latest-memos/hiring-and-talent-development-for-the-senior-executive-service.pdf';
 
 /* ---------- article hubs (outlines from the client Google Doc) ---------- */
@@ -45,6 +47,7 @@ export const hubs = {
     title: 'EXECUTIVE CAREER STRATEGY',
     eyebrow: 'CORPORATE EXECUTIVES',
     lead: 'Three articles that walk a corporate executive from value, to fit, to market.',
+    hideOutline: true,
     journey: [['ARTICLE 1', 'What is my value?'], ['ARTICLE 2', 'Where does that value fit?'], ['ARTICLE 3', 'How do I take that value to market?']],
     back: { to: '/corporate', label: 'Back to Corporate Executives' },
     articles: [

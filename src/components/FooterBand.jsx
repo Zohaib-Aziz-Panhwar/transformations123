@@ -7,7 +7,7 @@ export default function FooterBand() {
     <footer className="footer-band">
       <div className="footer-swoosh" aria-hidden="true"><img src={A + "assets/images/footer-swoosh.jpg"} alt="" /></div>
       <div className="container footer-inner">
-        <span className="footer-butterfly" aria-hidden="true"><img src={A + "assets/images/footer-butterfly.png"} alt="" /></span>
+        <span className="footer-butterfly" aria-hidden="true"><img src={A + "assets/images/landing/ses-butterfly-hero.png"} alt="" /></span>
         <p className="footer-tagline">
           <span className="ft-1">STAND OUT</span>
           <span className="ft-2">FROM THE <span className="accent">AI NOISE.</span></span>

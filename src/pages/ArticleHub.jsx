@@ -29,8 +29,8 @@ export default function ArticleHub({ hub }) {
               </div>
               <h2>{a.title}</h2>
               {a.core && <p className="post-core">{a.core}</p>}
-              <h3>Outline</h3>
-              <ul>{a.outline.map(o => <li key={o}>{o}</li>)}</ul>
+              {!hub.hideOutline && (<><h3>Outline</h3><ul>{a.outline.map(o => <li key={o}>{o}</li>)}</ul></>)}
+              {hub.hideOutline && <p className="post-soon">Full article coming soon.</p>}
               {a.note && <p className="post-note">{a.note}</p>}
               {a.closing && <p className="post-closing">{a.closing}</p>}
             </article>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import LandingShell, { Arrow } from '../components/LandingShell.jsx';
+import { BOOKING_URL } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
 
 const pillars = [
@@ -31,11 +32,11 @@ export default function Military() {
         <p>Real examples.<br />Real results.</p>
         <Arrow />
       </Link>
-      <Link className="lp-card is-orange" to="/contact">
+      <a className="lp-card is-orange" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
         <h3>BOOK A<br />DISCOVERY CALL</h3>
         <p>Let&rsquo;s discuss your transition strategy.</p>
         <Arrow />
-      </Link>
+      </a>
     </div>
   );
 

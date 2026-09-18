@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import LandingShell, { Arrow, Lines } from '../components/LandingShell.jsx';
+import { BOOKING_URL } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
 
 export default function Government() {
@@ -33,10 +34,10 @@ export default function Government() {
           <p>YOUR STRATEGY<br /><span className="o">DETERMINES WHAT<br />COMES NEXT.</span></p>
         </div>
         <img className="lp-mid-butterfly" src={A + "assets/images/landing/gov-butterfly-mid.png"} alt="" />
-        <Link className="lp-cta" to="/contact">
+        <a className="lp-cta" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
           <span>BOOK A<br />DISCOVERY CALL</span>
           <Arrow width={2.4} />
-        </Link>
+        </a>
       </section>
     </>
   );

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import LandingShell, { Lines } from '../components/LandingShell.jsx';
-import { OPM_PDF } from '../data/content.js';
+import { OPM_PDF, BOOKING_URL } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
 
 export default function Ses() {
@@ -35,7 +35,7 @@ export default function Ses() {
           <p>YOUR STRATEGY<br /><span className="o">DETERMINES WHAT<br />COMES NEXT.</span></p>
         </div>
         <img className="lp-mid-butterfly" src={A + "assets/images/landing/ses-butterfly-mid.png"} alt="" />
-        <Link className="lp-cta" to="/contact">BOOK A<br />DISCOVERY CALL</Link>
+        <a className="lp-cta" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">BOOK A<br />DISCOVERY CALL</a>
       </section>
 
       <div className="lp-line" aria-hidden="true"></div>
