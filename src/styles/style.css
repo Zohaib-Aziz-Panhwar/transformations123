@@ -173,7 +173,7 @@ h1, h2, h3, p { margin: 0; }
 .hero {
   position: relative;
   display: flex;
-  background: var(--navy) url("/assets/images/hero-bg.jpg") center / cover no-repeat;
+  background: var(--navy) url("/assets/images/hero-bg-clean.jpg") center / cover no-repeat;
   aspect-ratio: 1024 / 410;
   overflow: hidden;
 }
