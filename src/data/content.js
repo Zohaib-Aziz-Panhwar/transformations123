@@ -5,6 +5,13 @@ export const contact = {
   phoneTel: '+14104415056',
 };
 
+export const social = {
+  linkedin: 'https://www.linkedin.com/in/amy-sindicic-career-strategist/',
+  youtube: 'https://www.youtube.com/@transformations123',
+  instagram: 'https://www.instagram.com/amysindicic123/',
+  upwork: 'https://www.upwork.com/freelancers/amysindicic',
+};
+
 export const BOOKING_URL = 'https://amysindicic.simplybook.me/v2/#book';
 
 export const OPM_PDF = 'https://www.opm.gov/chcoc/latest-memos/hiring-and-talent-development-for-the-senior-executive-service.pdf';

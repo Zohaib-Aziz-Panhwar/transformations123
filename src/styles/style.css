@@ -705,3 +705,18 @@ h1, h2, h3, p { margin: 0; }
 @media (prefers-reduced-motion: reduce) { .footer-butterfly img { animation: none; } }
 .post-soon { margin-top: 16px; font-size: .9rem; letter-spacing: .12em; text-transform: uppercase; color: #6B7280; }
 .contact-btn { margin-top: 26px; }
+
+/* colourful social icons */
+.sf-connect { margin-top: 24px; font-family: var(--font-display); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--white); font-size: .95rem; }
+.sf-connect::after { content: ""; display: block; width: 34px; height: 3px; background: var(--orange); margin-top: 8px; }
+.sf-social { margin-top: 16px; }
+.sf-social a { width: 46px; height: 46px; background: var(--white); border-color: var(--white); }
+.sf-social svg { width: 22px; height: 22px; }
+.sf-social a.is-linkedin svg { fill: #0A66C2; }
+.sf-social a.is-youtube svg { fill: #FF0000; }
+.sf-social a.is-upwork svg { fill: #14A800; }
+.sf-social a:hover { background: var(--white); border-color: var(--white); transform: translateY(-3px) scale(1.06); box-shadow: 0 8px 20px rgba(0,0,0,.35); }
+.sf-social a:hover svg { fill: inherit; }
+.sf-social a.is-linkedin:hover svg { fill: #0A66C2; }
+.sf-social a.is-youtube:hover svg { fill: #FF0000; }
+.sf-social a.is-upwork:hover svg { fill: #14A800; }
