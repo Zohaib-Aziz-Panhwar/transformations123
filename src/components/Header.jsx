@@ -18,7 +18,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link className="logo" to="/" aria-label="Transformations123 home" onClick={close}>
-          <span className="logo-mark" aria-hidden="true"><img src={A + "assets/images/logo-butterfly.png"} alt="" /></span>
+          <span className="logo-mark" aria-hidden="true"><img src={A + "assets/images/amy-logo.png"} alt="" /></span>
           <span className="logo-text">TRANSFORMATIONS<span className="logo-num">123</span></span>
         </Link>
 

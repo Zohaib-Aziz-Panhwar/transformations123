@@ -449,3 +449,19 @@ body.landing {
   .lp-footer-center .lp-rule { margin: 22px auto 18px; }
   .lp-footer-side { line-height: 2.3; }
 }
+
+/* SES: package button under the blue row */
+.landing .lp-btn-package {
+  display: flex; align-items: center; justify-content: center; gap: 22px;
+  margin-top: clamp(16px, 1.8vw, 26px); max-width: 1300px;
+  min-height: clamp(64px, 5.6vw, 84px); padding: 14px 28px; border-radius: 12px;
+  background: linear-gradient(180deg, #FA8A2E 0%, #E95B05 100%); color: var(--lp-white);
+  font-family: "Oswald", sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: .06em;
+  font-size: clamp(1.05rem, 1.7vw, 1.6rem);
+  box-shadow: 0 10px 26px rgba(243,98,5,.4), inset 0 1px 0 rgba(255,255,255,.35);
+  transition: transform .2s, filter .2s;
+}
+.landing .lp-btn-package svg { width: clamp(28px, 3vw, 40px); flex: none; transition: transform .25s; }
+.landing .lp-btn-package:hover { transform: translateY(-3px); filter: brightness(1.06); }
+.landing .lp-btn-package:hover svg { transform: translateX(6px); }
+@media (max-width: 860px) { .landing .lp-btn-package { text-align: center; font-size: 1rem; gap: 12px; } }

@@ -13,11 +13,17 @@ export default function Ses() {
   );
 
   const actions = (
+    <>
     <div className="lp-btn-row">
       <a className="lp-btn-blue" href={OPM_PDF} target="_blank" rel="noopener noreferrer"><Lines items={['CURRENT OPM', 'SES GUIDANCE']} /></a>
       <Link className="lp-btn-blue" to="/ses-samples"><Lines items={['SES RESUME', 'AND ECQ SAMPLES']} /></Link>
       <Link className="lp-btn-blue" to="/ses-articles"><Lines items={['EXPLORE SES', 'STRATEGY ARTICLES']} /></Link>
     </div>
+    <Link className="lp-btn-package" to="/ses-package">
+      VIEW COMPLETE SES APPLICATION PACKAGE
+      <svg viewBox="0 0 40 16" aria-hidden="true"><path d="M0 8h34M27 1l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+    </Link>
+    </>
   );
 
   const body = (

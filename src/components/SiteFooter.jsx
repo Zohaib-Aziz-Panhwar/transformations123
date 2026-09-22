@@ -20,7 +20,7 @@ export default function SiteFooter() {
         <div className="sf-grid">
           <div className="sf-brand">
             <Link className="sf-logo" to="/">
-              <img src={A + "assets/images/logo-butterfly.png"} alt="" />
+              <img src={A + "assets/images/amy-logo.png"} alt="" />
               <span>TRANSFORMATIONS<b>123</b></span>
             </Link>
             <p className="sf-tagline">Career Strategy for What&rsquo;s Next</p>

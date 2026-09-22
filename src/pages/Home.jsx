@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout.jsx';
 import { BOOKING_URL } from '../data/content.js';
+import { services } from '../data/services.js';
 const A = import.meta.env.BASE_URL;
 
 const audiences = [
@@ -10,13 +11,6 @@ const audiences = [
   { to: '/corporate', img: 'corporate-executives.jpg', alt: 'Corporate executives', lines: ['CORPORATE', 'EXECUTIVES'] },
 ];
 
-const services = [
-  { lines: ['JOB SEARCH', 'STRATEGY'], text: 'Target the right opportunities and build visibility.' },
-  { lines: ['EXECUTIVE', 'POSITIONING'], text: 'Define and communicate your executive value.' },
-  { lines: ['PERSONAL', 'BRANDING'], text: 'Strengthen your resume, LinkedIn, and leadership presence.' },
-  { lines: ['INTERVIEW', 'PREP'], text: 'Communicate your value with confidence.' },
-  { lines: ['CAREER', 'COACHING'], text: 'Gain clarity and move forward with purpose.' },
-];
 
 export default function Home() {
   return (
@@ -79,11 +73,12 @@ export default function Home() {
           <h2 className="section-heading" data-reveal><span>SERVICES</span></h2>
           <div className="services-grid">
             {services.map((s, i) => (
-              <article className="service" key={s.lines[0] + s.lines[1]} data-reveal style={{ transitionDelay: `${i * 70}ms` }}>
-                <h3>{s.lines[0]}<br />{s.lines[1]}</h3>
+              <Link className="service" to={`/services/${s.slug}`} key={s.slug} data-reveal style={{ transitionDelay: `${i * 70}ms` }}>
+                <h3>{s.name[0]}<br />{s.name[1]}</h3>
                 <span className="dash"></span>
-                <p>{s.text}</p>
-              </article>
+                <p>{s.tagline}</p>
+                <span className="service-more">Explore &rarr;</span>
+              </Link>
             ))}
           </div>
           <div className="services-cta" data-reveal>
