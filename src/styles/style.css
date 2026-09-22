@@ -918,3 +918,9 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .sx-eyebrow { letter-spacing: .18em; font-size: .75rem; }
   .pk-ghost { min-width: 0; width: 100%; }
 }
+
+/* nav bar stays on screen while scrolling (fixed, since overflow-x hidden disables sticky) */
+.site-header { position: fixed; top: 0; left: 0; right: 0; }
+body { padding-top: 104px; }
+@media (max-width: 900px) { body { padding-top: 80px; } .main-nav { position: fixed; top: 80px; max-height: calc(100vh - 80px); overflow-y: auto; } }
+html { scroll-padding-top: 110px; }
