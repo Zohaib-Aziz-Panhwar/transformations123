@@ -8,7 +8,7 @@ export const contact = {
 export const social = {
   linkedin: 'https://www.linkedin.com/in/amy-sindicic-career-strategist/',
   youtube: 'https://www.youtube.com/@transformations123',
-  instagram: 'https://www.instagram.com/amysindicic123/',
+  instagram: 'https://www.instagram.com/transformations123careers/',
   upwork: 'https://www.upwork.com/freelancers/amysindicic',
 };
 

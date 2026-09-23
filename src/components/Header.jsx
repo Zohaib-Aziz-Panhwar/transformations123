@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { social } from '../data/content.js';
 import { BOOKING_URL } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
 
@@ -7,7 +8,7 @@ const links = [
   { to: '/', label: 'HOME', end: true },
   { to: '/about', label: 'ABOUT AMY' },
   { to: '/blog', label: 'BLOG' },
-  { to: '/testimonials', label: 'TESTIMONIALS' },
+  { href: social.upwork, label: 'TESTIMONIALS' },
 ];
 
 export default function Header() {
@@ -34,10 +35,10 @@ export default function Header() {
         <nav className={'main-nav' + (open ? ' is-open' : '')}>
           <ul>
             {links.map(l => (
-              <li key={l.to}>
-                <NavLink to={l.to} end={l.end} className={({ isActive }) => (isActive ? 'is-active' : undefined)} onClick={close}>
-                  {l.label}
-                </NavLink>
+              <li key={l.label}>
+                {l.href
+                  ? <a href={l.href} target="_blank" rel="noopener noreferrer" onClick={close}>{l.label}</a>
+                  : <NavLink to={l.to} end={l.end} className={({ isActive }) => (isActive ? 'is-active' : undefined)} onClick={close}>{l.label}</NavLink>}
               </li>
             ))}
           </ul>

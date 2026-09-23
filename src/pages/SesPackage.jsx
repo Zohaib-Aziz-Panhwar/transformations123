@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout.jsx';
-import { BOOKING_URL, OPM_PDF, social } from '../data/content.js';
+import { BOOKING_URL, OPM_PDF } from '../data/content.js';
+import { SES_PACKAGE_URL } from '../data/services.js';
 const A = import.meta.env.BASE_URL;
 
 const items = [
@@ -51,7 +52,7 @@ export default function SesPackage() {
             <ul>
               {items.map(t => <li key={t}><Check />{t}</li>)}
             </ul>
-            <a className="btn btn-orange btn-wide pk-upwork" href={social.upwork} target="_blank" rel="noopener noreferrer">VISIT UPWORK</a>
+            <a className="btn btn-orange btn-wide pk-upwork" href={SES_PACKAGE_URL} target="_blank" rel="noopener noreferrer">VIEW DETAILS</a>
           </div>
         </div>
       </section>

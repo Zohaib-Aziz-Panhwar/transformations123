@@ -40,7 +40,7 @@ export default function SiteFooter() {
               <li><Link to="/about">About Amy</Link></li>
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/blog">Blog</Link></li>
-              <li><Link to="/testimonials">Testimonials</Link></li>
+              <li><a href={socialLinks.upwork} target="_blank" rel="noopener noreferrer">Testimonials</a></li>
             </ul>
           </div>
 

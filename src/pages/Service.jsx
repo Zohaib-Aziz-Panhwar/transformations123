@@ -6,7 +6,7 @@ const A = import.meta.env.BASE_URL;
 
 function OfferLink({ o, className }) {
   return o.to
-    ? <Link className={className} to={o.to}>VIEW PACKAGE</Link>
+    ? <Link className={className} to={o.to}>{UPWORK_LABEL}</Link>
     : <a className={className} href={o.href} target="_blank" rel="noopener noreferrer">{UPWORK_LABEL}</a>;
 }
 
