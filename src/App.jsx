@@ -10,6 +10,7 @@ import Samples from './pages/Samples.jsx';
 import Placeholder from './pages/Placeholder.jsx';
 import SesPackage from './pages/SesPackage.jsx';
 import Services from './pages/Services.jsx';
+import About from './pages/About.jsx';
 import Service from './pages/Service.jsx';
 import { hubs, samples } from './data/content.js';
 
@@ -36,7 +37,7 @@ export default function App() {
         <Route path="/ses-samples" element={<Samples page={samples.ses} />} />
         <Route path="/ses-articles" element={<Samples page={samples.sesArticles} />} />
 
-        <Route path="/about" element={<Placeholder title="ABOUT AMY" />} />
+        <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Placeholder title="BLOG" />} />
         <Route path="/testimonials" element={<Placeholder title="TESTIMONIALS" />} />
         <Route path="/services" element={<Services />} />
