@@ -4,33 +4,32 @@ import { BOOKING_URL } from '../data/content.js';
 
 const A = import.meta.env.BASE_URL;
 
-/* The step between the button and the booking form: Amy wants people to see
-   what they are applying for, and the price range, before the calendar. */
+/* The step between the button and the booking form. Amy designed this panel
+   herself, so the page is her artwork rather than a rebuild of it.
+
+   Everything on it is baked into the image, which has two consequences: the
+   whole panel is the link, so a click anywhere -- including on the button she
+   drew -- reaches the form; and the wording is repeated in the alt text and in
+   the plain block underneath, because a screen reader cannot read a picture
+   and the lettering is too small to follow on a phone. */
 export default function Book() {
   return (
     <Layout title="Apply to Work With Me">
       <section className="bk">
         <div className="bk-inner">
-          <div className="bk-art" aria-hidden="true">
-            <img src={`${A}assets/images/amy-cutout.png`} alt="" />
-          </div>
+          <a className="bk-panel" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+            <img
+              src={`${A}assets/images/booking/apply-to-work-with-me.jpg`}
+              alt="Apply to work with me. Due to a full schedule, I am only accepting a
+                   limited number of new clients at this time. Please use the link below
+                   to schedule an evaluation call and apply. Please note: my comprehensive
+                   packages range from $699 to $1,999. Schedule your evaluation call and apply."
+            />
+          </a>
 
-          <div className="bk-text">
-            <p className="st-eyebrow"><span>TRANSFORMATIONS &middot; AMY SINDICIC</span></p>
-            <h1>APPLY TO <span className="o">WORK WITH ME.</span></h1>
-
-            <p className="bk-lead">
-              Due to a full schedule, I am only accepting a limited number of new
-              clients at this time. Please use the link below to schedule an
-              evaluation call and apply.
-            </p>
-
-            <p className="bk-note">
-              <b>Please note:</b> my comprehensive packages range from
-              <strong> $699 to $1,999</strong>.
-            </p>
-
-            <a className="btn btn-orange btn-wide bk-cta" href={BOOKING_URL}
+          {/* Below the panel on a phone, where the drawn button is about 20px tall. */}
+          <div className="bk-fallback">
+            <a className="btn btn-orange btn-wide" href={BOOKING_URL}
               target="_blank" rel="noopener noreferrer">
               SCHEDULE YOUR EVALUATION CALL AND APPLY
               <svg className="arrow" viewBox="0 0 40 16" aria-hidden="true">
@@ -38,15 +37,13 @@ export default function Book() {
                   strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
-
-            <p className="bk-small">
-              The form takes a few minutes. It asks about your background, what you
-              are aiming for and your timeline, so the call starts from where you
-              actually are.
+            <p>
+              Due to a full schedule, Amy is accepting a limited number of new clients.
+              Comprehensive packages range from <strong>$699 to $1,999</strong>.
             </p>
-
-            <p className="bk-back"><Link to="/">&larr; Back to Home</Link></p>
           </div>
+
+          <p className="bk-back"><Link to="/">&larr; Back to Home</Link></p>
         </div>
       </section>
     </Layout>
