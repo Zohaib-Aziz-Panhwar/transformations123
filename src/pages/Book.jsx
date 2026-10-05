@@ -13,7 +13,6 @@ export default function Book() {
         <div className="bk-inner">
           <div className="bk-art" aria-hidden="true">
             <img src={`${A}assets/images/amy-cutout.png`} alt="" />
-            <img className="bk-fly" src={`${A}assets/images/logo-butterfly.png`} alt="" />
           </div>
 
           <div className="bk-text">
