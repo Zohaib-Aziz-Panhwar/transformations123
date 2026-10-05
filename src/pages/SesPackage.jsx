@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout.jsx';
-import { BOOKING_URL, OPM_PDF } from '../data/content.js';
+import { OPM_PDF, APPLY_PATH, resourcePaths } from '../data/content.js';
 import { SES_PACKAGE_URL } from '../data/services.js';
 const A = import.meta.env.BASE_URL;
 
@@ -63,9 +63,9 @@ export default function SesPackage() {
           <p>Present your executive leadership experience with the strategic depth, enterprise impact, and executive-level positioning expected of an SES candidate.</p>
           <div className="pk-links">
             <a className="pk-ghost" href={OPM_PDF} target="_blank" rel="noopener noreferrer">2025 OPM GUIDANCE</a>
-            <Link className="pk-ghost" to="/ses-samples">SES RESUME AND ECQ SAMPLES</Link>
+            <Link className="pk-ghost" to={resourcePaths.sesSamples}>SES RESUME AND ECQ SAMPLES</Link>
           </div>
-          <a className="btn btn-orange btn-wide" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">DISCOVERY CALL</a>
+          <Link className="btn btn-orange btn-wide" to={APPLY_PATH}>DISCOVERY CALL</Link>
         </div>
       </section>
     </Layout>

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import LandingShell, { Arrow, Lines } from '../components/LandingShell.jsx';
-import { BOOKING_URL } from '../data/content.js';
+import { resourcePaths, APPLY_PATH } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
 
 export default function Government() {
@@ -15,7 +15,7 @@ export default function Government() {
   const actions = (
     <div className="lp-btn-row">
       <Link className="lp-btn-blue" to="/government-strategy"><Lines items={['GOVERNMENT', 'CAREER STRATEGY']} /></Link>
-      <Link className="lp-btn-blue" to="/government-samples"><Lines items={['GOVERNMENT', 'RESUME SAMPLES']} /></Link>
+      <Link className="lp-btn-blue" to={resourcePaths.governmentSamples}><Lines items={['GOVERNMENT', 'RESUME SAMPLES']} /></Link>
     </div>
   );
 
@@ -34,10 +34,10 @@ export default function Government() {
           <p>YOUR STRATEGY<br /><span className="o">DETERMINES WHAT<br />COMES NEXT.</span></p>
         </div>
         <img className="lp-mid-butterfly" src={A + "assets/images/landing/gov-butterfly-mid.png"} alt="" />
-        <a className="lp-cta" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+        <Link className="lp-cta" to={APPLY_PATH}>
           <span>BOOK A<br />DISCOVERY CALL</span>
           <Arrow width={2.4} />
-        </a>
+        </Link>
       </section>
     </>
   );

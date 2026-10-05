@@ -287,8 +287,10 @@ body.landing {
 .lp-card {
   position: relative;
   display: flex; flex-direction: column;
-  min-height: clamp(180px, 24vw, 246px);
-  padding: clamp(22px, 3.2vw, 36px) clamp(22px, 3.2vw, 36px) clamp(22px, 3vw, 32px);
+  /* Heading and arrow only, so the card is sized to the words rather than
+     to a sub-line that is no longer there. */
+  min-height: clamp(128px, 15vw, 168px);
+  padding: clamp(20px, 2.4vw, 28px) clamp(22px, 3.2vw, 36px) clamp(20px, 2.4vw, 26px);
   border-radius: 10px;
   border: 2px solid #3F84CB;
   background: linear-gradient(135deg, #0F3169 0%, #0A1F45 100%);
@@ -303,10 +305,10 @@ body.landing {
   font-size: clamp(1.25rem, 2.6vw, 2rem);
   line-height: 1.15;
 }
-.lp-card p { margin-top: 18px; padding-right: 64px; color: var(--lp-blue); font-size: clamp(.95rem, 1.6vw, 1.2rem); line-height: 1.35; }
-.lp-card .lp-arrow { position: absolute; right: clamp(20px, 3vw, 34px); bottom: clamp(20px, 3vw, 30px); width: clamp(34px, 4.4vw, 48px); color: var(--lp-blue); }
+.lp-card h3 { padding-right: clamp(40px, 5vw, 56px); margin: 0; }
+.lp-card .lp-arrow { position: absolute; right: clamp(20px, 3vw, 34px); bottom: clamp(16px, 2.2vw, 24px); width: clamp(30px, 3.8vw, 42px); color: var(--lp-blue); }
 .lp-card.is-orange { border-color: #FA8A2E; background: linear-gradient(180deg, #FA8A2E 0%, #EA5B05 100%); }
-.lp-card.is-orange p, .lp-card.is-orange .lp-arrow { color: var(--lp-white); }
+.lp-card.is-orange .lp-arrow { color: var(--lp-white); }
 
 /* ---------- footer ---------- */
 .lp-footer { position: relative; padding: clamp(28px, 3vw, 44px) 0 clamp(30px, 3.4vw, 48px); }
@@ -373,7 +375,7 @@ body.landing {
   .lp-pillars { grid-template-columns: 1fr; }
   .lp-pillar { border-left: 0; }
   .lp-logo-text { font-size: 1.35rem; }
-  .lp-tagline { letter-spacing: .2em; font-size: .6rem; }
+  .lp-tagline { letter-spacing: .2em; font-size: .78rem; }  /* .6rem read as 9.6px */
 }
 
 /* ---------- site nav bar on landing pages ---------- */
@@ -391,7 +393,7 @@ body.landing {
   .landing .lp-btn-blue { min-height: clamp(78px, 7vw, 112px); font-size: clamp(1.05rem, 1.7vw, 1.65rem); border-radius: 10px; }
   .landing-gov .lp-btn-row { max-width: 980px; }
   .lp-btn-row { max-width: 1300px; }
-  .lp-card { min-height: clamp(150px, 16vw, 200px); }
+  .lp-card { min-height: clamp(112px, 12vw, 140px); }
   .lp-cta { min-height: clamp(80px, 8vw, 110px); font-size: clamp(1.2rem, 2.2vw, 2rem); }
   .lp-header { padding-top: clamp(20px, 2.4vw, 36px); }
   .lp-cards + .lp-pillars { margin-top: clamp(28px, 3.5vw, 56px); }

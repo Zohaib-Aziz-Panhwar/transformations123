@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import LandingShell, { Arrow } from '../components/LandingShell.jsx';
-import { BOOKING_URL } from '../data/content.js';
+import { APPLY_PATH, resourcePaths } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
 
 const pillars = [
@@ -24,19 +24,16 @@ export default function Corporate() {
     <div className="lp-cards">
       <Link className="lp-card" to="/executive-strategy">
         <h3>EXECUTIVE<br />CAREER STRATEGY</h3>
-        <p>Insights, resources and guidance.</p>
         <Arrow />
       </Link>
-      <Link className="lp-card" to="/executive-samples">
+      <Link className="lp-card" to={resourcePaths.resumeSamples}>
         <h3>EXECUTIVE<br />RESUME SAMPLES</h3>
-        <p>Real examples.<br />Real results.</p>
         <Arrow />
       </Link>
-      <a className="lp-card is-orange" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+      <Link className="lp-card is-orange" to={APPLY_PATH}>
         <h3>BOOK A<br />DISCOVERY CALL</h3>
-        <p>Let&rsquo;s discuss your next strategic move.</p>
         <Arrow />
-      </a>
+      </Link>
     </div>
   );
 

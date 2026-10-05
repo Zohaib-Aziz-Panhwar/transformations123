@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout.jsx';
 import { about } from '../data/about.js';
-import { BOOKING_URL, social } from '../data/content.js';
+import { social, APPLY_PATH } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
 
 export default function About() {
@@ -17,7 +17,7 @@ export default function About() {
             <p className="ab-sig">Amy Sindicic, <small>BCC</small></p>
             <p className="ab-role">Executive Career Strategist</p>
             <div className="ab-actions">
-              <a className="btn btn-orange btn-wide" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">BOOK A DISCOVERY CALL</a>
+              <Link className="btn btn-orange btn-wide" to={APPLY_PATH}>BOOK A DISCOVERY CALL</Link>
               <Link className="ab-link" to="/services">Explore services <i>&rarr;</i></Link>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function About() {
           <div data-reveal>
             <p className="ab-eyebrow">WORKING TOGETHER</p>
             <h2>WHAT YOU CAN EXPECT</h2>
-            <p className="ab-expect-copy">Clear positioning, honest feedback, and a plan you can act on.</p>
+            <p className="ab-expect-copy">{about.expectLead}</p>
           </div>
           <ul className="ab-expect-list">
             {about.expect.map((t, i) => (
@@ -91,7 +91,7 @@ export default function About() {
       <section className="ab-cta">
         <div className="container" data-reveal>
           <h2>YOUR EXPERIENCE GOT YOU HERE.<br /><span className="o">YOUR STRATEGY DETERMINES WHAT COMES NEXT.</span></h2>
-          <a className="btn btn-orange btn-wide" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">BOOK A DISCOVERY CALL</a>
+          <Link className="btn btn-orange btn-wide" to={APPLY_PATH}>BOOK A DISCOVERY CALL</Link>
         </div>
       </section>
     </Layout>

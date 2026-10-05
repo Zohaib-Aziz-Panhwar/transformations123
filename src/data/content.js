@@ -13,6 +13,9 @@ export const social = {
 };
 
 export const BOOKING_URL = 'https://amysindicic.simplybook.me/v2/#book';
+/* The site buttons go here first, so people see what they are applying
+   for and the price range before the calendar. */
+export const APPLY_PATH = '/book';
 
 export const OPM_PDF = 'https://www.opm.gov/chcoc/latest-memos/hiring-and-talent-development-for-the-senior-executive-service.pdf';
 
@@ -76,6 +79,17 @@ export const hubs = {
 };
 
 /* ---------- sample / coming-soon pages ---------- */
+/* The pages that carry downloadable material. These used to live only on the
+   WordPress site; the files and their pages are part of this site now, so
+   these are ordinary routes. */
+export const resourcePaths = {
+  resumeSamples:  '/executive-resume-samples',
+  sesSamples:     '/ses-sample-materials',
+  resumesLibrary: '/resumes-library',
+  militarySamples:   '/military-transition-resume-samples',
+  governmentSamples: '/government-to-private-sector-resume-samples',
+};
+
 export const samples = {
   military: {
     title: 'MILITARY RESUME SAMPLES', eyebrow: 'MILITARY LEADERS',

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { contact, BOOKING_URL, social as socialLinks } from '../data/content.js';
+import { contact, social as socialLinks, APPLY_PATH } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
 
 const Icon = {
@@ -68,7 +68,7 @@ export default function SiteFooter() {
                 <a href={`tel:${contact.phoneTel}`}>{contact.phone}</a>
               </li>
             </ul>
-            <a className="btn btn-orange sf-cta" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">BOOK A DISCOVERY CALL</a>
+            <Link className="btn btn-orange sf-cta" to={APPLY_PATH}>BOOK A DISCOVERY CALL</Link>
           </div>
         </div>
       </div>

@@ -1,13 +1,18 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { social } from '../data/content.js';
-import { BOOKING_URL } from '../data/content.js';
+import { social, resourcePaths, APPLY_PATH } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
 
 const links = [
   { to: '/', label: 'HOME', end: true },
   { to: '/about', label: 'ABOUT AMY' },
+  { to: '/services', label: 'SERVICES' },
   { to: '/blog', label: 'BLOG' },
+  { to: resourcePaths.resumesLibrary, label: 'RESUMES LIBRARY' },
+  // Amy asked for this one in full; SES stays short so seven still fit.
+  { to: resourcePaths.resumeSamples, label: 'EXECUTIVE RESUME SAMPLES' },
+  { to: resourcePaths.sesSamples, label: 'SES SAMPLES' },
+  // Amy keeps her reviews on Upwork, so this one leaves the site.
   { href: social.upwork, label: 'TESTIMONIALS' },
 ];
 
@@ -42,7 +47,7 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          <a className="btn btn-orange nav-cta" href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={close}>BOOK A DISCOVERY CALL</a>
+          <Link className="btn btn-orange nav-cta" to={APPLY_PATH} onClick={close}>BOOK A DISCOVERY CALL</Link>
         </nav>
       </div>
     </header>

@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom';
 import Layout from '../components/Layout.jsx';
-import { contact, BOOKING_URL } from '../data/content.js';
+import { contact, APPLY_PATH } from '../data/content.js';
 
 export default function Placeholder({ title, contact: isContact }) {
   return (
@@ -12,7 +13,7 @@ export default function Placeholder({ title, contact: isContact }) {
               <p className="intro-copy">Let&rsquo;s talk about your strategy. Reach Amy directly:</p>
               <p className="contact-line"><a href={`mailto:${contact.email}`}>{contact.email}</a></p>
               <p className="contact-line"><a href={`tel:${contact.phoneTel}`}>{contact.phone}</a></p>
-              <p className="contact-btn"><a className="btn btn-orange btn-wide" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">OPEN MY CALENDAR</a></p>
+              <p className="contact-btn"><Link className="btn btn-orange btn-wide" to={APPLY_PATH}>OPEN MY CALENDAR</Link></p>
             </div>
           ) : (
             <p className="intro-copy">Content for this page is coming soon.</p>

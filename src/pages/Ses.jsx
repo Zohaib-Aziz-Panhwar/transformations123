@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import LandingShell, { Lines } from '../components/LandingShell.jsx';
-import { OPM_PDF, BOOKING_URL } from '../data/content.js';
+import { OPM_PDF, resourcePaths, APPLY_PATH } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
 
 export default function Ses() {
@@ -16,8 +16,8 @@ export default function Ses() {
     <>
     <div className="lp-btn-row">
       <a className="lp-btn-blue" href={OPM_PDF} target="_blank" rel="noopener noreferrer"><Lines items={['CURRENT OPM', 'SES GUIDANCE']} /></a>
-      <Link className="lp-btn-blue" to="/ses-samples"><Lines items={['SES RESUME', 'AND ECQ SAMPLES']} /></Link>
-      <Link className="lp-btn-blue" to="/ses-articles"><Lines items={['EXPLORE SES', 'STRATEGY ARTICLES']} /></Link>
+      <Link className="lp-btn-blue" to={resourcePaths.sesSamples}><Lines items={['SES RESUME', 'AND ECQ SAMPLES']} /></Link>
+      <Link className="lp-btn-blue" to="/ses-strategy"><Lines items={['EXPLORE SES', 'STRATEGY ARTICLES']} /></Link>
     </div>
     <Link className="lp-btn-package" to="/ses-package">
       VIEW COMPLETE SES APPLICATION PACKAGE
@@ -41,7 +41,7 @@ export default function Ses() {
           <p>YOUR STRATEGY<br /><span className="o">DETERMINES WHAT<br />COMES NEXT.</span></p>
         </div>
         <img className="lp-mid-butterfly" src={A + "assets/images/landing/ses-butterfly-mid.png"} alt="" />
-        <a className="lp-cta" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">BOOK A<br />DISCOVERY CALL</a>
+        <Link className="lp-cta" to={APPLY_PATH}>BOOK A<br />DISCOVERY CALL</Link>
       </section>
 
       <div className="lp-line" aria-hidden="true"></div>

@@ -1,4 +1,5 @@
-/* Five service categories — same list on the home page and the Services page.
+/* The service categories. The home page shows the first five; the two marked
+   listOnly appear on the Services page only, which is the full list.
    Each offering links to its Upwork project page (links from Amy, 22 Sept 2026). */
 
 const U = 'https://www.upwork.com/services/product/';
@@ -79,18 +80,79 @@ export const services = [
   },
   {
     slug: 'career-coaching',
+    // Amy asked for the two she moved up to sit on their own top row.
+    topRow: 2,
     name: ['CAREER', 'COACHING'],
     tagline: 'Gain clarity and move forward with purpose.',
     hero: 'career-coaching.jpg', butterfly: 'career-coaching-butterfly.png',
     heroAlign: 'left',
     offerings: [
+      { title: 'Strategic Leadership Advancement Intensive', href: L.coaching5h },
+      { title: 'Senior Executive Career Strategy and Advisory', href: L.execResume },
       { title: 'Senior Leader Career & Work-Life Strategy Intensive', href: L.lifeCoach },
       { title: 'DISC and Personality Insights', href: L.disc },
       { title: '360° Leadership Assessment', href: L.assess360 },
-      { title: 'Strategic Leadership Advancement Intensive', href: L.coaching5h },
-      { title: 'Senior Executive Career Strategy and Advisory', href: L.execResume },
     ],
     outcome: ['MOVE FORWARD WITH', 'GREATER CLARITY'],
+  },
+  {
+    slug: 'executive-coaching',
+    listOnly: true,
+    name: ['EXECUTIVE', 'COACHING'],
+    tagline: 'Strengthen how you lead, decide, and move forward.',
+    hero: 'career-coaching.jpg', butterfly: 'career-coaching-butterfly.png',
+    heroAlign: 'left',
+    // Amy's list for this page is these three and nothing else.
+    offerings: [
+      { title: 'Life Coaching for Transitions and Transformation', href: L.lifeCoach },
+      { title: '360° Leadership Assessment', href: L.assess360 },
+      { title: 'DISC and Personality Insights', href: L.disc },
+    ],
+    outcome: ['LEAD WITH GREATER CLARITY', 'AND CONFIDENCE'],
+  },
+  {
+    slug: 'executive-branding',
+    listOnly: true,
+    name: ['EXECUTIVE', 'BRANDING'],
+    accent: 1,
+    tagline: 'Clarify your leadership value. Define your direction. Position yourself for what comes next.',
+    hero: 'personal-branding.jpg', butterfly: 'personal-branding-butterfly.png',
+    heroAlign: 'left',
+    kicker: 'GREATER POSSIBILITIES FOR WHAT COMES NEXT',
+    eyebrow: 'SENIOR EXECUTIVE CAREER BRANDING & POSITIONING PACKAGES',
+    heading: 'SENIOR EXECUTIVE CAREER STRATEGY & ADVISORY',
+    intro: [
+      'For senior leaders navigating career transition, advancement, or a new market.',
+      'More than resume writing. Every engagement begins with your leadership value, target direction, and executive positioning.',
+    ],
+    // Prices supplied by the client on 24 Sept 2026.
+    tiers: [
+      { name: 'EXECUTIVE POSITIONING', price: '$999', duration: '30 DAYS', items: [
+        'Leadership & transferable-value assessment',
+        '2–3 realistic career directions',
+        'Executive value proposition',
+        'Up to three targeted resumes',
+        'LinkedIn positioning',
+        'Executive cover letter',
+        'Implementation session'] },
+      { name: 'EXECUTIVE MARKET STRATEGY', price: '$1,499', duration: '60 DAYS', items: [
+        'Everything in Executive Positioning',
+        'Target-role & organization mapping',
+        'Recruiters & decision-makers',
+        'Networking & executive outreach',
+        'Hidden-market strategy',
+        'Ongoing opportunity guidance'] },
+      { name: 'EXECUTIVE ADVISORY', price: '$1,999', duration: '90 DAYS', items: [
+        'Everything in Market Strategy',
+        'Executive interview preparation',
+        'Opportunity evaluation',
+        'Continued strategy refinement',
+        'Offer assessment',
+        'Compensation guidance',
+        'Negotiation support'] },
+    ],
+    tierCta: L.execResume,
+    outcome: ['POSITION YOUR EXPERIENCE', 'FOR THE OPPORTUNITIES YOU WANT'],
   },
 ];
 

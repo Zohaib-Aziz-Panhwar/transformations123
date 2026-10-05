@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import LandingShell, { Arrow } from '../components/LandingShell.jsx';
-import { BOOKING_URL } from '../data/content.js';
+import { resourcePaths, APPLY_PATH } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
 
 const pillars = [
@@ -24,19 +24,16 @@ export default function Military() {
     <div className="lp-cards">
       <Link className="lp-card" to="/military-strategy">
         <h3>MILITARY<br />TRANSITION<br />STRATEGY</h3>
-        <p>Practical insights and guidance.</p>
         <Arrow />
       </Link>
-      <Link className="lp-card" to="/military-samples">
+      <Link className="lp-card" to={resourcePaths.militarySamples}>
         <h3>MILITARY<br />RESUME<br />SAMPLES</h3>
-        <p>Real examples.<br />Real results.</p>
         <Arrow />
       </Link>
-      <a className="lp-card is-orange" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+      <Link className="lp-card is-orange" to={APPLY_PATH}>
         <h3>BOOK A<br />DISCOVERY CALL</h3>
-        <p>Let&rsquo;s discuss your transition strategy.</p>
         <Arrow />
-      </a>
+      </Link>
     </div>
   );
 

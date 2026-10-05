@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout.jsx';
 import { services } from '../data/services.js';
-import { BOOKING_URL } from '../data/content.js';
+import { APPLY_PATH } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
 
 export default function Services() {
@@ -28,8 +28,13 @@ export default function Services() {
                 <h2>{s.name[0]} <span>{s.name[1]}</span></h2>
                 <p>{s.tagline}</p>
                 <ul className="sx-offers">
-                  {(s.offerings || [s.feature]).slice(0, 3).map(o => <li key={o.title}>{o.title}</li>)}
-                  {s.offerings && s.offerings.length > 3 && <li className="more">+ {s.offerings.length - 3} more</li>}
+                  {/* A tiers page has neither offerings nor a feature, so fall
+                      back to its tier names rather than rendering undefined. */}
+                  {(s.offerings || s.tiers || [s.feature]).filter(Boolean).slice(0, 3)
+                    .map(o => <li key={o.title || o.name}>{o.title || o.name}</li>)}
+                  {(s.offerings || s.tiers || []).length > 3 && (
+                    <li className="more">+ {(s.offerings || s.tiers).length - 3} more</li>
+                  )}
                 </ul>
                 <span className="sx-more">Explore {s.name.join(' ').toLowerCase()} <i>&rarr;</i></span>
               </div>
@@ -42,7 +47,7 @@ export default function Services() {
         <div className="container" data-reveal>
           <h2>NOT SURE WHERE TO START?</h2>
           <p>A short conversation about where your experience creates the most value, and which path fits.</p>
-          <a className="btn btn-orange btn-wide" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">BOOK A DISCOVERY CALL</a>
+          <Link className="btn btn-orange btn-wide" to={APPLY_PATH}>BOOK A DISCOVERY CALL</Link>
         </div>
       </section>
     </Layout>
