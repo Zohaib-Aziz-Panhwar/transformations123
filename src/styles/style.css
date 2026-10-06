@@ -1058,7 +1058,7 @@ html { scroll-padding-top: 110px; }
 }
 
 .bl-list { background: var(--light); padding: clamp(30px, 4vw, 60px) 0 clamp(36px, 5vw, 72px); }
-.bl-list .container { max-width: none; padding: 0 clamp(20px, 4vw, 72px); }
+.bl-list .container { max-width: 1680px; margin: 0 auto; padding: 0 clamp(16px, 2.4vw, 40px); }
 
 .bl-search { display: flex; align-items: center; gap: 18px; margin-bottom: clamp(24px, 3vw, 40px); flex-wrap: wrap; }
 .bl-search input {
@@ -1158,7 +1158,7 @@ html { scroll-padding-top: 110px; }
 .bp-prose th { background: var(--light); color: var(--navy-text); font-weight: 600; }
 
 .bp-nav { background: var(--white); padding: 0 0 clamp(40px, 5vw, 70px); }
-.bp-nav .container { max-width: 860px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.bp-nav .container { max-width: 1180px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .bp-nav-link {
   display: flex; flex-direction: column; gap: 6px; padding: 20px 24px;
   background: var(--light); border-radius: 14px; color: inherit;
@@ -1170,7 +1170,7 @@ html { scroll-padding-top: 110px; }
 .bp-nav-link.is-next { text-align: right; }
 
 .bp-more { background: var(--light); padding: clamp(40px, 5vw, 72px) 0; }
-.bp-more .container { max-width: none; padding: 0 clamp(20px, 4vw, 72px); }
+.bp-more .container { max-width: 1680px; margin: 0 auto; padding: 0 clamp(16px, 2.4vw, 40px); }
 .bp-more .section-heading { margin-bottom: clamp(24px, 3vw, 40px); }
 
 .bp-missing { padding: clamp(60px, 8vw, 120px) 0; text-align: center; }
@@ -1619,7 +1619,7 @@ html { scroll-padding-top: 110px; }
   position: relative; max-width: 1100px;
   padding-top: clamp(30px, 3.6vw, 52px); padding-bottom: clamp(30px, 3.6vw, 52px);
 }
-.bp-head.has-cover .bp-head-text { max-width: 1100px; }
+.bp-head.has-cover .bp-head-text { max-width: 1760px; }
 .bp-head h1 {
   font-family: var(--font-display); font-weight: 700; line-height: 1.06;
   font-size: clamp(1.9rem, 4.2vw, 3.5rem); margin: 0; max-width: 20ch;
@@ -1652,9 +1652,9 @@ html { scroll-padding-top: 110px; }
 /* The reading column keeps a comfortable measure; the space beside it carries
    the article's own sections rather than sitting empty. */
 .bp-layout {
-  display: grid; grid-template-columns: minmax(0, 760px) 240px;
-  justify-content: center; gap: clamp(28px, 4vw, 72px);
-  max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px);
+  display: grid; grid-template-columns: minmax(0, 1fr) 320px;
+  justify-content: center; gap: clamp(32px, 5vw, 96px);
+  max-width: 1760px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 56px);
   align-items: start;
 }
 .bp-main { min-width: 0; }
