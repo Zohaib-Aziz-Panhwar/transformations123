@@ -23,7 +23,7 @@ export default function Book() {
               alt="Apply to work with me. Due to a full schedule, I am only accepting a
                    limited number of new clients at this time. Please use the link below
                    to schedule an evaluation call and apply. Please note: my comprehensive
-                   packages range from $699 to $1,999. Schedule your evaluation call and apply."
+                   packages range from $499 to $1,999. Schedule your evaluation call and apply."
             />
           </a>
 
@@ -39,7 +39,7 @@ export default function Book() {
             </a>
             <p>
               Due to a full schedule, Amy is accepting a limited number of new clients.
-              Comprehensive packages range from <strong>$699 to $1,999</strong>.
+              Professional packages range from <strong>$499 to $1,999</strong>.
             </p>
           </div>
 

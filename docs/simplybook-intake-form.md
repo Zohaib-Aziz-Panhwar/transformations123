@@ -38,7 +38,7 @@ first four only need adding if Amy wants them repeated on the form itself.
 | 10 | What is your timeline for your next career move? | Dropdown | Yes |
 | 11 | What are your goals for your next career move? | Long text | Yes |
 | 12 | Please provide your LinkedIn profile URL so we may review before our call. | Text | Yes |
-| 13 | My professional services generally range from $699 to $1,999+. Type "YES" to confirm you are ready to invest. | Text | Yes |
+| 13 | My professional services generally range from $499 to $1,999. Type "YES" to confirm you are ready to invest. | Text | Yes |
 
 ### 5. How did you hear about me?
 ```
@@ -128,6 +128,5 @@ rather the long version went on the booking form instead.
 
 Amy chose *"Type YES to confirm you are ready to invest"* over a
 Yes / Possibly / Not at this time dropdown, because it qualifies harder. That
-is what is written above. The price range here is **$699 to $1,999+**, matching
-the apply page on the site; one of her notes said $249–$999+, so the two should
-be reconciled before this goes live.
+is what is written above. The price range is **$499 to $1,999** (set by Amy on 7 Oct 2026),
+matching the apply page artwork and the site.
