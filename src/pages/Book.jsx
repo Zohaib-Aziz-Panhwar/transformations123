@@ -39,9 +39,15 @@ const BLANK = {
 
 export default function Book() {
   const navigate = useNavigate();
+  const [started, setStarted] = useState(false);
   const [f, setF] = useState(BLANK);
   const [errors, setErrors] = useState({});
   const calendlyReady = useRef(false);
+
+  function begin() {
+    setStarted(true);
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }
 
   const set = (k) => (e) => setF((s) => ({ ...s, [k]: e.target.value }));
 
@@ -130,6 +136,37 @@ export default function Book() {
 
   const cls = (k) => `bk-field${errors[k] ? ' is-error' : ''}`;
 
+  /* Step 1: Amy's artwork. People meet her and see the price before the form. */
+  if (!started) {
+    return (
+      <Layout title="Apply to Work With Me">
+        <section className="bki">
+          <div className="bki-inner">
+            <button type="button" className="bki-panel" onClick={begin}
+              aria-label="Start your application">
+              <img src={`${A}assets/images/booking/apply-to-work-with-me.jpg`}
+                alt="Apply to work with me. Due to a full schedule, I am only accepting a
+                     limited number of new clients. Comprehensive packages range from
+                     $499 to $1,999. Start your application." />
+            </button>
+            <button type="button" className="btn btn-orange btn-wide bki-start" onClick={begin}>
+              START YOUR APPLICATION
+              <svg className="arrow" viewBox="0 0 40 16" aria-hidden="true">
+                <path d="M0 8h34M27 1l7 7-7 7" fill="none" stroke="currentColor"
+                  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            <p className="bki-note">
+              Comprehensive packages range from <strong>$499 to $1,999</strong>.
+              You&rsquo;ll pick a time after you apply.
+            </p>
+          </div>
+        </section>
+      </Layout>
+    );
+  }
+
+  /* Step 2: the application form, which hands off to Calendly. */
   return (
     <Layout title="Apply to Work With Me">
       <section className="bkf">
