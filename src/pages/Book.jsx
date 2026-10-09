@@ -151,27 +151,23 @@ export default function Book() {
           </header>
 
           <form className="bkf-form" onSubmit={handleSubmit} noValidate>
-            <div className="bk-row">
-              <label className={cls('firstName')}>
-                <span>First Name <b>*</b></span>
-                <input type="text" value={f.firstName} onChange={set('firstName')} placeholder="First name" />
-              </label>
-              <label className={cls('lastName')}>
-                <span>Last Name <b>*</b></span>
-                <input type="text" value={f.lastName} onChange={set('lastName')} placeholder="Last name" />
-              </label>
-            </div>
+            <label className={cls('firstName')}>
+              <span>First Name <b>*</b></span>
+              <input type="text" value={f.firstName} onChange={set('firstName')} placeholder="First name" />
+            </label>
+            <label className={cls('lastName')}>
+              <span>Last Name <b>*</b></span>
+              <input type="text" value={f.lastName} onChange={set('lastName')} placeholder="Last name" />
+            </label>
 
-            <div className="bk-row">
-              <label className={cls('email')}>
-                <span>Email <b>*</b></span>
-                <input type="email" value={f.email} onChange={set('email')} placeholder="Email address" />
-              </label>
-              <label className={cls('phone')}>
-                <span>Phone Number <b>*</b></span>
-                <input type="tel" value={f.phone} onChange={set('phone')} placeholder="Phone number" />
-              </label>
-            </div>
+            <label className={cls('email')}>
+              <span>Email <b>*</b></span>
+              <input type="email" value={f.email} onChange={set('email')} placeholder="Email address" />
+            </label>
+            <label className={cls('phone')}>
+              <span>Phone Number <b>*</b></span>
+              <input type="tel" value={f.phone} onChange={set('phone')} placeholder="Phone number" />
+            </label>
 
             <label className={cls('hear')}>
               <span>How did you hear about me? <b>*</b></span>
@@ -201,24 +197,22 @@ export default function Book() {
                 placeholder="For example: industry, function, leadership level, target roles, etc." />
             </label>
 
-            <div className="bk-row">
-              <label className={cls('compensation')}>
-                <span>What is your target compensation range? <b>*</b></span>
-                <select value={f.compensation} onChange={set('compensation')}>
-                  <option value="" disabled>Select...</option>
-                  {COMPENSATION.map((o) => <option key={o} value={o}>{o}</option>)}
-                </select>
-              </label>
-              <label className={cls('timeline')}>
-                <span>What is your timeline for your next career move? <b>*</b></span>
-                <select value={f.timeline} onChange={set('timeline')}>
-                  <option value="" disabled>Select...</option>
-                  {TIMELINE.map((o) => <option key={o} value={o}>{o}</option>)}
-                </select>
-              </label>
-            </div>
+            <label className={cls('compensation')}>
+              <span>What is your target compensation range? <b>*</b></span>
+              <select value={f.compensation} onChange={set('compensation')}>
+                <option value="" disabled>Select...</option>
+                {COMPENSATION.map((o) => <option key={o} value={o}>{o}</option>)}
+              </select>
+            </label>
+            <label className={cls('timeline')}>
+              <span>What is your timeline for your next career move? <b>*</b></span>
+              <select value={f.timeline} onChange={set('timeline')}>
+                <option value="" disabled>Select...</option>
+                {TIMELINE.map((o) => <option key={o} value={o}>{o}</option>)}
+              </select>
+            </label>
 
-            <label className={cls('goals')}>
+            <label className={`${cls('goals')} bk-full`}>
               <span>What are your goals for your next career move? <b>*</b></span>
               <textarea rows="3" value={f.goals} onChange={set('goals')}
                 placeholder="For example: position, industry, leadership level, long-term goals, anything you think will help us." />

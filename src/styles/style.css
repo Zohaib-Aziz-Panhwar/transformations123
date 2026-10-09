@@ -1792,7 +1792,7 @@ html { scroll-padding-top: 110px; }
   background: linear-gradient(90deg, var(--orange) 0%, var(--orange-hi) 40%, var(--navy) 100%);
   opacity: .9;
 }
-.bkf-inner { position: relative; max-width: 920px; margin: 0 auto; padding: 0 clamp(14px, 3vw, 28px); }
+.bkf-inner { position: relative; max-width: 1200px; margin: 0 auto; padding: 0 clamp(14px, 3vw, 32px); }
 
 /* Branded banner: brand lock-up on the left, title panel on the right. */
 .bkf-head {
@@ -1834,11 +1834,14 @@ html { scroll-padding-top: 110px; }
 /* The form card. */
 .bkf-form {
   background: var(--white); border-radius: 0 0 16px 16px;
-  padding: clamp(22px, 3.6vw, 46px) clamp(18px, 3.6vw, 46px) clamp(26px, 3.6vw, 44px);
+  padding: clamp(24px, 3.4vw, 52px) clamp(20px, 3.4vw, 54px) clamp(28px, 3.4vw, 48px);
   box-shadow: 0 18px 44px rgba(0, 14, 33, .12);
-  display: flex; flex-direction: column; gap: clamp(16px, 2vw, 22px);
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 1.8vw, 24px) clamp(20px, 2.6vw, 40px);
+  align-items: start;
 }
-.bk-row { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(14px, 2vw, 22px); }
+/* Fields that read better across the whole width. */
+.bk-full, .bkf-submit, .bkf-foot { grid-column: 1 / -1; }
 
 .bk-field { display: flex; flex-direction: column; gap: 7px; }
 .bk-field > span {
@@ -1880,9 +1883,9 @@ html { scroll-padding-top: 110px; }
 .bkf-submit .arrow { width: 34px; height: 14px; margin-left: 12px; }
 .bkf-foot { text-align: center; color: #5A6473; font-size: .85rem; margin: 2px 0 0; }
 
-@media (max-width: 680px) {
+@media (max-width: 760px) {
   .bkf-head { grid-template-columns: 1fr; }
-  .bk-row { grid-template-columns: 1fr; }
+  .bkf-form { grid-template-columns: 1fr; }
 }
 
 .bkd { background: var(--light); padding: clamp(30px, 4vw, 60px) 0 clamp(40px, 5vw, 76px); }
