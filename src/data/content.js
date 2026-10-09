@@ -13,8 +13,9 @@ export const social = {
 };
 
 export const BOOKING_URL = 'https://amysindicic.simplybook.me/v2/#book';
-/* The site buttons go here first, so people see what they are applying
-   for and the price range before the calendar. */
+/* The scheduling page the application form hands off to, pre-filled. */
+export const CALENDLY_URL = 'https://calendly.com/amysindicic/30min';
+/* The site buttons go here first, so people apply before the calendar. */
 export const APPLY_PATH = '/book';
 
 export const OPM_PDF = 'https://www.opm.gov/chcoc/latest-memos/hiring-and-talent-development-for-the-senior-executive-service.pdf';
