@@ -1773,9 +1773,26 @@ html { scroll-padding-top: 110px; }
    ========================================================= */
 
 /* The application form. People tell Amy about themselves here, then the form
-   hands off to Calendly for the time. Designed from Amy's own mock-up. */
-.bkf { background: #EAEEF3; padding: clamp(20px, 3vw, 44px) 0 clamp(40px, 5vw, 72px); }
-.bkf-inner { max-width: 880px; margin: 0 auto; padding: 0 clamp(14px, 3vw, 24px); }
+   hands off to Calendly for the time. Designed from Amy's own mock-up.
+
+   The page is wider than the card on purpose, so the brand-tinted ground
+   around it reads as a designed surface rather than empty grey. */
+.bkf {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(48% 42% at -2% -4%, rgba(243, 98, 5, .10), transparent 60%),
+    radial-gradient(52% 55% at 102% 14%, rgba(0, 14, 33, .14), transparent 58%),
+    radial-gradient(40% 40% at 100% 100%, rgba(243, 98, 5, .07), transparent 60%),
+    linear-gradient(180deg, #EDF1F6 0%, #E5EAF1 55%, #E8ECF2 100%);
+  padding: clamp(24px, 3.6vw, 58px) 0 clamp(46px, 5.6vw, 88px);
+}
+/* A soft brand hairline sweeping across the top of the ground. */
+.bkf::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--orange) 0%, var(--orange-hi) 40%, var(--navy) 100%);
+  opacity: .9;
+}
+.bkf-inner { position: relative; max-width: 920px; margin: 0 auto; padding: 0 clamp(14px, 3vw, 28px); }
 
 /* Branded banner: brand lock-up on the left, title panel on the right. */
 .bkf-head {
