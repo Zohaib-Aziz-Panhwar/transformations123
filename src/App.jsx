@@ -12,11 +12,12 @@ import SesPackage from './pages/SesPackage.jsx';
 import Services from './pages/Services.jsx';
 import Blog from './pages/Blog.jsx';
 import SampleMaterials from './pages/SampleMaterials.jsx';
+import SesSampleGallery from './pages/SesSampleGallery.jsx';
 import ResumesLibrary from './pages/ResumesLibrary.jsx';
 import Strategy from './pages/Strategy.jsx';
 import Book from './pages/Book.jsx';
 import Booked from './pages/Booked.jsx';
-import { resumeSamples, sesSamples, militarySamples, governmentSamples } from './data/resources.js';
+import { resumeSamples, sesSamples, sesSampleGallery, militarySamples, governmentSamples } from './data/resources.js';
 import BlogPost from './pages/BlogPost.jsx';
 import About from './pages/About.jsx';
 import Service from './pages/Service.jsx';
@@ -42,7 +43,7 @@ export default function App() {
         <Route path="/executive-resume-samples" element={<SampleMaterials page={resumeSamples} />} />
         {/* The address it was published at for a few days. */}
         <Route path="/resume-samples" element={<Navigate to="/executive-resume-samples" replace />} />
-        <Route path="/ses-sample-materials" element={<SampleMaterials page={sesSamples} />} />
+        <Route path="/ses-sample-materials" element={<SesSampleGallery page={sesSampleGallery} />} />
         <Route path="/military-transition-resume-samples" element={<SampleMaterials page={militarySamples} />} />
         <Route path="/government-to-private-sector-resume-samples" element={<SampleMaterials page={governmentSamples} />} />
         <Route path="/resumes-library" element={<ResumesLibrary />} />

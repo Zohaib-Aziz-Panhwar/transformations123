@@ -1530,6 +1530,44 @@ html { scroll-padding-top: 110px; }
   width: 100%; height: auto; display: block; border-radius: 14px;
   box-shadow: 0 26px 54px rgba(0, 0, 0, .46);
 }
+/* The gallery hero carries no cover image, so it runs as a single centred
+   column rather than the two-column split the sample pages use. */
+.sm-hero-inner--center {
+  grid-template-columns: minmax(0, 820px); justify-content: center; text-align: center;
+}
+.sm-hero-inner--center .sm-lead,
+.sm-hero-inner--center .sm-intro { max-width: none; }
+.sm-hero-inner--center .page-back { display: inline-block; }
+
+/* SES sample gallery: one card per package -- Amy's artwork, then its files. */
+.sg { background: var(--light); padding: clamp(30px, 4vw, 60px) 0 clamp(40px, 5vw, 76px); }
+.sg-inner {
+  max-width: 1040px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px);
+  display: flex; flex-direction: column; gap: clamp(28px, 4vw, 48px);
+}
+.sg-card {
+  background: var(--white); border: 1px solid var(--divider); border-radius: 14px;
+  overflow: hidden; box-shadow: 0 16px 40px rgba(0, 14, 33, .12);
+}
+.sg-art { display: block; width: 100%; height: auto; border-bottom: 1px solid var(--divider); }
+.sg-dl { display: grid; grid-template-columns: repeat(3, 1fr); }
+.sg-file {
+  display: flex; align-items: center; gap: 11px;
+  padding: clamp(15px, 1.6vw, 20px) clamp(16px, 1.8vw, 24px);
+  color: var(--navy-text); border-right: 1px solid var(--divider);
+  transition: background .15s ease, color .15s ease;
+}
+.sg-file:last-child { border-right: 0; }
+.sg-file:hover { background: #FFF4EC; color: var(--orange-text); }
+.sg-file:focus-visible { outline: 3px solid var(--orange); outline-offset: -3px; }
+.sg-file .dl-icon { width: 22px; height: 22px; flex: none; color: var(--orange); }
+.sg-file-name { font-weight: 700; font-size: clamp(.92rem, 1.1vw, 1rem); }
+.sg-file-meta { margin-left: auto; color: #6B7480; font-size: .82rem; white-space: nowrap; }
+@media (max-width: 640px) {
+  .sg-dl { grid-template-columns: 1fr; }
+  .sg-file { border-right: 0; border-bottom: 1px solid var(--divider); }
+  .sg-file:last-child { border-bottom: 0; }
+}
 
 .sm-h2 {
   font-family: var(--font-display); font-weight: 700; color: var(--navy-text);

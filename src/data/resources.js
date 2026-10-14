@@ -205,3 +205,39 @@ export const resumesLibrary = {
     },
   ],
 };
+
+/* Two full SES sample packages shown as a gallery on the SES Samples page.
+   Amy supplied each card's artwork (title, summary, and a resume preview);
+   the three files beneath it are the complete package. Added 14 Oct 2026. */
+export const sesSampleGallery = {
+  slug: 'ses-sample-materials',
+  eyebrow: 'SAMPLE MATERIALS',
+  title: 'SES RESUME SAMPLES',
+  lead: 'Full sample packages -- an SES resume with its ECQ and TQ narratives -- as they appear in a competitive Senior Executive Service application.',
+  intro: [
+    'These samples show the format, structure, branding, and level of detail found in strong SES applications. Each package includes the two-page resume plus the ECQ and TQ narratives used to prepare for the agency and QRB interviews.',
+  ],
+  packages: [
+    {
+      key: 'healthcare',
+      image: 'assets/images/samples/ses-healthcare-sample.jpg',
+      alt: 'SES Resume Sample -- Healthcare Quality, Patient Safety and Oversight (Angela M. Torres, LCSW)',
+      downloads: [
+        { title: 'SES Resume', file: D + 'SES-Resume-Sample-Angela-Torres.pdf', kind: 'PDF', size: '250 KB' },
+        { title: 'ECQ Narratives', file: D + 'SES-ECQ-Narratives-Angela-Torres.pdf', kind: 'PDF', size: '120 KB' },
+        { title: 'TQ Narratives', file: D + 'SES-TQ-Narratives-Angela-Torres.pdf', kind: 'PDF', size: '102 KB' },
+      ],
+    },
+    {
+      key: 'financial',
+      image: 'assets/images/samples/ses-financial-sample.jpg',
+      alt: 'SES Resume Sample -- Financial Management, Budget and Resource Stewardship (Daniel R. Okafor, CPA, CGFM)',
+      downloads: [
+        { title: 'SES Resume', file: D + 'SES-Resume-Sample-Daniel-Okafor.pdf', kind: 'PDF', size: '168 KB' },
+        { title: 'ECQ Narratives', file: D + 'SES-ECQ-Narratives-Daniel-Okafor.pdf', kind: 'PDF', size: '193 KB' },
+        { title: 'TQ Narratives', file: D + 'SES-TQ-Narratives-Daniel-Okafor.pdf', kind: 'PDF', size: '168 KB' },
+      ],
+    },
+  ],
+  closing: sesSamples.closing,
+};
