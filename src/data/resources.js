@@ -217,8 +217,8 @@ export const sesSampleGallery = {
   subhead: 'Your executive experience needs a clear leadership story.',
   feature: 'assets/images/samples/ses-sample-materials.jpg',
   intro: [
-    'Explore how relevant accomplishments, executive scope, and measurable results can be organized into a focused SES resume and supporting qualification narratives.',
-    'The resume establishes the leadership story. The ECQ and TQ narratives develop the examples that support it.',
+    'The samples on this page are fictionalized. Each one presents an invented senior executive candidate, with a two-page SES resume, Executive Core Qualification (ECQ) narratives, and Technical Qualification (TQ) narratives. Names, contact details, accomplishments, and figures are illustrative only and do not describe real people or real results.',
+    'Every sample follows OPM’s 2025 SES guidance: a two-page resume that shows the five new ECQs and the job’s TQs, and narratives written in the Challenge, Context, Action, Result (CCAR) format to prepare for the agency and Qualifications Review Board structured interviews. Use them as models for your own story, not as text to copy.',
   ],
   disclaimer: 'Fictional sample materials. Names, contact details, accomplishments, and figures are illustrative.',
   packages: [
