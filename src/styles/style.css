@@ -118,7 +118,7 @@ h1, h2, h3, p { margin: 0; }
   align-items: center;
   gap: 48px;
 }
-.main-nav ul {
+.main-nav > ul {
   display: flex;
   gap: 36px;
 }
@@ -143,6 +143,36 @@ h1, h2, h3, p { margin: 0; }
 }
 .main-nav li a:hover::after,
 .main-nav li a.is-active::after { transform: scaleX(1); }
+
+/* RESUME SAMPLES dropdown */
+.nav-sub-toggle {
+  font-family: var(--font-display); font-weight: 500; font-size: 1.1rem; letter-spacing: .03em;
+  color: var(--white); background: none; border: 0; cursor: pointer;
+  padding: 6px 0; display: inline-flex; align-items: center; gap: 7px;
+}
+.nav-caret { width: 10px; height: 6px; transition: transform .2s ease; }
+.has-sub.is-open .nav-caret { transform: rotate(180deg); }
+.nav-sub { list-style: none; margin: 0; padding: 0; }
+@media (min-width: 1281px) {
+  .has-sub { position: relative; }
+  .nav-sub {
+    position: absolute; top: 100%; left: 50%; transform: translate(-50%, 8px);
+    min-width: 250px; background: var(--navy); padding: 8px;
+    border: 1px solid rgba(255,255,255,.12); border-radius: 12px;
+    box-shadow: 0 20px 44px rgba(0,0,0,.45); z-index: 70;
+    opacity: 0; visibility: hidden;
+    transition: opacity .18s ease, transform .18s ease, visibility .18s;
+  }
+  .has-sub:hover .nav-sub, .has-sub:focus-within .nav-sub, .has-sub.is-open .nav-sub {
+    opacity: 1; visibility: visible; transform: translate(-50%, 12px);
+  }
+  .nav-sub li a {
+    display: block; padding: 11px 16px; border-radius: 8px; white-space: nowrap;
+    font-family: var(--font-body); font-weight: 500; font-size: .98rem; letter-spacing: 0; color: var(--white);
+  }
+  .nav-sub li a::after { display: none; }
+  .nav-sub li a:hover, .nav-sub li a.is-active { background: rgba(255,255,255,.08); color: var(--orange-hi); }
+}
 
 .nav-cta {
   padding: 15px 22px;
@@ -463,8 +493,12 @@ h1, h2, h3, p { margin: 0; }
     border-top: 1px solid rgba(255,255,255,.08);
   }
   .main-nav.is-open { display: flex; }
-  .main-nav ul { flex-direction: column; gap: 4px; }
+  .main-nav > ul { flex-direction: column; gap: 4px; }
   .main-nav li a { display: block; padding: 12px 0; font-size: 1.2rem; }
+  .nav-sub-toggle { display: flex; width: 100%; justify-content: space-between; padding: 12px 0; font-size: 1.2rem; }
+  .nav-sub { display: none; padding-left: 14px; }
+  .has-sub.is-open .nav-sub { display: block; }
+  .nav-sub li a { font-size: 1.08rem; padding: 10px 0; }
   .nav-cta { margin-top: 12px; }
 
   .hero {

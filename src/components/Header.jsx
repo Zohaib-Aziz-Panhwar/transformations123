@@ -9,16 +9,19 @@ const links = [
   { to: '/services', label: 'SERVICES' },
   { to: '/blog', label: 'BLOG' },
   { to: resourcePaths.resumesLibrary, label: 'RESUMES LIBRARY' },
-  // Amy asked for this one in full; SES stays short so seven still fit.
-  { to: resourcePaths.resumeSamples, label: 'EXECUTIVE RESUME SAMPLES' },
-  { to: resourcePaths.sesSamples, label: 'SES SAMPLES' },
+  // The two sample pages now sit under one menu.
+  { label: 'RESUME SAMPLES', children: [
+    { to: resourcePaths.sesSamples, label: 'SES Resume Samples' },
+    { to: resourcePaths.resumeSamples, label: 'Executive Resume Samples' },
+  ] },
   // Amy keeps her reviews on Upwork, so this one leaves the site.
   { href: social.upwork, label: 'TESTIMONIALS' },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const close = () => setOpen(false);
+  const [sub, setSub] = useState(false);
+  const close = () => { setOpen(false); setSub(false); };
 
   return (
     <header className="site-header">
@@ -40,11 +43,34 @@ export default function Header() {
         <nav className={'main-nav' + (open ? ' is-open' : '')}>
           <ul>
             {links.map(l => (
-              <li key={l.label}>
-                {l.href
-                  ? <a href={l.href} target="_blank" rel="noopener noreferrer" onClick={close}>{l.label}</a>
-                  : <NavLink to={l.to} end={l.end} className={({ isActive }) => (isActive ? 'is-active' : undefined)} onClick={close}>{l.label}</NavLink>}
-              </li>
+              l.children ? (
+                <li key={l.label} className={'has-sub' + (sub ? ' is-open' : '')}>
+                  <button
+                    type="button"
+                    className="nav-sub-toggle"
+                    aria-expanded={sub}
+                    onClick={() => setSub(s => !s)}
+                  >
+                    {l.label}
+                    <svg className="nav-caret" viewBox="0 0 10 6" aria-hidden="true">
+                      <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+                  <ul className="nav-sub">
+                    {l.children.map(c => (
+                      <li key={c.label}>
+                        <NavLink to={c.to} className={({ isActive }) => (isActive ? 'is-active' : undefined)} onClick={close}>{c.label}</NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ) : (
+                <li key={l.label}>
+                  {l.href
+                    ? <a href={l.href} target="_blank" rel="noopener noreferrer" onClick={close}>{l.label}</a>
+                    : <NavLink to={l.to} end={l.end} className={({ isActive }) => (isActive ? 'is-active' : undefined)} onClick={close}>{l.label}</NavLink>}
+                </li>
+              )
             ))}
           </ul>
           <Link className="btn btn-orange nav-cta" to={APPLY_PATH} onClick={close}>BOOK A DISCOVERY CALL</Link>
