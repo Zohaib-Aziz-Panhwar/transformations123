@@ -1,13 +1,47 @@
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout.jsx';
 import { APPLY_PATH } from '../data/content.js';
 
 const A = import.meta.env.BASE_URL;
+const PER_DESKTOP = 3;
+const PER_MOBILE = 2;
 
-/* The SES Samples landing page. A navy hero with the "SES Sample Materials"
-   graphic, then one block per fictional candidate: a resume preview, the
-   leadership story it tells, and the three files of the package. */
+/* Three samples per page on desktop, two on a phone, with paging controls. */
+function usePageSize() {
+  const [size, setSize] = useState(
+    () => (typeof window !== 'undefined' && window.matchMedia('(max-width: 760px)').matches ? PER_MOBILE : PER_DESKTOP),
+  );
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 760px)');
+    const on = () => setSize(mq.matches ? PER_MOBILE : PER_DESKTOP);
+    on();
+    mq.addEventListener('change', on);
+    return () => mq.removeEventListener('change', on);
+  }, []);
+  return size;
+}
+
+/* The SES Samples landing page: a navy hero with the "SES Sample Materials"
+   graphic, then one block per fictional candidate -- resume preview, the
+   leadership story it tells, and the three files of the package -- paged. */
 export default function SesSampleGallery({ page }) {
+  const pageSize = usePageSize();
+  const [pageIndex, setPageIndex] = useState(0);
+  const listRef = useRef(null);
+
+  const pageCount = Math.max(1, Math.ceil(page.packages.length / pageSize));
+  // Keep the current page valid when the page size changes (resize / rotate).
+  useEffect(() => { setPageIndex((p) => Math.min(p, pageCount - 1)); }, [pageCount]);
+
+  const goTo = (i) => {
+    setPageIndex(i);
+    if (listRef.current) listRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  const start = pageIndex * pageSize;
+  const shown = page.packages.slice(start, start + pageSize);
+
   return (
     <Layout title={page.title}>
       <section className="ses-hero">
@@ -27,17 +61,15 @@ export default function SesSampleGallery({ page }) {
         </div>
       </section>
 
-      {page.disclaimer && (
-        <p className="ses-disclaimer">{page.disclaimer}</p>
-      )}
+      {page.disclaimer && <p className="ses-disclaimer">{page.disclaimer}</p>}
 
       <section className="ses-list">
-        <div className="ses-list-inner">
-          {page.packages.map(pkg => (
+        <div className="ses-list-inner" ref={listRef}>
+          {shown.map(pkg => (
             <article className="ses-item" key={pkg.key}>
               <div className="ses-item-top">
                 <div className="ses-item-art">
-                  <img src={`${A}${pkg.resume}`} alt={`${pkg.title} — SES resume sample`} />
+                  <img src={`${A}${pkg.resume}`} alt={`${pkg.title} — SES resume sample`} loading="lazy" />
                 </div>
                 <div className="ses-item-text">
                   <h2>{pkg.title}</h2>
@@ -55,6 +87,31 @@ export default function SesSampleGallery({ page }) {
               </div>
             </article>
           ))}
+
+          {pageCount > 1 && (
+            <nav className="ses-pager" aria-label="Sample pages">
+              <button
+                type="button" className="ses-pager-btn"
+                onClick={() => goTo(pageIndex - 1)} disabled={pageIndex === 0}
+              >&larr; Prev</button>
+              <ul className="ses-pager-nums">
+                {Array.from({ length: pageCount }, (_, i) => (
+                  <li key={i}>
+                    <button
+                      type="button"
+                      className={'ses-pager-num' + (i === pageIndex ? ' is-active' : '')}
+                      aria-current={i === pageIndex ? 'page' : undefined}
+                      onClick={() => goTo(i)}
+                    >{i + 1}</button>
+                  </li>
+                ))}
+              </ul>
+              <button
+                type="button" className="ses-pager-btn"
+                onClick={() => goTo(pageIndex + 1)} disabled={pageIndex === pageCount - 1}
+              >Next &rarr;</button>
+            </nav>
+          )}
         </div>
       </section>
 

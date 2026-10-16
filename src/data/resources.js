@@ -244,6 +244,50 @@ export const sesSampleGallery = {
         { title: 'TQ Narratives', file: D + 'SES-TQ-Narratives-Angela-Torres.pdf' },
       ],
     },
+    {
+      key: 'humancapital',
+      title: 'Human Capital Strategy & Workforce Transformation',
+      resume: 'assets/images/samples/ses-humancapital-resume.jpg',
+      summary: 'This sample presents a federal and military leadership career through the lens of enterprise workforce transformation. It emphasizes large-scale hiring reform, HR modernization, cross-agency coordination, and measurable improvements in efficiency, connecting complex personnel operations to executive leadership and mission results.',
+      downloads: [
+        { title: 'SES Resume', file: D + 'SES-Resume-Sample-Marcus-Ellison.pdf' },
+        { title: 'ECQ Narratives', file: D + 'SES-ECQ-Narratives-Marcus-Ellison.pdf' },
+        { title: 'TQ Narratives', file: D + 'SES-TQ-Narratives-Marcus-Ellison.pdf' },
+      ],
+    },
+    {
+      key: 'legal',
+      title: 'Legal Leadership, Regulatory Strategy & Enforcement',
+      resume: 'assets/images/samples/ses-legal-resume.jpg',
+      summary: 'This sample demonstrates how federal legal expertise can be presented as a strong executive leadership story. It highlights litigation and regulatory oversight, leadership of multidisciplinary legal teams, and modernization of legal operations, connecting complex legal work to measurable cost savings, faster case resolution, and stronger accountability.',
+      downloads: [
+        { title: 'SES Resume', file: D + 'SES-Resume-Sample-Margaret-Holloway.pdf' },
+        { title: 'ECQ Narratives', file: D + 'SES-ECQ-Narratives-Margaret-Holloway.pdf' },
+        { title: 'TQ Narratives', file: D + 'SES-TQ-Narratives-Margaret-Holloway.pdf' },
+      ],
+    },
+    {
+      key: 'operations',
+      title: 'Operations, Infrastructure & Mission Delivery',
+      resume: 'assets/images/samples/ses-operations-resume.jpg',
+      summary: 'This sample turns federal facilities and military logistics experience into a compelling executive leadership story built on OPM’s five 2025 Executive Core Qualifications. It highlights large-scale workforce and budget oversight, capital program recovery, and emergency response, connecting complex operations to measurable cost savings, improved service delivery, and continuity of essential government services.',
+      downloads: [
+        { title: 'SES Resume', file: D + 'SES-Resume-Sample-Teresa-Alvarado.pdf' },
+        { title: 'ECQ Narratives', file: D + 'SES-ECQ-Narratives-Teresa-Alvarado.pdf' },
+        { title: 'TQ Narratives', file: D + 'SES-TQ-Narratives-Teresa-Alvarado.pdf' },
+      ],
+    },
+    {
+      key: 'research',
+      title: 'Research Commercialization, Intellectual Property & Strategic Partnerships',
+      resume: 'assets/images/samples/ses-research-resume.jpg',
+      summary: 'This sample presents federal research commercialization as a compelling executive leadership story. It highlights technology transfer, intellectual property management, licensing, and strategic partnerships, connecting scientific and legal expertise to faster commercialization, increased licensing revenue, and innovations that improve care for Veterans.',
+      downloads: [
+        { title: 'SES Resume', file: D + 'SES-Resume-Sample-Elena-Castellano.pdf' },
+        { title: 'ECQ Narratives', file: D + 'SES-ECQ-Narratives-Elena-Castellano.pdf' },
+        { title: 'TQ Narratives', file: D + 'SES-TQ-Narratives-Elena-Castellano.pdf' },
+      ],
+    },
   ],
   closing: sesSamples.closing,
 };
