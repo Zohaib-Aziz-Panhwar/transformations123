@@ -7,7 +7,7 @@ export const posts = [
     "title": "Everyone Has AI. Not Everyone Has a Strategy.",
     "date": "2026-10-16",
     "excerpt": "You can ask AI to rewrite your resume, create a cover letter, or help you prepare for an interview. Within minutes, you can have polished language describing your experience. But before you decide how to tell your story, you need to decide what that story should communicate—and to whom…",
-    "image": null,
+    "image": "everyone-has-ai-not-everyone-has-a-strategy.jpg",
     "imageAlt": "Everyone Has AI. Not Everyone Has a Strategy.",
     "wide": false,
     "category": null,
