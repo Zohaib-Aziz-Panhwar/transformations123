@@ -4,47 +4,52 @@ import { APPLY_PATH } from '../data/content.js';
 
 const A = import.meta.env.BASE_URL;
 
-function DownloadIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="dl-icon">
-      <path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16"
-        fill="none" stroke="currentColor" strokeWidth="2"
-        strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-/* The SES Samples page: a gallery of full sample packages. Each card is Amy's
-   artwork -- a resume preview with the package title and summary -- and the
-   three files of the package sit beneath it as downloads. */
+/* The SES Samples landing page. A navy hero with the "SES Sample Materials"
+   graphic, then one block per fictional candidate: a resume preview, the
+   leadership story it tells, and the three files of the package. */
 export default function SesSampleGallery({ page }) {
   return (
     <Layout title={page.title}>
-      <section className="sm-hero">
-        <div className="sm-hero-inner sm-hero-inner--center">
-          <div className="sm-hero-text">
+      <section className="ses-hero">
+        <div className="ses-hero-inner">
+          <div className="ses-hero-text">
             <Link className="page-back" to="/">&larr; Back to Home</Link>
-            <p className="st-eyebrow"><span>{page.eyebrow}</span></p>
+            <p className="ses-eyebrow">{page.eyebrow}</p>
             <h1>{page.title}</h1>
-            <p className="sm-lead">{page.lead}</p>
-            {page.intro.map(t => <p key={t} className="sm-intro">{t}</p>)}
+            <p className="ses-subhead">{page.subhead}</p>
+            {page.intro.map(t => <p key={t} className="ses-intro">{t}</p>)}
           </div>
+          {page.feature && (
+            <div className="ses-hero-art">
+              <img src={`${A}${page.feature}`} alt="SES sample materials: resume, ECQs and TQs" />
+            </div>
+          )}
         </div>
       </section>
 
-      <section className="sg">
-        <div className="sg-inner">
+      {page.disclaimer && (
+        <p className="ses-disclaimer">{page.disclaimer}</p>
+      )}
+
+      <section className="ses-list">
+        <div className="ses-list-inner">
           {page.packages.map(pkg => (
-            <article className="sg-card" key={pkg.key}>
-              <img className="sg-art" src={`${A}${pkg.image}`} alt={pkg.alt} />
-              <div className="sg-dl">
+            <article className="ses-item" key={pkg.key}>
+              <div className="ses-item-top">
+                <div className="ses-item-art">
+                  <img src={`${A}${pkg.resume}`} alt={`${pkg.title} — SES resume sample`} />
+                </div>
+                <div className="ses-item-text">
+                  <h2>{pkg.title}</h2>
+                  <p>{pkg.summary}</p>
+                </div>
+              </div>
+              <div className="ses-item-dl">
                 {pkg.downloads.map(d => (
                   /* download, so the browser saves the file rather than
                      opening a PDF viewer over the page. */
-                  <a className="sg-file" href={`${A}${d.file}`} download key={d.file}>
-                    <DownloadIcon />
-                    <span className="sg-file-name">{d.title}</span>
-                    <span className="sg-file-meta">{d.kind} &middot; {d.size}</span>
+                  <a className="ses-dl-btn" href={`${A}${d.file}`} download key={d.file}>
+                    {d.title.toUpperCase()}
                   </a>
                 ))}
               </div>

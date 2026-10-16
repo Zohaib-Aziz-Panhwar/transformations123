@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { social, resourcePaths, APPLY_PATH } from '../data/content.js';
 const A = import.meta.env.BASE_URL;
@@ -21,7 +21,18 @@ const links = [
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [sub, setSub] = useState(false);
+  const subRef = useRef(null);
   const close = () => { setOpen(false); setSub(false); };
+
+  // Click away from the open dropdown closes it.
+  useEffect(() => {
+    if (!sub) return;
+    const onDoc = (e) => {
+      if (subRef.current && !subRef.current.contains(e.target)) setSub(false);
+    };
+    document.addEventListener('mousedown', onDoc);
+    return () => document.removeEventListener('mousedown', onDoc);
+  }, [sub]);
 
   return (
     <header className="site-header">
@@ -44,7 +55,7 @@ export default function Header() {
           <ul>
             {links.map(l => (
               l.children ? (
-                <li key={l.label} className={'has-sub' + (sub ? ' is-open' : '')}>
+                <li key={l.label} ref={subRef} className={'has-sub' + (sub ? ' is-open' : '')}>
                   <button
                     type="button"
                     className="nav-sub-toggle"

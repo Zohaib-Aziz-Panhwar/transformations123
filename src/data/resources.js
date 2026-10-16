@@ -206,36 +206,42 @@ export const resumesLibrary = {
   ],
 };
 
-/* Two full SES sample packages shown as a gallery on the SES Samples page.
-   Amy supplied each card's artwork (title, summary, and a resume preview);
-   the three files beneath it are the complete package. Added 14 Oct 2026. */
+/* The SES Samples landing page. A navy hero with the "SES Sample Materials"
+   graphic, then one block per fictional candidate: a resume preview, the
+   leadership story it tells, and the three files of the package. Added 14 Oct
+   2026; rebuilt to Amy's landing-page design 16 Oct 2026. */
 export const sesSampleGallery = {
   slug: 'ses-sample-materials',
-  eyebrow: 'SAMPLE MATERIALS',
+  eyebrow: 'EXECUTIVE POSITIONING · LEADERSHIP EVIDENCE',
   title: 'SES RESUME SAMPLES',
-  lead: 'Full sample packages -- an SES resume with its ECQ and TQ narratives -- as they appear in a competitive Senior Executive Service application.',
+  subhead: 'Your executive experience needs a clear leadership story.',
+  feature: 'assets/images/samples/ses-sample-materials.jpg',
   intro: [
-    'These samples show the format, structure, branding, and level of detail found in strong SES applications. Each package includes the two-page resume plus the ECQ and TQ narratives used to prepare for the agency and QRB interviews.',
+    'Explore how relevant accomplishments, executive scope, and measurable results can be organized into a focused SES resume and supporting qualification narratives.',
+    'The resume establishes the leadership story. The ECQ and TQ narratives develop the examples that support it.',
   ],
+  disclaimer: 'Fictional sample materials. Names, contact details, accomplishments, and figures are illustrative.',
   packages: [
     {
-      key: 'healthcare',
-      image: 'assets/images/samples/ses-healthcare-sample.jpg',
-      alt: 'SES Resume Sample -- Healthcare Quality, Patient Safety and Oversight (Angela M. Torres, LCSW)',
+      key: 'financial',
+      title: 'Financial Management, Budget & Resource Stewardship',
+      resume: 'assets/images/samples/ses-financial-resume.jpg',
+      summary: 'This sample presents federal financial expertise as a clear executive leadership story. It highlights multibillion-dollar budget oversight, audit remediation, financial controls, and leadership of a large finance organization, connecting sound resource management to measurable savings, stronger accountability, and funding for mission priorities.',
       downloads: [
-        { title: 'SES Resume', file: D + 'SES-Resume-Sample-Angela-Torres.pdf', kind: 'PDF', size: '250 KB' },
-        { title: 'ECQ Narratives', file: D + 'SES-ECQ-Narratives-Angela-Torres.pdf', kind: 'PDF', size: '120 KB' },
-        { title: 'TQ Narratives', file: D + 'SES-TQ-Narratives-Angela-Torres.pdf', kind: 'PDF', size: '102 KB' },
+        { title: 'SES Resume', file: D + 'SES-Resume-Sample-Daniel-Okafor.pdf' },
+        { title: 'ECQ Narratives', file: D + 'SES-ECQ-Narratives-Daniel-Okafor.pdf' },
+        { title: 'TQ Narratives', file: D + 'SES-TQ-Narratives-Daniel-Okafor.pdf' },
       ],
     },
     {
-      key: 'financial',
-      image: 'assets/images/samples/ses-financial-sample.jpg',
-      alt: 'SES Resume Sample -- Financial Management, Budget and Resource Stewardship (Daniel R. Okafor, CPA, CGFM)',
+      key: 'healthcare',
+      title: 'Healthcare Quality, Patient Safety & Oversight',
+      resume: 'assets/images/samples/ses-healthcare-resume.jpg',
+      summary: 'This sample shows how a frontline clinical career can be developed into a compelling federal executive leadership story. It highlights national healthcare oversight, behavioral health expertise, and organizational reform, connecting clinical investigations and corrective actions to measurable improvements in patient safety and accountability.',
       downloads: [
-        { title: 'SES Resume', file: D + 'SES-Resume-Sample-Daniel-Okafor.pdf', kind: 'PDF', size: '168 KB' },
-        { title: 'ECQ Narratives', file: D + 'SES-ECQ-Narratives-Daniel-Okafor.pdf', kind: 'PDF', size: '193 KB' },
-        { title: 'TQ Narratives', file: D + 'SES-TQ-Narratives-Daniel-Okafor.pdf', kind: 'PDF', size: '168 KB' },
+        { title: 'SES Resume', file: D + 'SES-Resume-Sample-Angela-Torres.pdf' },
+        { title: 'ECQ Narratives', file: D + 'SES-ECQ-Narratives-Angela-Torres.pdf' },
+        { title: 'TQ Narratives', file: D + 'SES-TQ-Narratives-Angela-Torres.pdf' },
       ],
     },
   ],
