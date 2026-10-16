@@ -3,6 +3,17 @@
 
 export const posts = [
   {
+    "slug": "everyone-has-ai-not-everyone-has-a-strategy",
+    "title": "Everyone Has AI. Not Everyone Has a Strategy.",
+    "date": "2026-10-16",
+    "excerpt": "You can ask AI to rewrite your resume, create a cover letter, or help you prepare for an interview. Within minutes, you can have polished language describing your experience. But before you decide how to tell your story, you need to decide what that story should communicate—and to whom…",
+    "image": null,
+    "imageAlt": "Everyone Has AI. Not Everyone Has a Strategy.",
+    "wide": false,
+    "category": null,
+    "minutes": 3
+  },
+  {
     "slug": "your-military-title-is-not-your-civilian-value",
     "title": "Your Military Title Is Not Your Civilian Value",
     "date": "2026-09-12",
