@@ -3,6 +3,17 @@
 
 export const posts = [
   {
+    "slug": "executive-career-transition-market-value",
+    "title": "Executive Career Transition: Is Your Leadership Experience Marketable?",
+    "date": "2026-10-21",
+    "excerpt": "You have spent decades building an impressive career—leading organizations, managing substantial budgets, developing teams. Yet as you consider your next executive move, you may discover that your leadership title does not automatically translate into market value…",
+    "image": "executive-career-transition-market-value.jpg",
+    "imageAlt": "Executive Career Transition: Is Your Leadership Experience Marketable?",
+    "wide": false,
+    "category": null,
+    "minutes": 6
+  },
+  {
     "slug": "everyone-has-ai-not-everyone-has-a-strategy",
     "title": "Everyone Has AI. Not Everyone Has a Strategy.",
     "date": "2026-10-16",
