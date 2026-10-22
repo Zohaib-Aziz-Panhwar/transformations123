@@ -1629,7 +1629,13 @@ html { scroll-padding-top: 110px; }
 }
 .ses-item-text h2 {
   font-family: var(--font-body); font-weight: 700; color: var(--navy-text);
-  font-size: clamp(1.4rem, 2.4vw, 2rem); line-height: 1.14; margin: 2px 0 .5em;
+  font-size: clamp(1.4rem, 2.4vw, 2rem); line-height: 1.14; margin: 2px 0 .3em;
+}
+/* The role shift under the title on the military samples: "X -> Y". */
+.ses-item-sub {
+  font-family: var(--font-display); font-weight: 600; color: #5b6b7d;
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem); line-height: 1.25;
+  margin: 0 0 .7em;
 }
 .ses-item-text p { color: var(--body); font-size: clamp(1rem, 1.2vw, 1.1rem); line-height: 1.7; margin: 0; }
 .ses-item-dl {

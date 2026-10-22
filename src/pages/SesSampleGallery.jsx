@@ -55,7 +55,7 @@ export default function SesSampleGallery({ page }) {
           </div>
           {page.feature && (
             <div className="ses-hero-art">
-              <img src={`${A}${page.feature}`} alt="SES sample materials: resume, ECQs and TQs" />
+              <img src={`${A}${page.feature}`} alt={`${page.title} sample materials`} />
             </div>
           )}
         </div>
@@ -69,10 +69,11 @@ export default function SesSampleGallery({ page }) {
             <article className="ses-item" key={pkg.key}>
               <div className="ses-item-top">
                 <div className="ses-item-art">
-                  <img src={`${A}${pkg.resume}`} alt={`${pkg.title} — SES resume sample`} loading="lazy" />
+                  <img src={`${A}${pkg.resume}`} alt={`${pkg.title} — resume sample`} loading="lazy" />
                 </div>
                 <div className="ses-item-text">
                   <h2>{pkg.title}</h2>
+                  {pkg.subtitle && <p className="ses-item-sub">{pkg.subtitle}</p>}
                   <p>{pkg.summary}</p>
                 </div>
               </div>

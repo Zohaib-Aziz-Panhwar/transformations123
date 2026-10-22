@@ -13,6 +13,7 @@ const links = [
   { label: 'RESUME SAMPLES', children: [
     { to: resourcePaths.sesSamples, label: 'SES Resume Samples' },
     { to: resourcePaths.resumeSamples, label: 'Executive Resume Samples' },
+    { to: resourcePaths.militarySamples, label: 'Military Transition Resume Samples' },
   ] },
   // Amy keeps her reviews on Upwork, so this one leaves the site.
   { href: social.upwork, label: 'TESTIMONIALS' },

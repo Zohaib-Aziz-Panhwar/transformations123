@@ -291,3 +291,125 @@ export const sesSampleGallery = {
   ],
   closing: sesSamples.closing,
 };
+
+/* The Military Transition gallery, in the same shape as the SES gallery but
+   with a before/after/cover-letter package per fictional candidate. Each one
+   shows how a military career is repositioned for a civilian executive role:
+   the resume subtitle names that role shift (e.g. "Army command -> COO"). */
+export const militarySampleGallery = {
+  slug: 'military-transition-resume-samples',
+  eyebrow: 'MILITARY-TO-CIVILIAN TRANSITION · LEADERSHIP EVIDENCE',
+  title: 'MILITARY TRANSITION RESUME SAMPLES',
+  subhead: 'A successful transition takes real strategy.',
+  feature: 'assets/images/samples/military-transition-resume-samples.jpg',
+  intro: [
+    'Start with the role you want. Translate military experience into civilian value, select the achievements that matter, and prove your impact. Explore the before, after, and cover letter for each sample to see the strategy in action.',
+    'The samples on this page are fictionalized. Names, organizations, accomplishments, and figures are illustrative only and do not describe real people or real results. Use them as models for your own story, not as text to copy.',
+  ],
+  disclaimer: 'Fictional sample materials. Names, organizations, and results are illustrative.',
+  packages: [
+    {
+      key: 'vance',
+      title: 'Global Operations & Humanitarian Leadership',
+      subtitle: 'Army command → Humanitarian COO',
+      resume: 'assets/images/samples/mil-vance-resume.jpg',
+      summary: 'Position Renata for a humanitarian COO role by connecting dispersed Army command, emergency response, and supply chain leadership. Replace broad claims and acronyms with clear scope and measurable results. The cover letter maps her experience to the employer’s priorities and explains her commitment to relief work.',
+      downloads: [
+        { title: 'Resume Before', file: D + 'Military-Resume-Before-Vance.pdf' },
+        { title: 'Resume After', file: D + 'Military-Resume-After-Vance.pdf' },
+        { title: 'Cover Letter', file: D + 'Military-Cover-Letter-Vance.pdf' },
+      ],
+    },
+    {
+      key: 'alvarado',
+      title: 'Multi-Site Manufacturing & Business Unit Leadership',
+      subtitle: 'Navy officer → Manufacturing business leader',
+      resume: 'assets/images/samples/mil-alvarado-resume.jpg',
+      summary: 'Position Marcus for business unit leadership by leading with P&L ownership, plant growth, and profitability. Translate Navy responsibilities into business functions and replace duties with evidence of turnaround, safety, and talent results. The cover letter connects his military leadership story to the employer’s expansion plans.',
+      downloads: [
+        { title: 'Resume Before', file: D + 'Military-Resume-Before-Alvarado.pdf' },
+        { title: 'Resume After', file: D + 'Military-Resume-After-Alvarado.pdf' },
+        { title: 'Cover Letter', file: D + 'Military-Cover-Letter-Alvarado.pdf' },
+      ],
+    },
+    {
+      key: 'ashby',
+      title: 'CIO & Enterprise Technology Leadership',
+      subtitle: 'Air Force Colonel → Private-sector CIO',
+      resume: 'assets/images/samples/mil-ashby-resume.jpg',
+      summary: 'Position Simone for a CIO role by leading with budget ownership, cost savings, and uptime. Add a “business equivalent” line to every Air Force role so rank reads as executive scope, and replace duties with proof of savings, security, and resilience results. The cover letter ties her global experience to the employer’s cloud and expansion plans.',
+      downloads: [
+        { title: 'Resume Before', file: D + 'Military-Resume-Before-Ashby.pdf' },
+        { title: 'Resume After', file: D + 'Military-Resume-After-Ashby.pdf' },
+        { title: 'Cover Letter', file: D + 'Military-Cover-Letter-Ashby.pdf' },
+      ],
+    },
+    {
+      key: 'whitaker',
+      title: 'HR & People Operations Leadership',
+      subtitle: 'Army jargon → HR language',
+      resume: 'assets/images/samples/mil-whitaker-resume.jpg',
+      summary: 'Position Darnell for senior HR leadership by translating Army jargon into private-sector HR language: Command Sergeant Major becomes HR Director, command climate scores become employee engagement, and UCMJ cases become employee relations. Lead with engagement and retention results, keep Army titles as a footnote, and let the cover letter match the employer’s needs to his results.',
+      downloads: [
+        { title: 'Resume Before', file: D + 'Military-Resume-Before-Whitaker.pdf' },
+        { title: 'Resume After', file: D + 'Military-Resume-After-Whitaker.pdf' },
+        { title: 'Cover Letter', file: D + 'Military-Cover-Letter-Whitaker.pdf' },
+      ],
+    },
+    {
+      key: 'thornbury',
+      title: 'Legal Counsel & Corporate Compliance',
+      subtitle: 'Judge Advocate → Corporate Counsel',
+      resume: 'assets/images/samples/mil-thornbury-resume.jpg',
+      summary: 'Position Marisol for in-house counsel roles by translating JAG titles into corporate legal functions: Staff Judge Advocate becomes General Counsel and courts-martial becomes litigation. Open with selected accomplishments, and give every role its scope and value added so rank reads as business impact. The cover letter is written like a legal brief, answering the employer’s biggest question with proven results.',
+      downloads: [
+        { title: 'Resume Before', file: D + 'Military-Resume-Before-Thornbury.pdf' },
+        { title: 'Resume After', file: D + 'Military-Resume-After-Thornbury.pdf' },
+        { title: 'Cover Letter', file: D + 'Military-Cover-Letter-Thornbury.pdf' },
+      ],
+    },
+    {
+      key: 'okafor',
+      title: 'Cybersecurity & Information Security Leadership',
+      subtitle: 'Navy Cyber Commander → CISO / Director of Security Operations',
+      resume: 'assets/images/samples/mil-okafor-resume.jpg',
+      summary: 'Position Nathaniel as a CISO by leading with risk reduced, not missions flown: dwell time, ransomware stopped, and dollars saved. Rename each Navy command as a security function, with scope and the military title underneath, and move education to the end. The cover letter reads like a security briefing, naming the employer’s risk and a 90-day plan to reduce it.',
+      downloads: [
+        { title: 'Resume Before', file: D + 'Military-Resume-Before-Okafor.pdf' },
+        { title: 'Resume After', file: D + 'Military-Resume-After-Okafor.pdf' },
+        { title: 'Cover Letter', file: D + 'Military-Cover-Letter-Okafor.pdf' },
+      ],
+    },
+    {
+      key: 'holloway',
+      title: 'Supply Chain, Logistics & Distribution',
+      subtitle: 'Marine Colonel → VP of Logistics',
+      resume: 'assets/images/samples/mil-holloway-resume.jpg',
+      summary: 'Position Rebecca as a supply chain executive by leading with the metrics operations leaders buy: on-time delivery, inventory dollars, and freight cost. Map her career across the full supply chain, from plan to deliver, and give every role a business title, scope, and value added. The cover letter uses a shipping-manifest theme to tie her biggest military move to the employer’s growth.',
+      downloads: [
+        { title: 'Resume Before', file: D + 'Military-Resume-Before-Holloway.pdf' },
+        { title: 'Resume After', file: D + 'Military-Resume-After-Holloway.pdf' },
+        { title: 'Cover Letter', file: D + 'Military-Cover-Letter-Holloway.pdf' },
+      ],
+    },
+    {
+      key: 'fontaine',
+      title: 'Program Management & Strategic Transformation',
+      subtitle: 'Army Major → Program Director',
+      resume: 'assets/images/samples/mil-fontaine-resume.jpg',
+      summary: 'Position Malik as a program leader by leading with portfolio results: dollars managed, milestones on time, and budgets beaten. Put PMP and PgMP beside his name, show his climb on a career roadmap, and replace duties with programs rescued and a PMO built from scratch. The cover letter is written as a project charter, answering risks before the employer raises them.',
+      downloads: [
+        { title: 'Resume Before', file: D + 'Military-Resume-Before-Fontaine.pdf' },
+        { title: 'Resume After', file: D + 'Military-Resume-After-Fontaine.pdf' },
+        { title: 'Cover Letter', file: D + 'Military-Cover-Letter-Fontaine.pdf' },
+      ],
+    },
+  ],
+  closing: {
+    title: 'YOUR MILITARY EXPERIENCE DESERVES A CIVILIAN STRATEGY',
+    text: [
+      'Every engagement begins with strategy. Your target role, leadership value, and transferable strengths are clarified before your resume is written—so your service reads as executive impact, not a list of duties.',
+      'Schedule a complimentary consultation to discuss your transition and determine whether my services may be a good fit.',
+    ],
+  },
+};
