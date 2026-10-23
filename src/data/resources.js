@@ -306,7 +306,16 @@ export const militarySampleGallery = {
     'Start with the role you want. Translate military experience into civilian value, select the achievements that matter, and prove your impact. Explore the before, after, and cover letter for each sample to see the strategy in action.',
     'The samples on this page are fictionalized. Names, organizations, accomplishments, and figures are illustrative only and do not describe real people or real results. Use them as models for your own story, not as text to copy.',
   ],
-  disclaimer: 'Fictional sample materials. Names, organizations, and results are illustrative.',
+  disclaimer: 'Fictional samples. Names, organizations, and results are illustrative.',
+  summaryLabel: 'The Strategy',
+  band: {
+    heading: ['You lead', 'with purpose.'],
+    sub: 'Make sure your story is told with impact.',
+    previews: [
+      { src: 'assets/images/samples/mil-vance-resume.jpg', alt: 'Renata L. Vance — resume sample' },
+      { src: 'assets/images/samples/mil-vance-cover.jpg', alt: 'Renata L. Vance — cover letter sample' },
+    ],
+  },
   packages: [
     {
       key: 'vance',
