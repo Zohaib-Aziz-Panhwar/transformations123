@@ -301,6 +301,7 @@ export const militarySampleGallery = {
   eyebrow: 'MILITARY-TO-CIVILIAN TRANSITION · LEADERSHIP EVIDENCE',
   title: 'MILITARY TRANSITION RESUME SAMPLES',
   subhead: 'A successful transition takes real strategy.',
+  heroImage: 'assets/images/samples/military-hero-soldier.jpg',
   feature: 'assets/images/samples/military-transition-resume-samples.jpg',
   intro: [
     'Start with the role you want. Translate military experience into civilian value, select the achievements that matter, and prove your impact. Explore the before, after, and cover letter for each sample to see the strategy in action.',

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout.jsx';
+import { Lightbox, ZoomPreview } from '../components/Zoom.jsx';
 import { APPLY_PATH } from '../data/content.js';
 
 const A = import.meta.env.BASE_URL;
@@ -28,6 +29,7 @@ function usePageSize() {
 export default function SesSampleGallery({ page }) {
   const pageSize = usePageSize();
   const [pageIndex, setPageIndex] = useState(0);
+  const [shot, setShot] = useState(null);
   const listRef = useRef(null);
 
   const pageCount = Math.max(1, Math.ceil(page.packages.length / pageSize));
@@ -69,7 +71,7 @@ export default function SesSampleGallery({ page }) {
             <article className="ses-item" key={pkg.key}>
               <div className="ses-item-top">
                 <div className="ses-item-art">
-                  <img src={`${A}${pkg.resume}`} alt={`${pkg.title} — resume sample`} loading="lazy" />
+                  <ZoomPreview src={pkg.resume} alt={`${pkg.title} — resume sample`} onOpen={setShot} />
                 </div>
                 <div className="ses-item-text">
                   <h2>{pkg.title}</h2>
@@ -125,6 +127,8 @@ export default function SesSampleGallery({ page }) {
           </Link>
         </div>
       </section>
+
+      {shot && <Lightbox shot={shot} onClose={() => setShot(null)} />}
     </Layout>
   );
 }
