@@ -14,6 +14,7 @@ const links = [
     { to: resourcePaths.sesSamples, label: 'SES Resume Samples' },
     { to: resourcePaths.resumeSamples, label: 'Executive Resume Samples' },
     { to: resourcePaths.militarySamples, label: 'Military Transition Resume Samples' },
+    { to: resourcePaths.governmentSamples, label: 'Government-to-Private-Sector Resume Samples' },
   ] },
   // Amy keeps her reviews on Upwork, so this one leaves the site.
   { href: social.upwork, label: 'TESTIMONIALS' },

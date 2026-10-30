@@ -14,11 +14,12 @@ import Blog from './pages/Blog.jsx';
 import SampleMaterials from './pages/SampleMaterials.jsx';
 import SesSampleGallery from './pages/SesSampleGallery.jsx';
 import ResumeGallery from './pages/ResumeGallery.jsx';
+import CareerCheck from './pages/CareerCheck.jsx';
 import ResumesLibrary from './pages/ResumesLibrary.jsx';
 import Strategy from './pages/Strategy.jsx';
 import Book from './pages/Book.jsx';
 import Booked from './pages/Booked.jsx';
-import { resumeSamples, sesSamples, sesSampleGallery, militarySampleGallery, governmentSamples } from './data/resources.js';
+import { resumeSamples, sesSamples, sesSampleGallery, militarySampleGallery, governmentSampleGallery } from './data/resources.js';
 import BlogPost from './pages/BlogPost.jsx';
 import About from './pages/About.jsx';
 import Service from './pages/Service.jsx';
@@ -46,7 +47,7 @@ export default function App() {
         <Route path="/resume-samples" element={<Navigate to="/executive-resume-samples" replace />} />
         <Route path="/ses-sample-materials" element={<SesSampleGallery page={sesSampleGallery} />} />
         <Route path="/military-transition-resume-samples" element={<ResumeGallery page={militarySampleGallery} />} />
-        <Route path="/government-to-private-sector-resume-samples" element={<SampleMaterials page={governmentSamples} />} />
+        <Route path="/government-to-private-sector-resume-samples" element={<ResumeGallery page={governmentSampleGallery} />} />
         <Route path="/resumes-library" element={<ResumesLibrary />} />
         {/* The placeholder pages these replace, kept so older links still land. */}
         <Route path="/military-samples" element={<Navigate to="/executive-resume-samples" replace />} />
@@ -57,6 +58,7 @@ export default function App() {
         <Route path="/ses-articles" element={<Navigate to="/ses-strategy" replace />} />
 
         <Route path="/about" element={<About />} />
+        <Route path="/career-positioning-check" element={<CareerCheck />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/testimonials" element={<Placeholder title="TESTIMONIALS" />} />

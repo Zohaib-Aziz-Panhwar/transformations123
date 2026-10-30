@@ -422,3 +422,203 @@ export const militarySampleGallery = {
     ],
   },
 };
+
+
+/* Government-to-Private-Sector gallery -- same rich layout as the military
+   page. Twelve fictional federal executives repositioned for the private
+   sector; the resume samples are generated illustrations, not real resumes. */
+export const governmentSampleGallery = {
+  "slug": "government-to-private-sector-resume-samples",
+  "eyebrow": "GOVERNMENT-TO-PRIVATE-SECTOR · LEADERSHIP EVIDENCE",
+  "title": "GOVERNMENT-TO-PRIVATE-SECTOR RESUME SAMPLES",
+  "subhead": "Your government title is not your market value.",
+  "intro": [
+    "Start with the opportunity you want. Translate public-sector leadership into business value, surface the results that prove your impact, and position your experience for the private and nonprofit sectors. Explore each sample to see the strategy in action.",
+    "The samples on this page are fictionalized. Names, organizations, accomplishments, and figures are illustrative only and do not describe real people or real results. Use them as models for your own story, not as text to copy."
+  ],
+  "disclaimer": "Fictional samples. Names, organizations, and results are illustrative.",
+  "summaryLabel": "The Strategy",
+  "band": {
+    "heading": [
+      "Your title is",
+      "not your value."
+    ],
+    "sub": "Show the private sector what you can deliver.",
+    "previews": [
+      {
+        "src": "assets/images/samples/gov-okonkwo-resume.jpg",
+        "alt": "Government-to-private-sector resume sample"
+      },
+      {
+        "src": "assets/images/samples/gov-marchetti-resume.jpg",
+        "alt": "Government-to-private-sector resume sample"
+      }
+    ]
+  },
+  "packages": [
+    {
+      "key": "okonkwo",
+      "title": "Cybersecurity & Digital Risk Leadership",
+      "subtitle": "Federal Chief Information Security Officer → Fortune 500 CISO",
+      "resume": "assets/images/samples/gov-okonkwo-resume.jpg",
+      "summary": "Position Derek for a Fortune 500 CISO role by translating federal cybersecurity leadership into corporate risk management and business protection. Replace agency acronyms with executive scope and measurable results: 4.2 million endpoints protected, a $340M budget, and incident response reduced from 72 to 6 hours. The cover letter connects his experience defending against sophisticated cyberattacks to protecting corporate assets, reputation, and customer trust.",
+      "downloads": [
+        {
+          "title": "Resume Sample",
+          "file": "assets/downloads/Gov-Resume-Okonkwo.pdf"
+        }
+      ]
+    },
+    {
+      "key": "marchetti",
+      "title": "Finance & Enterprise Performance Leadership",
+      "subtitle": "Agency Chief Financial Officer → Corporate CFO",
+      "resume": "assets/images/samples/gov-marchetti-resume.jpg",
+      "summary": "Position Elena for a corporate CFO role by translating federal financial oversight into enterprise performance, capital allocation, and financial governance. Replace government terminology with executive scope and measurable results: a $21B budget, $410M in annual savings, seven clean audits, and financial close reduced from 45 to 12 days. The cover letter connects her financial transformation experience and congressional testimony to board accountability, operational efficiency, and investor confidence.",
+      "downloads": [
+        {
+          "title": "Resume Sample",
+          "file": "assets/downloads/Gov-Resume-Marchetti.pdf"
+        }
+      ]
+    },
+    {
+      "key": "reyes",
+      "title": "Science, Technology & Research Investment Leadership",
+      "subtitle": "Federal SES Executive → Chief Science & Technology Officer",
+      "resume": "assets/images/samples/gov-reyes-resume.jpg",
+      "summary": "Position Marcus for a Chief Science & Technology Officer role by translating federal executive authority into corporate leadership, research investment, and commercialization strategy. Reframe grant oversight as capital allocation and emphasize executive reporting relationships, investment decisions, and measurable results in risk and efficiency. The cover letter connects his experience directing research funding and evaluating innovation to winning federal business, accelerating commercialization, and bringing new technologies to market.",
+      "downloads": [
+        {
+          "title": "Resume Sample",
+          "file": "assets/downloads/Gov-Resume-Reyes.pdf"
+        }
+      ]
+    },
+    {
+      "key": "krishnan",
+      "title": "Technology Transfer & IP Commercialization",
+      "subtitle": "Ph.D. Researcher → Licensing & Partnerships Manager",
+      "resume": "assets/images/samples/gov-krishnan-resume.jpg",
+      "summary": "Position Meera for an industry licensing role by emphasizing patent expertise, technology commercialization, and strategic partnerships over academic research. Highlight measurable results across 12 medical centers, 140+ disclosures, 60+ patent filings, and four licenses. Reorganize her experience into an ATS-compatible format that prioritizes commercial achievements. The cover letter connects her technical judgment and intellectual property expertise to identifying marketable innovations, negotiating partnerships, and accelerating medical technology commercialization.",
+      "downloads": [
+        {
+          "title": "Resume Sample",
+          "file": "assets/downloads/Gov-Resume-Krishnan.pdf"
+        }
+      ]
+    },
+    {
+      "key": "mehta",
+      "title": "Healthcare Operations & Virtual Care Leadership",
+      "subtitle": "Federal Physician → Medical Director, Virtual Addiction Care",
+      "resume": "assets/images/samples/gov-mehta-resume.jpg",
+      "summary": "Position Rohan for a virtual care medical director role by translating federal clinical leadership into scalable treatment programs, patient retention, and regulatory compliance. Replace clinical acronyms with measurable results: 1,000+ patients served, retention improved from 58% to 74%, treatment initiation reduced from nine days to under 48 hours, and zero accreditation findings. The cover letter connects his telehealth leadership to expanding access, improving treatment outcomes, and scaling safe, compliant addiction care.",
+      "downloads": [
+        {
+          "title": "Resume Sample",
+          "file": "assets/downloads/Gov-Resume-Mehta.pdf"
+        }
+      ]
+    },
+    {
+      "key": "whitfield",
+      "title": "Corporate Legal Leadership & Regulatory Strategy",
+      "subtitle": "Acting General Counsel, U.S. DOT → Fortune 500 General Counsel",
+      "resume": "assets/images/samples/gov-whitfield-resume.jpg",
+      "summary": "Position Caroline for a Fortune 500 General Counsel role by translating federal legal authority into corporate governance, regulatory strategy, and enterprise risk management. Highlight leadership of a 450-person, $120M legal organization, $210M in settlements, an 85% litigation win rate, and $85M in penalties avoided. The cover letter connects her regulatory expertise, congressional experience, and crisis leadership to protecting corporate interests, managing legal exposure, and supporting business growth.",
+      "downloads": [
+        {
+          "title": "Resume Sample",
+          "file": "assets/downloads/Gov-Resume-Whitfield.pdf"
+        }
+      ]
+    },
+    {
+      "key": "brooks",
+      "title": "Healthcare Quality, Compliance & Patient Safety",
+      "subtitle": "Federal Inspector General → VP of Quality & Patient Safety",
+      "resume": "assets/images/samples/gov-brooks-resume.jpg",
+      "summary": "Position Natalie for a healthcare quality executive role by translating federal inspection experience into patient safety, regulatory compliance, and operational improvement. Highlight oversight of a 9.6-million-beneficiary health system, 96% adoption of 420+ recommendations, wait times reduced from 28 to 10 days, and zero accreditation findings. The cover letter connects her regulatory insight and performance improvement experience to strengthening patient outcomes, maintaining accreditation readiness, and reducing organizational risk.",
+      "downloads": [
+        {
+          "title": "Resume Sample",
+          "file": "assets/downloads/Gov-Resume-Brooks.pdf"
+        }
+      ]
+    },
+    {
+      "key": "hale",
+      "title": "Global Affairs & International Market Strategy",
+      "subtitle": "Senior Foreign Service Officer → VP, Global Government Affairs",
+      "resume": "assets/images/samples/gov-hale-resume.jpg",
+      "summary": "Position Gregory for a VP of global government affairs role by presenting him as an executive who opens markets and manages political risk, not a diplomat listing postings. “Deputy Chief of Mission” becomes the second-in-command of a 1,100-person international operation with a $95M budget, and “bilateral engagement” becomes negotiating directly with heads of government, regulators and industry leaders. Replace State Department terms with headline numbers: $3.8B in U.S. company deals advanced, 14 trade barriers removed, 3 crisis evacuations led, and operations across 9 countries in 22 years. The cover letter shows how a career spent resolving disputes with foreign governments helps a multinational enter new markets faster and avoid costly political risk.",
+      "downloads": [
+        {
+          "title": "Resume Sample",
+          "file": "assets/downloads/Gov-Resume-Hale.pdf"
+        }
+      ]
+    },
+    {
+      "key": "carter",
+      "title": "Defense Acquisition & Aerospace Operations",
+      "subtitle": "Senior Defense Civilian (SES) → Chief Operating Officer, Defense & Aerospace",
+      "resume": "assets/images/samples/gov-carter-resume.jpg",
+      "summary": "Position Raymond for a defense industry COO role by translating federal acquisition leadership into operational performance, supplier management, and business growth. Highlight oversight of a $38B portfolio, 6,000 personnel, 42 major programs, and $3.1B in cost overruns avoided. The cover letter connects his knowledge of Pentagon procurement, complex program delivery, and contractor expectations to improving operational efficiency, protecting profit margins, and securing future defense contracts.",
+      "downloads": [
+        {
+          "title": "Resume Sample",
+          "file": "assets/downloads/Gov-Resume-Carter.pdf"
+        }
+      ]
+    },
+    {
+      "key": "russo",
+      "title": "Corporate Security & Global Investigations",
+      "subtitle": "FBI Executive Assistant Director → Chief Security Officer",
+      "resume": "assets/images/samples/gov-russo-resume.jpg",
+      "summary": "Position Anthony for a Fortune 500 Chief Security Officer role by translating FBI leadership into corporate security, threat prevention, and crisis management. Highlight oversight of 4,500 personnel, a $1.2B budget, 2,300+ investigations, and $780M in recovered assets. The cover letter connects his experience managing complex security threats, reducing critical incident response times by 60%, and building corporate partnerships to protecting employees, safeguarding intellectual property, and strengthening global enterprise security.",
+      "downloads": [
+        {
+          "title": "Resume Sample",
+          "file": "assets/downloads/Gov-Resume-Russo.pdf"
+        }
+      ]
+    },
+    {
+      "key": "pierce",
+      "title": "Board Governance & Portfolio Leadership",
+      "subtitle": "Deputy Secretary (Political Appointee) → Corporate Director & Private Equity Operating Partner",
+      "resume": "assets/images/samples/gov-pierce-resume.jpg",
+      "summary": "Position Jonathan for board and private equity roles by translating federal executive leadership into corporate governance, operational transformation, and investment value creation. Highlight oversight of an 85,000-person, $60B enterprise, $900M in annual savings, 60% revenue growth, and a 3.1x private equity exit. The cover letter connects his experience in corporate leadership, enterprise transformation, and risk oversight to strengthening portfolio performance, guiding strategic investments, and creating shareholder value.",
+      "downloads": [
+        {
+          "title": "Resume Sample",
+          "file": "assets/downloads/Gov-Resume-Pierce.pdf"
+        }
+      ]
+    },
+    {
+      "key": "bello",
+      "title": "Regulatory Affairs & Product Approval Strategy",
+      "subtitle": "FDA Office Director → Vice President, Regulatory Affairs, Medical Devices",
+      "resume": "assets/images/samples/gov-bello-resume.jpg",
+      "summary": "Position Dr. Bello for a medical device regulatory executive role by translating FDA leadership into product approval strategy, regulatory compliance, and market access. Highlight oversight of 650 personnel, 1,800+ annual product submissions, review times reduced by 30%, and 40+ first-of-a-kind device approvals. The cover letter connects her insider knowledge of FDA decision-making and breakthrough device programs to accelerating approvals, minimizing regulatory delays, and bringing innovative medical technologies to patients sooner.",
+      "downloads": [
+        {
+          "title": "Resume Sample",
+          "file": "assets/downloads/Gov-Resume-Bello.pdf"
+        }
+      ]
+    }
+  ],
+  "closing": {
+    "title": "YOUR GOVERNMENT TITLE IS NOT YOUR MARKET VALUE",
+    "text": [
+      "Every engagement begins by assessing your leadership scope, accomplishments, strengths, and transferable value before developing a targeted private-sector resume.",
+      "Schedule a complimentary consultation to discuss your goals and determine whether my services may be a good fit."
+    ]
+  }
+};
+
