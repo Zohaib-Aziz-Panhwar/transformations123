@@ -433,6 +433,7 @@ export const governmentSampleGallery = {
   "eyebrow": "GOVERNMENT-TO-PRIVATE-SECTOR · LEADERSHIP EVIDENCE",
   "title": "GOVERNMENT-TO-PRIVATE-SECTOR RESUME SAMPLES",
   "subhead": "Your government title is not your market value.",
+  "heroImage": "assets/images/samples/government-hero-capitol.jpg",
   "intro": [
     "Start with the opportunity you want. Translate public-sector leadership into business value, surface the results that prove your impact, and position your experience for the private and nonprofit sectors. Explore each sample to see the strategy in action.",
     "The samples on this page are fictionalized. Names, organizations, accomplishments, and figures are illustrative only and do not describe real people or real results. Use them as models for your own story, not as text to copy."
