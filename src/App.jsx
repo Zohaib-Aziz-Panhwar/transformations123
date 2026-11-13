@@ -19,7 +19,7 @@ import ResumesLibrary from './pages/ResumesLibrary.jsx';
 import Strategy from './pages/Strategy.jsx';
 import Book from './pages/Book.jsx';
 import Booked from './pages/Booked.jsx';
-import { resumeSamples, sesSamples, sesSampleGallery, militarySampleGallery, governmentSampleGallery } from './data/resources.js';
+import { resumeSamples, sesSamples, sesSampleGallery, militarySampleGallery, governmentSampleGallery, corporateSampleGallery } from './data/resources.js';
 import BlogPost from './pages/BlogPost.jsx';
 import About from './pages/About.jsx';
 import Service from './pages/Service.jsx';
@@ -48,6 +48,7 @@ export default function App() {
         <Route path="/ses-sample-materials" element={<SesSampleGallery page={sesSampleGallery} />} />
         <Route path="/military-transition-resume-samples" element={<ResumeGallery page={militarySampleGallery} />} />
         <Route path="/government-to-private-sector-resume-samples" element={<ResumeGallery page={governmentSampleGallery} />} />
+        <Route path="/corporate-executive-resume-samples" element={<ResumeGallery page={corporateSampleGallery} />} />
         <Route path="/resumes-library" element={<ResumesLibrary />} />
         {/* The placeholder pages these replace, kept so older links still land. */}
         <Route path="/military-samples" element={<Navigate to="/executive-resume-samples" replace />} />

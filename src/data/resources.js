@@ -323,6 +323,7 @@ export const militarySampleGallery = {
       title: 'Global Operations & Humanitarian Leadership',
       subtitle: 'Army command → Humanitarian COO',
       resume: 'assets/images/samples/mil-vance-resume.jpg',
+      cover: 'assets/images/samples/mil-vance-cover.jpg',
       summary: 'Position Renata for a humanitarian COO role by connecting dispersed Army command, emergency response, and supply chain leadership. Replace broad claims and acronyms with clear scope and measurable results. The cover letter maps her experience to the employer’s priorities and explains her commitment to relief work.',
       downloads: [
         { title: 'Resume Before', file: D + 'Military-Resume-Before-Vance.pdf' },
@@ -335,6 +336,7 @@ export const militarySampleGallery = {
       title: 'Multi-Site Manufacturing & Business Unit Leadership',
       subtitle: 'Navy officer → Manufacturing business leader',
       resume: 'assets/images/samples/mil-alvarado-resume.jpg',
+      cover: 'assets/images/samples/mil-alvarado-cover.jpg',
       summary: 'Position Marcus for business unit leadership by leading with P&L ownership, plant growth, and profitability. Translate Navy responsibilities into business functions and replace duties with evidence of turnaround, safety, and talent results. The cover letter connects his military leadership story to the employer’s expansion plans.',
       downloads: [
         { title: 'Resume Before', file: D + 'Military-Resume-Before-Alvarado.pdf' },
@@ -347,6 +349,7 @@ export const militarySampleGallery = {
       title: 'CIO & Enterprise Technology Leadership',
       subtitle: 'Air Force Colonel → Private-sector CIO',
       resume: 'assets/images/samples/mil-ashby-resume.jpg',
+      cover: 'assets/images/samples/mil-ashby-cover.jpg',
       summary: 'Position Simone for a CIO role by leading with budget ownership, cost savings, and uptime. Add a “business equivalent” line to every Air Force role so rank reads as executive scope, and replace duties with proof of savings, security, and resilience results. The cover letter ties her global experience to the employer’s cloud and expansion plans.',
       downloads: [
         { title: 'Resume Before', file: D + 'Military-Resume-Before-Ashby.pdf' },
@@ -359,6 +362,7 @@ export const militarySampleGallery = {
       title: 'HR & People Operations Leadership',
       subtitle: 'Army jargon → HR language',
       resume: 'assets/images/samples/mil-whitaker-resume.jpg',
+      cover: 'assets/images/samples/mil-whitaker-cover.jpg',
       summary: 'Position Darnell for senior HR leadership by translating Army jargon into private-sector HR language: Command Sergeant Major becomes HR Director, command climate scores become employee engagement, and UCMJ cases become employee relations. Lead with engagement and retention results, keep Army titles as a footnote, and let the cover letter match the employer’s needs to his results.',
       downloads: [
         { title: 'Resume Before', file: D + 'Military-Resume-Before-Whitaker.pdf' },
@@ -371,6 +375,7 @@ export const militarySampleGallery = {
       title: 'Legal Counsel & Corporate Compliance',
       subtitle: 'Judge Advocate → Corporate Counsel',
       resume: 'assets/images/samples/mil-thornbury-resume.jpg',
+      cover: 'assets/images/samples/mil-thornbury-cover.jpg',
       summary: 'Position Marisol for in-house counsel roles by translating JAG titles into corporate legal functions: Staff Judge Advocate becomes General Counsel and courts-martial becomes litigation. Open with selected accomplishments, and give every role its scope and value added so rank reads as business impact. The cover letter is written like a legal brief, answering the employer’s biggest question with proven results.',
       downloads: [
         { title: 'Resume Before', file: D + 'Military-Resume-Before-Thornbury.pdf' },
@@ -383,6 +388,7 @@ export const militarySampleGallery = {
       title: 'Cybersecurity & Information Security Leadership',
       subtitle: 'Navy Cyber Commander → CISO / Director of Security Operations',
       resume: 'assets/images/samples/mil-okafor-resume.jpg',
+      cover: 'assets/images/samples/mil-okafor-cover.jpg',
       summary: 'Position Nathaniel as a CISO by leading with risk reduced, not missions flown: dwell time, ransomware stopped, and dollars saved. Rename each Navy command as a security function, with scope and the military title underneath, and move education to the end. The cover letter reads like a security briefing, naming the employer’s risk and a 90-day plan to reduce it.',
       downloads: [
         { title: 'Resume Before', file: D + 'Military-Resume-Before-Okafor.pdf' },
@@ -395,6 +401,7 @@ export const militarySampleGallery = {
       title: 'Supply Chain, Logistics & Distribution',
       subtitle: 'Marine Colonel → VP of Logistics',
       resume: 'assets/images/samples/mil-holloway-resume.jpg',
+      cover: 'assets/images/samples/mil-holloway-cover.jpg',
       summary: 'Position Rebecca as a supply chain executive by leading with the metrics operations leaders buy: on-time delivery, inventory dollars, and freight cost. Map her career across the full supply chain, from plan to deliver, and give every role a business title, scope, and value added. The cover letter uses a shipping-manifest theme to tie her biggest military move to the employer’s growth.',
       downloads: [
         { title: 'Resume Before', file: D + 'Military-Resume-Before-Holloway.pdf' },
@@ -407,6 +414,7 @@ export const militarySampleGallery = {
       title: 'Program Management & Strategic Transformation',
       subtitle: 'Army Major → Program Director',
       resume: 'assets/images/samples/mil-fontaine-resume.jpg',
+      cover: 'assets/images/samples/mil-fontaine-cover.jpg',
       summary: 'Position Malik as a program leader by leading with portfolio results: dollars managed, milestones on time, and budgets beaten. Put PMP and PgMP beside his name, show his climb on a career roadmap, and replace duties with programs rescued and a PMO built from scratch. The cover letter is written as a project charter, answering risks before the employer raises them.',
       downloads: [
         { title: 'Resume Before', file: D + 'Military-Resume-Before-Fontaine.pdf' },
@@ -445,174 +453,120 @@ export const governmentSampleGallery = {
       "Your title is",
       "not your value."
     ],
-    "sub": "Show the private sector what you can deliver.",
+    "sub": "The resume and the cover letter, built to match.",
     "previews": [
-      {
-        "src": "assets/images/samples/gov-okonkwo-resume.jpg",
-        "alt": "Government-to-private-sector resume sample"
-      },
-      {
-        "src": "assets/images/samples/gov-marchetti-resume.jpg",
-        "alt": "Government-to-private-sector resume sample"
-      }
+      { "src": "assets/images/samples/gov-okonkwo-resume.jpg", "alt": "Executive resume sample" },
+      { "src": "assets/images/samples/gov-okonkwo-cover.jpg", "alt": "Cover letter sample" }
     ]
   },
   "packages": [
     {
       "key": "okonkwo",
       "title": "Cybersecurity & Digital Risk Leadership",
-      "subtitle": "Federal Chief Information Security Officer → Fortune 500 CISO",
+      "subtitle": "Federal CISO (SES) → Fortune 500 CISO",
       "resume": "assets/images/samples/gov-okonkwo-resume.jpg",
-      "summary": "Position Derek for a Fortune 500 CISO role by translating federal cybersecurity leadership into corporate risk management and business protection. Replace agency acronyms with executive scope and measurable results: 4.2 million endpoints protected, a $340M budget, and incident response reduced from 72 to 6 hours. The cover letter connects his experience defending against sophisticated cyberattacks to protecting corporate assets, reputation, and customer trust.",
-      "downloads": [
-        {
-          "title": "Resume Sample",
-          "file": "assets/downloads/Gov-Resume-Okonkwo.pdf"
-        }
-      ]
+      "cover": "assets/images/samples/gov-okonkwo-cover.jpg",
+      "summary": "Derek’s resume and cover letter reposition a federal cyber leader as a Fortune 500 CISO — leading with executive scope and board-level results: 4.2M endpoints protected, a $340M security organization, incident response cut from 72 to 6 hours, and zero major breaches in three years.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Gov-Okonkwo-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Gov-Okonkwo-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Gov-Okonkwo-Cover-Letter.pdf" } ]
     },
     {
-      "key": "marchetti",
+      "key": "marquez",
       "title": "Finance & Enterprise Performance Leadership",
-      "subtitle": "Agency Chief Financial Officer → Corporate CFO",
-      "resume": "assets/images/samples/gov-marchetti-resume.jpg",
-      "summary": "Position Elena for a corporate CFO role by translating federal financial oversight into enterprise performance, capital allocation, and financial governance. Replace government terminology with executive scope and measurable results: a $21B budget, $410M in annual savings, seven clean audits, and financial close reduced from 45 to 12 days. The cover letter connects her financial transformation experience and congressional testimony to board accountability, operational efficiency, and investor confidence.",
-      "downloads": [
-        {
-          "title": "Resume Sample",
-          "file": "assets/downloads/Gov-Resume-Marchetti.pdf"
-        }
-      ]
+      "subtitle": "Agency CFO → Corporate CFO",
+      "resume": "assets/images/samples/gov-marquez-resume.jpg",
+      "cover": "assets/images/samples/gov-marquez-cover.jpg",
+      "summary": "Elena’s materials present a federal CFO as a corporate CFO — enterprise performance and capital discipline turned into measurable savings, faster reporting, and the investor-grade controls boards expect.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Gov-Marquez-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Gov-Marquez-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Gov-Marquez-Cover-Letter.pdf" } ]
     },
     {
-      "key": "reyes",
-      "title": "Science, Technology & Research Investment Leadership",
+      "key": "ellery",
+      "title": "Science, Technology & R&D Investment Leadership",
       "subtitle": "Federal SES Executive → Chief Science & Technology Officer",
-      "resume": "assets/images/samples/gov-reyes-resume.jpg",
-      "summary": "Position Marcus for a Chief Science & Technology Officer role by translating federal executive authority into corporate leadership, research investment, and commercialization strategy. Reframe grant oversight as capital allocation and emphasize executive reporting relationships, investment decisions, and measurable results in risk and efficiency. The cover letter connects his experience directing research funding and evaluating innovation to winning federal business, accelerating commercialization, and bringing new technologies to market.",
-      "downloads": [
-        {
-          "title": "Resume Sample",
-          "file": "assets/downloads/Gov-Resume-Reyes.pdf"
-        }
-      ]
+      "resume": "assets/images/samples/gov-ellery-resume.jpg",
+      "cover": "assets/images/samples/gov-ellery-cover.jpg",
+      "summary": "Dr. Ellery’s resume and cover letter frame a federal science executive as a Chief Science & Technology Officer who allocates research investment like capital — portfolio results, commercialization, and public-private partnerships.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Gov-Ellery-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Gov-Ellery-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Gov-Ellery-Cover-Letter.pdf" } ]
     },
     {
-      "key": "krishnan",
-      "title": "Technology Transfer & IP Commercialization",
-      "subtitle": "Ph.D. Researcher → Licensing & Partnerships Manager",
-      "resume": "assets/images/samples/gov-krishnan-resume.jpg",
-      "summary": "Position Meera for an industry licensing role by emphasizing patent expertise, technology commercialization, and strategic partnerships over academic research. Highlight measurable results across 12 medical centers, 140+ disclosures, 60+ patent filings, and four licenses. Reorganize her experience into an ATS-compatible format that prioritizes commercial achievements. The cover letter connects her technical judgment and intellectual property expertise to identifying marketable innovations, negotiating partnerships, and accelerating medical technology commercialization.",
-      "downloads": [
-        {
-          "title": "Resume Sample",
-          "file": "assets/downloads/Gov-Resume-Krishnan.pdf"
-        }
-      ]
-    },
-    {
-      "key": "mehta",
-      "title": "Healthcare Operations & Virtual Care Leadership",
-      "subtitle": "Federal Physician → Medical Director, Virtual Addiction Care",
-      "resume": "assets/images/samples/gov-mehta-resume.jpg",
-      "summary": "Position Rohan for a virtual care medical director role by translating federal clinical leadership into scalable treatment programs, patient retention, and regulatory compliance. Replace clinical acronyms with measurable results: 1,000+ patients served, retention improved from 58% to 74%, treatment initiation reduced from nine days to under 48 hours, and zero accreditation findings. The cover letter connects his telehealth leadership to expanding access, improving treatment outcomes, and scaling safe, compliant addiction care.",
-      "downloads": [
-        {
-          "title": "Resume Sample",
-          "file": "assets/downloads/Gov-Resume-Mehta.pdf"
-        }
-      ]
-    },
-    {
-      "key": "whitfield",
-      "title": "Corporate Legal Leadership & Regulatory Strategy",
-      "subtitle": "Acting General Counsel, U.S. DOT → Fortune 500 General Counsel",
-      "resume": "assets/images/samples/gov-whitfield-resume.jpg",
-      "summary": "Position Caroline for a Fortune 500 General Counsel role by translating federal legal authority into corporate governance, regulatory strategy, and enterprise risk management. Highlight leadership of a 450-person, $120M legal organization, $210M in settlements, an 85% litigation win rate, and $85M in penalties avoided. The cover letter connects her regulatory expertise, congressional experience, and crisis leadership to protecting corporate interests, managing legal exposure, and supporting business growth.",
-      "downloads": [
-        {
-          "title": "Resume Sample",
-          "file": "assets/downloads/Gov-Resume-Whitfield.pdf"
-        }
-      ]
-    },
-    {
-      "key": "brooks",
-      "title": "Healthcare Quality, Compliance & Patient Safety",
-      "subtitle": "Federal Inspector General → VP of Quality & Patient Safety",
-      "resume": "assets/images/samples/gov-brooks-resume.jpg",
-      "summary": "Position Natalie for a healthcare quality executive role by translating federal inspection experience into patient safety, regulatory compliance, and operational improvement. Highlight oversight of a 9.6-million-beneficiary health system, 96% adoption of 420+ recommendations, wait times reduced from 28 to 10 days, and zero accreditation findings. The cover letter connects her regulatory insight and performance improvement experience to strengthening patient outcomes, maintaining accreditation readiness, and reducing organizational risk.",
-      "downloads": [
-        {
-          "title": "Resume Sample",
-          "file": "assets/downloads/Gov-Resume-Brooks.pdf"
-        }
-      ]
+      "key": "raghunathan",
+      "title": "Technology Transfer, IP & Commercialization",
+      "subtitle": "Federal Research → Industry Licensing & Partnerships",
+      "resume": "assets/images/samples/gov-raghunathan-resume.jpg",
+      "cover": "assets/images/samples/gov-raghunathan-cover.jpg",
+      "summary": "Dr. Raghunathan’s materials move a federal technology-transfer specialist into industry licensing and partnerships — commercialized innovation, patent strategy, and executed licenses backed by deep technical judgment.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Gov-Raghunathan-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Gov-Raghunathan-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Gov-Raghunathan-Cover-Letter.pdf" } ]
     },
     {
       "key": "hale",
-      "title": "Global Affairs & International Market Strategy",
-      "subtitle": "Senior Foreign Service Officer → VP, Global Government Affairs",
+      "title": "Global Government Affairs & Market Entry",
+      "subtitle": "Senior Foreign Service → Global Government Affairs Leader",
       "resume": "assets/images/samples/gov-hale-resume.jpg",
-      "summary": "Position Gregory for a VP of global government affairs role by presenting him as an executive who opens markets and manages political risk, not a diplomat listing postings. “Deputy Chief of Mission” becomes the second-in-command of a 1,100-person international operation with a $95M budget, and “bilateral engagement” becomes negotiating directly with heads of government, regulators and industry leaders. Replace State Department terms with headline numbers: $3.8B in U.S. company deals advanced, 14 trade barriers removed, 3 crisis evacuations led, and operations across 9 countries in 22 years. The cover letter shows how a career spent resolving disputes with foreign governments helps a multinational enter new markets faster and avoid costly political risk.",
-      "downloads": [
-        {
-          "title": "Resume Sample",
-          "file": "assets/downloads/Gov-Resume-Hale.pdf"
-        }
-      ]
+      "cover": "assets/images/samples/gov-hale-cover.jpg",
+      "summary": "Gregory’s resume and cover letter present a senior diplomat as a global government-affairs executive who opens markets and manages political risk — deals advanced, trade barriers removed, crises managed.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Gov-Hale-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Gov-Hale-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Gov-Hale-Cover-Letter.pdf" } ]
     },
     {
-      "key": "carter",
-      "title": "Defense Acquisition & Aerospace Operations",
-      "subtitle": "Senior Defense Civilian (SES) → Chief Operating Officer, Defense & Aerospace",
-      "resume": "assets/images/samples/gov-carter-resume.jpg",
-      "summary": "Position Raymond for a defense industry COO role by translating federal acquisition leadership into operational performance, supplier management, and business growth. Highlight oversight of a $38B portfolio, 6,000 personnel, 42 major programs, and $3.1B in cost overruns avoided. The cover letter connects his knowledge of Pentagon procurement, complex program delivery, and contractor expectations to improving operational efficiency, protecting profit margins, and securing future defense contracts.",
-      "downloads": [
-        {
-          "title": "Resume Sample",
-          "file": "assets/downloads/Gov-Resume-Carter.pdf"
-        }
-      ]
+      "key": "castillo",
+      "title": "Operations & Program Delivery Leadership",
+      "subtitle": "Defense SES Executive → Chief Operating Officer",
+      "resume": "assets/images/samples/gov-castillo-resume.jpg",
+      "cover": "assets/images/samples/gov-castillo-cover.jpg",
+      "summary": "Raymond’s materials reposition a defense acquisition leader as a Chief Operating Officer — portfolio scale, cost and schedule performance, and overruns avoided turned into operational results.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Gov-Castillo-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Gov-Castillo-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Gov-Castillo-Cover-Letter.pdf" } ]
     },
     {
       "key": "russo",
-      "title": "Corporate Security & Global Investigations",
-      "subtitle": "FBI Executive Assistant Director → Chief Security Officer",
+      "title": "Corporate Security & Investigations Leadership",
+      "subtitle": "Federal Law-Enforcement Executive → Chief Security Officer",
       "resume": "assets/images/samples/gov-russo-resume.jpg",
-      "summary": "Position Anthony for a Fortune 500 Chief Security Officer role by translating FBI leadership into corporate security, threat prevention, and crisis management. Highlight oversight of 4,500 personnel, a $1.2B budget, 2,300+ investigations, and $780M in recovered assets. The cover letter connects his experience managing complex security threats, reducing critical incident response times by 60%, and building corporate partnerships to protecting employees, safeguarding intellectual property, and strengthening global enterprise security.",
-      "downloads": [
-        {
-          "title": "Resume Sample",
-          "file": "assets/downloads/Gov-Resume-Russo.pdf"
-        }
-      ]
+      "cover": "assets/images/samples/gov-russo-cover.jpg",
+      "summary": "Anthony’s resume and cover letter translate national-security leadership into corporate security — threat prevention, investigations, and crisis management led by the metrics boards care about.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Gov-Russo-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Gov-Russo-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Gov-Russo-Cover-Letter.pdf" } ]
     },
     {
-      "key": "pierce",
-      "title": "Board Governance & Portfolio Leadership",
-      "subtitle": "Deputy Secretary (Political Appointee) → Corporate Director & Private Equity Operating Partner",
-      "resume": "assets/images/samples/gov-pierce-resume.jpg",
-      "summary": "Position Jonathan for board and private equity roles by translating federal executive leadership into corporate governance, operational transformation, and investment value creation. Highlight oversight of an 85,000-person, $60B enterprise, $900M in annual savings, 60% revenue growth, and a 3.1x private equity exit. The cover letter connects his experience in corporate leadership, enterprise transformation, and risk oversight to strengthening portfolio performance, guiding strategic investments, and creating shareholder value.",
-      "downloads": [
-        {
-          "title": "Resume Sample",
-          "file": "assets/downloads/Gov-Resume-Pierce.pdf"
-        }
-      ]
+      "key": "fontaine",
+      "title": "Program & Portfolio Management Leadership",
+      "subtitle": "Program Director → Enterprise PMO Leader",
+      "resume": "assets/images/samples/gov-fontaine-resume.jpg",
+      "cover": "assets/images/samples/gov-fontaine-cover.jpg",
+      "summary": "Malik’s materials present a program and portfolio leader (PMP, PgMP) for enterprise PMO roles — portfolio governance, agile delivery, and programs delivered on cost and schedule.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Gov-Fontaine-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Gov-Fontaine-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Gov-Fontaine-Cover-Letter.pdf" } ]
     },
     {
-      "key": "bello",
-      "title": "Regulatory Affairs & Product Approval Strategy",
-      "subtitle": "FDA Office Director → Vice President, Regulatory Affairs, Medical Devices",
-      "resume": "assets/images/samples/gov-bello-resume.jpg",
-      "summary": "Position Dr. Bello for a medical device regulatory executive role by translating FDA leadership into product approval strategy, regulatory compliance, and market access. Highlight oversight of 650 personnel, 1,800+ annual product submissions, review times reduced by 30%, and 40+ first-of-a-kind device approvals. The cover letter connects her insider knowledge of FDA decision-making and breakthrough device programs to accelerating approvals, minimizing regulatory delays, and bringing innovative medical technologies to patients sooner.",
-      "downloads": [
-        {
-          "title": "Resume Sample",
-          "file": "assets/downloads/Gov-Resume-Bello.pdf"
-        }
-      ]
+      "key": "thornbury",
+      "title": "Legal Leadership & Corporate Counsel",
+      "subtitle": "Judge Advocate → Corporate Counsel",
+      "resume": "assets/images/samples/gov-thornbury-resume.jpg",
+      "cover": "assets/images/samples/gov-thornbury-cover.jpg",
+      "summary": "Marisol’s resume and cover letter reposition a senior government attorney as corporate counsel — litigation and regulatory judgment framed as enterprise legal leadership.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Gov-Thornbury-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Gov-Thornbury-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Gov-Thornbury-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "okafor",
+      "title": "Cybersecurity & Security Operations Leadership",
+      "subtitle": "Federal Cyber Commander → CISO / Director of Security Operations",
+      "resume": "assets/images/samples/gov-okafor-resume.jpg",
+      "cover": "assets/images/samples/gov-okafor-cover.jpg",
+      "summary": "Nathaniel’s materials present a career cyber-defense leader as a CISO — 21 years defending networks under real-world attack, translated into risk reduced and resilient operations.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Gov-Okafor-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Gov-Okafor-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Gov-Okafor-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "holloway",
+      "title": "Supply Chain, Logistics & Operations",
+      "subtitle": "Federal Logistics Leader → VP of Logistics",
+      "resume": "assets/images/samples/gov-holloway-resume.jpg",
+      "cover": "assets/images/samples/gov-holloway-cover.jpg",
+      "summary": "Rebecca’s resume and cover letter move a large-scale logistics leader into supply chain and operations roles — on-time delivery, inventory and freight cost framed as business impact.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Gov-Holloway-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Gov-Holloway-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Gov-Holloway-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "vance",
+      "title": "Global Operations & Emergency-Response Leadership",
+      "subtitle": "Operations & Logistics Leader → Chief Operating Officer",
+      "resume": "assets/images/samples/gov-vance-resume.jpg",
+      "cover": "assets/images/samples/gov-vance-cover.jpg",
+      "summary": "Renata’s resume and cover letter reposition a large-scale operations and emergency-response leader as a Chief Operating Officer — dispersed global operations, humanitarian supply chain, and crisis response translated into measurable business scope and results.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Gov-Vance-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Gov-Vance-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Gov-Vance-Cover-Letter.pdf" } ]
     }
   ],
   "closing": {
@@ -624,3 +578,172 @@ export const governmentSampleGallery = {
   }
 };
 
+
+export const corporateSampleGallery = {
+  "slug": "corporate-executive-resume-samples",
+  "eyebrow": "CORPORATE EXECUTIVE · LEADERSHIP EVIDENCE",
+  "title": "CORPORATE EXECUTIVE RESUME SAMPLES",
+  "subhead": "Built to move leaders into the C-suite.",
+  "heroImage": "assets/images/corporate-executives.jpg",
+  "intro": [
+    "Start with the role you want next. These samples show how senior corporate leaders translate scope, results, and judgment into a resume and cover letter built for the step up — from division president to CEO, from VP to chief officer, from the firm to the boardroom. Explore each one to see the strategy in action.",
+    "The samples on this page are fictionalized. Names, organizations, accomplishments, and figures are illustrative only and do not describe real people or real results. Use them as models for your own story, not as text to copy."
+  ],
+  "disclaimer": "Fictional samples. Names, organizations, and results are illustrative.",
+  "summaryLabel": "The Strategy",
+  "band": {
+    "heading": [
+      "Your next role",
+      "is a bigger one."
+    ],
+    "sub": "The resume and the cover letter, built to match.",
+    "previews": [
+      { "src": "assets/images/samples/corp-raman-resume.jpg", "alt": "Executive resume sample" },
+      { "src": "assets/images/samples/corp-raman-cover.jpg", "alt": "Cover letter sample" }
+    ]
+  },
+  "packages": [
+    {
+      "key": "raman",
+      "title": "Chief Executive Leadership",
+      "subtitle": "Division President → First-Time CEO",
+      "resume": "assets/images/samples/corp-raman-resume.jpg",
+      "cover": "assets/images/samples/corp-raman-cover.jpg",
+      "summary": "Position Priya for her first CEO role through board-facing experience and P&L ownership of a 4,200-person business. Lead with results: revenue grew from $900M to $1.4B, operating margin rose from 9% to 15%, she integrated three acquisitions, and built a $210M business in Asia. Three brief case studies show a turnaround, a major customer win, and crisis leadership. The cover letter connects those results to leading an entire company and answering to its board.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Raman-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Corp-Raman-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Raman-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "osei",
+      "title": "Operations & Turnaround Leadership",
+      "subtitle": "VP of Manufacturing → Turnaround COO",
+      "resume": "assets/images/samples/corp-osei-resume.jpg",
+      "cover": "assets/images/samples/corp-osei-cover.jpg",
+      "summary": "Position Kevin as a turnaround COO by showing how he led 9 plants, managed 3,800 people, and oversaw $1.1B in cost of goods. On-time delivery rose from 71% to 96%, annual costs fell by $84M, and safety incidents dropped 58%. Two brief case studies show how he returned struggling plants to profitability within 18 months. The cover letter connects his turnaround experience to leading company-wide operations.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Osei-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Corp-Osei-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Osei-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "hendricks",
+      "title": "Finance & IPO-Readiness Leadership",
+      "subtitle": "Divisional CFO → Public-Company CFO",
+      "resume": "assets/images/samples/corp-hendricks-resume.jpg",
+      "cover": "assets/images/samples/corp-hendricks-cover.jpg",
+      "summary": "Position Laura for a public-company CFO role by highlighting her financial leadership of a $2.2B business. She refinanced $450M in debt, saving $19M annually, shortened the close from 15 to 5 days, freed $60M in working capital, and built SOX controls ahead of an IPO. Leading due diligence on a $700M acquisition shows she can work with bankers, auditors, and investors. The cover letter connects that experience to taking a company public and telling its story to Wall Street.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Hendricks-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Corp-Hendricks-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Hendricks-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "nakamura",
+      "title": "Technology & Digital Transformation Leadership",
+      "subtitle": "IT Director → CIO, Digital Transformation",
+      "resume": "assets/images/samples/corp-nakamura-resume.jpg",
+      "cover": "assets/images/samples/corp-nakamura-cover.jpg",
+      "summary": "Position Samuel for a CIO role by highlighting his leadership of a 240-person technology organization and a $95M budget. His cloud migration cut infrastructure costs by 34%, his digital ordering platform grew online revenue from 8% to 31% of sales, and system outages fell 80%. The cover letter connects his partnerships with sales and operations leaders to how he would use technology to grow revenue across the company.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Nakamura-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Corp-Nakamura-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Nakamura-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "reyes",
+      "title": "Cybersecurity & Risk Leadership",
+      "subtitle": "Director of Security Operations → CISO",
+      "resume": "assets/images/samples/corp-reyes-resume.jpg",
+      "cover": "assets/images/samples/corp-reyes-cover.jpg",
+      "summary": "Position Natasha for her first CISO role by highlighting her leadership of cyber defense for a $6B company. She cut detection time from 9 days to 4 hours, reduced audit findings by 75%, and saved $3.2M by consolidating tools. A brief case study shows how she contained ransomware with zero downtime. The cover letter explains how she would brief the board on cyber risk and protect revenue and reputation.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Reyes-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Corp-Reyes-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Reyes-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "whitfield",
+      "title": "Revenue & Growth Leadership",
+      "subtitle": "VP of Sales → Chief Revenue Officer",
+      "resume": "assets/images/samples/corp-whitfield-resume.jpg",
+      "cover": "assets/images/samples/corp-whitfield-cover.jpg",
+      "summary": "Position Jamal as a CRO who leads growth from first contact to renewal, drawing on his leadership of 180 people across sales, marketing, and customer success. Annual recurring revenue grew from $60M to $210M, retention reached 118%, the sales cycle fell from 9 to 5 months, and he opened three markets. The cover letter connects his work aligning sales and marketing to building predictable growth at scale.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Whitfield-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Corp-Whitfield-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Whitfield-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "santoro",
+      "title": "Human Resources & Transformation Leadership",
+      "subtitle": "VP of HR → CHRO, M&A and Transformation",
+      "resume": "assets/images/samples/corp-santoro-resume.jpg",
+      "cover": "assets/images/samples/corp-santoro-cover.jpg",
+      "summary": "Position Maria for a CHRO role by highlighting her leadership of a 140-person HR team supporting 22,000 employees and her work with the board’s compensation committee. She integrated four acquisitions while retaining 92% of key talent, cut turnover from 24% to 13% and saved $38M annually, and filled 85% of senior roles internally through succession planning. The cover letter shows how she would use culture and talent to support growth and change.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Santoro-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Corp-Santoro-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Santoro-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "lindqvist",
+      "title": "Legal & Governance Leadership",
+      "subtitle": "Law-Firm Partner → In-House General Counsel",
+      "resume": "assets/images/samples/corp-lindqvist-resume.jpg",
+      "cover": "assets/images/samples/corp-lindqvist-cover.jpg",
+      "summary": "Position David for an in-house general counsel role by highlighting his work advising 40+ public and private company boards. He closed $8B in M&A deals, guided three IPOs, resolved a regulatory investigation without penalties, and cut a client’s legal spend by 30%. The cover letter connects his experience building a practice to leading an in-house legal team that manages risk and supports growth.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Lindqvist-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Corp-Lindqvist-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Lindqvist-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "castellanos",
+      "title": "Strategy & Transformation Leadership",
+      "subtitle": "Management Consultant → Chief Strategy Officer",
+      "resume": "assets/images/samples/corp-castellanos-resume.jpg",
+      "cover": "assets/images/samples/corp-castellanos-cover.jpg",
+      "summary": "Position Emily for a chief strategy officer role by highlighting her work with 30+ CEOs and her 18 months as interim head of strategy. Her strategies drove $2.4B in revenue growth and $650M in cost savings. She helped shape six acquisitions and repositioned two companies for successful exits. The cover letter connects her in-house experience to owning strategy from design through execution.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Castellanos-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Corp-Castellanos-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Castellanos-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "hargrove",
+      "title": "Board & Governance Leadership",
+      "subtitle": "Retired CFO → First Public-Company Board Seat",
+      "resume": "assets/images/samples/corp-hargrove-resume.jpg",
+      "cover": "assets/images/samples/corp-hargrove-cover.jpg",
+      "summary": "Position Linda for her first public company board seat with a concise board bio and director profile. Highlight two IPOs, oversight of $3B in acquisitions, 12 years of clean audits, and four years presenting to audit committees. A Board Qualifications section maps her experience to audit, finance, risk, and M&A oversight. The cover letter shows how her CFO experience would help a board ask informed questions of management.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Hargrove-Resume-Before.pdf" }, { "title": "Director Profile", "file": "assets/downloads/Corp-Hargrove-Director-Profile.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Hargrove-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "mensah",
+      "title": "Medical & Clinical Leadership",
+      "subtitle": "Practicing Physician → Health-System Chief Medical Officer",
+      "resume": "assets/images/samples/corp-mensah-resume.jpg",
+      "cover": "assets/images/samples/corp-mensah-cover.jpg",
+      "summary": "Position Dr. Mensah for a health system CMO role by highlighting his leadership of 420 physicians and advanced practice clinicians. He cut readmissions by 28%, raised patient satisfaction to the top 10% nationally, saved $22M annually by reducing variation in care, and halved physician turnover. The cover letter connects his MBA and work on value-based care contracts to improving care quality and financial performance across a health system.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Mensah-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Corp-Mensah-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Mensah-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "ibarra",
+      "title": "Compliance & Enterprise-Risk Leadership",
+      "subtitle": "Compliance Director → Chief Compliance Officer",
+      "resume": "assets/images/samples/corp-ibarra-resume.jpg",
+      "cover": "assets/images/samples/corp-ibarra-cover.jpg",
+      "summary": "Position Rachel for a chief compliance officer role by highlighting her leadership of a 60-person team across 28 countries and her regular reporting to the audit committee. She resolved a $40M regulatory investigation without penalties, cut audit findings by 70%, built a risk program covering 5,000 suppliers, and shortened new-market approvals from six months to six weeks. The cover letter shows how she would manage risk while helping the company expand faster.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Ibarra-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Corp-Ibarra-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Ibarra-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "wakefield",
+      "title": "Nonprofit & Mission Leadership",
+      "subtitle": "Corporate Executive → Nonprofit CEO",
+      "resume": "assets/images/samples/corp-wakefield-resume.jpg",
+      "cover": "assets/images/samples/corp-wakefield-cover.jpg",
+      "summary": "Position Thomas for a nonprofit CEO role by pairing his leadership of a $500M operation and 2,000 employees with his longtime nonprofit board service. He co-chaired a $25M capital campaign as a volunteer, tripled the number of people served at the same cost, and built partnerships with 40 community organizations. The cover letter connects his operating and fundraising experience to reaching more people and growing funding.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Wakefield-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Corp-Wakefield-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Wakefield-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "raghavan",
+      "title": "Data & AI Leadership",
+      "subtitle": "Director of Analytics → Chief Data & AI Officer",
+      "resume": "assets/images/samples/corp-raghavan-resume.jpg",
+      "cover": "assets/images/samples/corp-raghavan-cover.jpg",
+      "summary": "Position Arjun for a chief data and AI officer role by highlighting his leadership of a 90-person team and his work with the CEO and business unit leaders. His AI pricing tool added $48M in annual profit, improved forecasting cut inventory costs by $31M, and customer churn fell 22%. The cover letter connects these results and company-wide adoption of responsible AI governance to growing the business safely and profitably.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Raghavan-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Corp-Raghavan-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Raghavan-Cover-Letter.pdf" } ]
+    },
+    {
+      "key": "delgado",
+      "title": "Product & Innovation Leadership",
+      "subtitle": "VP of Product → Chief Product Officer",
+      "resume": "assets/images/samples/corp-delgado-resume.jpg",
+      "cover": "assets/images/samples/corp-delgado-cover.jpg",
+      "summary": "Position Sofia for a chief product officer role by leading with results. She launched two products that reached $180M in annual revenue, grew the user base from 2M to 11M, cut time to market by 40%, and expanded her product team from 12 to 60. Note her three-year caregiving break in one line and highlight her advisory work with four startups and recent certifications. The cover letter connects her track record to leading product strategy from vision to revenue.",
+      "downloads": [ { "title": "Resume Before", "file": "assets/downloads/Corp-Delgado-Resume-Before.pdf" }, { "title": "Resume After", "file": "assets/downloads/Corp-Delgado-Resume-After.pdf" }, { "title": "Cover Letter", "file": "assets/downloads/Corp-Delgado-Cover-Letter.pdf" } ]
+    }
+  ],
+  "closing": {
+    "title": "YOUR TITLE IS NOT YOUR MARKET VALUE",
+    "text": [
+      "Every engagement begins by assessing your leadership scope, accomplishments, strengths, and transferable value before developing a resume and cover letter targeted to the role you want next.",
+      "Schedule a complimentary consultation to discuss your goals and determine whether my services may be a good fit."
+    ]
+  }
+};

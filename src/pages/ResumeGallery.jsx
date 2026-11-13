@@ -89,8 +89,17 @@ export default function ResumeGallery({ page }) {
             const num = String(start + i + 1).padStart(2, '0');
             return (
               <article className="rg-item" key={pkg.key}>
-                <div className="rg-item-art">
-                  <ZoomPreview src={pkg.resume} alt={`${pkg.title} — resume sample`} onOpen={openShot} />
+                <div className={'rg-item-art' + (pkg.cover ? ' rg-item-art--pair' : '')}>
+                  <figure className="rg-doc">
+                    <p className="rg-doc-cap">Resume</p>
+                    <ZoomPreview src={pkg.resume} alt={`${pkg.title} — resume`} onOpen={openShot} />
+                  </figure>
+                  {pkg.cover && (
+                    <figure className="rg-doc">
+                      <p className="rg-doc-cap">Cover Letter</p>
+                      <ZoomPreview src={pkg.cover} alt={`${pkg.title} — cover letter`} onOpen={openShot} />
+                    </figure>
+                  )}
                 </div>
                 <div className="rg-item-text">
                   <h2>

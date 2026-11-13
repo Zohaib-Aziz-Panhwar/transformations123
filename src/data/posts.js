@@ -3,6 +3,28 @@
 
 export const posts = [
   {
+    "slug": "prepare-ses-resume-before-vacancy-opens",
+    "title": "Thinking About an SES Role? What to Do Before the Vacancy Opens",
+    "date": "2026-11-11",
+    "excerpt": "Targeting a Senior Executive Service role? Use this guide to identify the agency’s priorities, build strong leadership examples, and prepare a two-page SES resume before the vacancy opens.",
+    "image": "prepare-ses-resume-before-vacancy-opens.jpg",
+    "imageAlt": "A GS-14 or GS-15 federal leader preparing a two-page SES resume before a Senior Executive Service vacancy opens.",
+    "wide": false,
+    "category": null,
+    "minutes": 6
+  },
+  {
+    "slug": "government-to-private-sector-career-transition",
+    "title": "Government to Private Sector Career Transition: 7 Strategies for Federal Executives",
+    "date": "2026-11-05",
+    "excerpt": "Your federal leadership experience is impressive. But is it marketable? Moving from a GS-14, GS-15, or SES position into corporate leadership takes more than updating your resume. These seven strategies help federal executives build a competitive transition plan…",
+    "image": "government-to-private-sector-career-transition.jpg",
+    "imageAlt": "Federal executive exploring a government to private sector career transition and corporate leadership opportunities.",
+    "wide": false,
+    "category": null,
+    "minutes": 11
+  },
+  {
     "slug": "executive-career-transition-market-value",
     "title": "Executive Career Transition: Is Your Leadership Experience Marketable?",
     "date": "2026-10-21",

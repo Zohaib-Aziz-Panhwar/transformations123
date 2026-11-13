@@ -2232,12 +2232,20 @@ html { scroll-padding-top: 110px; }
   padding: clamp(28px, 4vw, 56px) clamp(20px, 5vw, 70px);
 }
 .rg-item {
-  display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
   gap: clamp(22px, 3.4vw, 54px); align-items: start;
   padding: clamp(24px, 3vw, 40px) 0; border-top: 1px solid var(--divider);
 }
 .rg-item:first-child { border-top: 0; padding-top: clamp(6px, 1vw, 12px); }
 .rg-item-art { max-width: 300px; }
+/* Resume + cover letter shown side by side. */
+.rg-item-art--pair { max-width: 380px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.rg-doc { margin: 0; }
+.rg-doc-cap {
+  font-family: var(--font-display); font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: #5b6b7d; font-size: .72rem;
+  margin: 0 0 7px; text-align: center;
+}
 .rg-item-text h2 {
   font-family: var(--font-body); font-weight: 700; color: var(--navy-text);
   font-size: clamp(1.4rem, 2.5vw, 2.05rem); line-height: 1.12; margin: 0 0 .28em;
@@ -2258,7 +2266,7 @@ html { scroll-padding-top: 110px; }
 }
 .rg-item-sum { color: var(--body); font-size: clamp(1rem, 1.2vw, 1.1rem); line-height: 1.65; margin: 0; }
 .rg-item-dl {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(10px, 1.2vw, 16px);
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: clamp(10px, 1.2vw, 16px);
   margin-top: clamp(18px, 2.2vw, 28px);
 }
 .rg-dl-btn {
@@ -2315,6 +2323,7 @@ html { scroll-padding-top: 110px; }
 @media (max-width: 680px) {
   .rg-item { grid-template-columns: 1fr; gap: 18px; }
   .rg-item-art { max-width: 260px; margin: 0 auto; }
+  .rg-item-art--pair { max-width: 360px; margin: 0 auto; }
   .rg-item-dl { grid-template-columns: 1fr; }
   .rg-band-shots { grid-template-columns: 1fr 1fr; }
 }
@@ -2428,4 +2437,152 @@ html { scroll-padding-top: 110px; }
 .ses-item-art .rg-shot-frame img { border: 0; border-radius: 0; box-shadow: none; }
 @media (max-width: 760px) {
   .ses-item-art .rg-shot { max-width: 320px; margin: 0 auto; }
+}
+
+/* ===== SES Application Packages (3-tier) ===== */
+.sesp-hero {
+  position: relative; overflow: hidden; text-align: center;
+  background: linear-gradient(108deg, #e7f1fb 0%, #dcebfa 34%, #eef0ec 62%, #f6ece0 100%);
+  padding: clamp(36px, 5vw, 70px) 0 clamp(30px, 4.5vw, 58px);
+}
+/* soft warm glow behind the butterfly so the left side reads as colourful */
+.sesp-hero::before {
+  content: ""; position: absolute; left: -6%; top: 50%; transform: translateY(-50%);
+  width: clamp(240px, 32vw, 520px); height: clamp(240px, 32vw, 520px); border-radius: 50%;
+  background: radial-gradient(circle, rgba(243,98,5,.20) 0%, rgba(243,98,5,0) 68%);
+  z-index: 0; pointer-events: none;
+}
+.sesp-hero-butterfly {
+  position: absolute; left: clamp(-20px, 1vw, 40px); top: 50%; transform: translateY(-50%);
+  width: clamp(150px, 20vw, 300px); pointer-events: none; z-index: 1;
+  filter: drop-shadow(0 10px 16px rgba(10,18,48,.18));
+}
+.sesp-hero-capitol {
+  position: absolute; right: 0; top: 0; bottom: 0; width: 42%;
+  background-size: cover; background-position: center 40%; z-index: 1; pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 38%);
+  mask-image: linear-gradient(90deg, transparent, #000 38%);
+}
+/* The Capitol now shows at full strength, so give the centred heading a soft
+   light halo where it crosses the photo. */
+.sesp-hero-inner h1, .sesp-hero-inner p, .sesp-hero-inner .sesp-back {
+  text-shadow: 0 0 14px rgba(255,255,255,.95), 0 0 28px rgba(255,255,255,.8);
+}
+.sesp-hero-inner { position: relative; z-index: 2; max-width: 880px; margin: 0 auto; padding: 0 20px; }
+.sesp-back {
+  display: inline-block; font-family: var(--font-body); font-size: .82rem; font-weight: 600;
+  color: #5b6b7d; text-decoration: none; margin: 0 0 14px;
+}
+.sesp-back:hover { color: var(--orange-text); }
+.sesp-eyebrow {
+  font-family: var(--font-display); letter-spacing: .16em; text-transform: uppercase;
+  color: var(--orange-text); font-weight: 600; font-size: clamp(.78rem, 1.25vw, 1rem); margin: 0 0 .5em;
+}
+.sesp-eyebrow span::before, .sesp-eyebrow span::after {
+  content: ""; display: inline-block; width: clamp(22px, 4vw, 52px); height: 2px;
+  background: var(--orange); vertical-align: middle; margin: 0 clamp(8px, 1.2vw, 14px);
+}
+.sesp-title {
+  font-family: var(--font-display); font-weight: 700; color: var(--navy-text);
+  font-size: clamp(2.05rem, 5.4vw, 3.9rem); line-height: 1.03; margin: 0 0 .22em;
+}
+.sesp-sub {
+  font-family: var(--font-body); font-weight: 500; color: var(--navy-text);
+  font-size: clamp(1rem, 1.7vw, 1.32rem); margin: 0;
+}
+
+.sesp-body { background: #fff; padding: clamp(32px, 4.5vw, 58px) 0 clamp(28px, 4vw, 50px); }
+.sesp-lead {
+  text-align: center; font-family: var(--font-body); font-weight: 700; color: var(--navy-text);
+  font-size: clamp(1.12rem, 2.1vw, 1.55rem); line-height: 1.3; max-width: 880px;
+  margin: 0 auto clamp(28px, 4vw, 44px);
+}
+
+.sesp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2vw, 26px); align-items: start; }
+.sesp-card {
+  position: relative; display: flex; flex-direction: column;
+  /* A soft sky-blue wash, deepening slightly toward the foot of the card. */
+  background: linear-gradient(180deg, #f7fbff 0%, #e9f3fd 100%);
+  border: 1.5px solid #c8dcf1; border-radius: 14px; box-shadow: 0 10px 30px rgba(30, 80, 150, .10);
+}
+.sesp-card.is-featured {
+  border: 2px solid var(--orange); box-shadow: 0 16px 44px rgba(243, 98, 5, .22);
+  background: linear-gradient(180deg, #fffaf5 0%, #fff1e3 100%);
+}
+.sesp-ribbon {
+  position: absolute; top: -15px; left: 50%; transform: translateX(-50%); white-space: nowrap;
+  background: linear-gradient(90deg, var(--orange), var(--orange-hi)); color: #fff;
+  font-family: var(--font-display); font-weight: 600;
+  letter-spacing: .08em; font-size: .72rem; padding: 6px 18px; border-radius: 7px;
+  box-shadow: 0 5px 14px rgba(243, 98, 5, .38); z-index: 3;
+}
+/* header reads as a floating rounded plate, like the reference */
+.sesp-card-head {
+  margin: 12px 12px 0; border-radius: 10px; color: #fff; text-align: center;
+  background: linear-gradient(180deg, #16294f 0%, #0A1230 100%);
+  font-family: var(--font-display); font-weight: 600; letter-spacing: .02em;
+  font-size: clamp(.95rem, 1.25vw, 1.08rem); padding: 15px 14px;
+  box-shadow: 0 6px 16px rgba(10, 18, 48, .22);
+}
+/* Tier 3 gets the orange header from the reference */
+.sesp-card.is-featured .sesp-card-head {
+  background: linear-gradient(180deg, var(--orange-hi) 0%, var(--orange) 100%);
+  box-shadow: 0 6px 16px rgba(243, 98, 5, .34); margin-top: 16px;
+}
+.sesp-card-body { padding: clamp(18px, 2vw, 26px) clamp(16px, 1.8vw, 24px) clamp(22px, 2.6vw, 30px); }
+.sesp-tagline {
+  text-align: center; font-family: var(--font-body); font-style: italic; font-weight: 600;
+  color: var(--navy-text); font-size: clamp(.95rem, 1.3vw, 1.05rem); line-height: 1.32;
+  margin: 0 0 16px; min-height: 2.7em;
+}
+.sesp-price {
+  text-align: center; background: #fce8d7; color: var(--orange-text); border-radius: 10px;
+  font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 3.6vw, 2.7rem);
+  padding: 10px 8px; margin: 0 0 18px;
+}
+.sesp-items { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
+.sesp-items li {
+  display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
+  font-family: var(--font-body); font-size: clamp(.92rem, 1.1vw, 1rem); line-height: 1.4; color: var(--body);
+}
+.sesp-items strong { color: var(--navy-text); font-weight: 700; }
+.sesp-check { color: var(--orange); margin-top: 2px; }
+.sesp-check svg { display: block; width: 17px; height: 17px; }
+
+.sesp-upgrade {
+  display: flex; align-items: center; gap: 14px; margin: clamp(26px, 3.5vw, 40px) 0 clamp(22px, 3vw, 32px);
+  background: #fff6ee; border: 1.5px solid #f7c9a3; border-radius: 12px;
+  padding: clamp(14px, 1.8vw, 20px) clamp(16px, 2vw, 26px);
+}
+.sesp-upgrade-ic {
+  flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%; background: var(--orange);
+  color: #fff; display: grid; place-items: center;
+}
+.sesp-upgrade-ic svg { width: 20px; height: 20px; }
+.sesp-upgrade p { margin: 0; font-family: var(--font-body); font-size: clamp(.95rem, 1.4vw, 1.1rem); color: var(--navy-text); line-height: 1.45; }
+.sesp-upgrade-hd, .sesp-upgrade-off { color: var(--orange-text); font-weight: 700; }
+
+.sesp-cta-wrap { text-align: center; }
+.sesp-cta {
+  display: inline-flex; align-items: center; gap: 10px; background: var(--orange); color: #fff;
+  font-family: var(--font-display); font-weight: 600; letter-spacing: .05em;
+  font-size: clamp(1.05rem, 1.8vw, 1.4rem); padding: 16px 44px; border-radius: 10px; text-decoration: none;
+  box-shadow: 0 10px 24px rgba(243, 98, 5, .28); transition: background .15s, transform .15s;
+}
+.sesp-cta:hover { background: var(--orange-hi); transform: translateY(-1px); }
+
+.sesp-outcome { background: var(--navy); color: #fff; text-align: center; padding: clamp(16px, 2.2vw, 22px) 20px; border-top: 4px solid var(--orange); }
+.sesp-outcome p { margin: 0; font-family: var(--font-body); font-size: clamp(1rem, 1.5vw, 1.2rem); }
+.sesp-outcome em { color: var(--orange); font-style: italic; font-weight: 600; }
+
+@media (max-width: 900px) {
+  .sesp-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+  .sesp-tagline { min-height: 0; }
+  .sesp-hero-capitol { width: 64%; opacity: .45; }
+  .sesp-hero-butterfly { width: 120px; opacity: .72; }
+  .sesp-ribbon { top: -13px; }
+}
+@media (max-width: 560px) {
+  .sesp-upgrade { flex-direction: column; text-align: center; }
+  .sesp-cta { width: 100%; justify-content: center; padding-left: 20px; padding-right: 20px; }
 }

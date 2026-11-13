@@ -89,6 +89,7 @@ export const resourcePaths = {
   resumesLibrary: '/resumes-library',
   militarySamples:   '/military-transition-resume-samples',
   governmentSamples: '/government-to-private-sector-resume-samples',
+  corporateSamples:  '/corporate-executive-resume-samples',
 };
 
 export const samples = {
