@@ -42,9 +42,9 @@ jobs:
           protocol: ftp
           port: 21
           local-dir: ./dist/
-          # Adjust if your FTP account is already scoped to the site folder:
-          # for an account rooted at the site, use "./" instead.
-          server-dir: /public_html/transformations123/
+          # The deploy FTP account is scoped to public_html/transformations123,
+          # so that folder is its root — upload straight into it.
+          server-dir: ./
           # Keeps a sync-state file on the server so later deploys only send
           # changed files. It will NOT wipe the folder.
           dangerous-clean-slate: false
