@@ -48,3 +48,14 @@ jobs:
           # Keeps a sync-state file on the server so later deploys only send
           # changed files. It will NOT wipe the folder.
           dangerous-clean-slate: false
+          # The blog is edited live through /admin/, which writes
+          # content/posts.json, content/blog/*.json and photos on the server.
+          # Never upload those from the repo, or a deploy would undo Amy's
+          # edits. (content/posts.seed.json still ships: the site only falls
+          # back to it before the editor has saved for the first time.)
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            content/posts.json
+            content/blog/**

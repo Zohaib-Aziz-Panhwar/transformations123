@@ -5,10 +5,15 @@ import App from './App.jsx';
 import './styles/style.css';
 import './styles/landing.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
-);
+import { loadPosts } from './data/posts.js';
+
+// The blog list is edited live on the server, so it is fetched, not bundled.
+loadPosts().finally(() => {
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+});

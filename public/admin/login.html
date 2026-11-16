@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Sign in — Blog Editor</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Poppins:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="editor.css?v=1" />
+</head>
+<body class="login-page">
+  <form class="login" id="form">
+    <img class="login__logo" src="/assets/images/amy-logo.png" alt="" onerror="this.remove()" />
+    <h1 id="title">Blog Editor</h1>
+    <p class="sub" id="sub">Sign in to write and edit posts.</p>
+
+    <div class="err" id="error" hidden></div>
+
+    <div class="field" id="codeField" hidden>
+      <label for="code">Setup code</label>
+      <input type="text" id="code" autocomplete="off" spellcheck="false" placeholder="XXXX-XXXX-XXXX-XXXX-XXXX" />
+    </div>
+    <div class="field">
+      <label for="username">Username</label>
+      <input type="text" id="username" autocomplete="username" autofocus required />
+    </div>
+    <div class="field">
+      <label for="password" id="passwordLabel">Password</label>
+      <input type="password" id="password" autocomplete="current-password" required />
+    </div>
+
+    <button class="btn btn--primary btn--block" id="submit" type="submit">Sign in</button>
+  </form>
+  <script type="module" src="login.js?v=1"></script>
+</body>
+</html>

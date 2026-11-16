@@ -4,7 +4,6 @@ import Layout from '../components/Layout.jsx';
 import PageHero from '../components/PageHero.jsx';
 import PageCta from '../components/PageCta.jsx';
 import { posts } from '../data/posts.js';
-import { articleCategories } from '../data/strategy-articles.js';
 
 const A = import.meta.env.BASE_URL;
 
@@ -68,9 +67,8 @@ export default function Blog() {
 
   const matches = useMemo(() => {
     let list = posts;
-    if (cat && articleCategories[cat]) {
-      const inCat = new Set(articleCategories[cat]);
-      list = list.filter(p => inCat.has(p.slug));
+    if (cat && CATEGORIES.some(c => c.key === cat)) {
+      list = list.filter(p => (p.groups || []).includes(cat));
     }
     const q = query.trim().toLowerCase();
     if (!q) return list;
@@ -143,7 +141,7 @@ export default function Blog() {
               ALL<em>{posts.length}</em>
             </button>
             {CATEGORIES.map(c => {
-              const n = (articleCategories[c.key] || []).length;
+              const n = posts.filter(p => (p.groups || []).includes(c.key)).length;
               return (
                 <button
                   type="button"

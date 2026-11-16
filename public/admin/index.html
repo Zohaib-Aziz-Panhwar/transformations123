@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Blog Editor — Transformations123</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="editor.css?v=1" />
+</head>
+<body>
+  <header class="bar">
+    <a class="bar__brand" href="./">Blog Editor</a>
+    <span class="bar__spacer"></span>
+    <a class="bar__link" href="/blog" target="_blank" rel="noopener">View blog ↗</a>
+    <button class="bar__link" id="changePassword" type="button">Change password</button>
+    <button class="bar__link" id="signout" type="button">Sign out</button>
+  </header>
+
+  <!-- All posts -->
+  <main class="wrap" id="listView" hidden>
+    <div class="list-head">
+      <h1>Posts</h1>
+      <input type="search" id="search" placeholder="Search posts…" />
+      <button class="btn btn--primary" id="newPost" type="button">+ New post</button>
+    </div>
+    <p class="muted" id="count"></p>
+    <ul class="posts" id="posts"></ul>
+  </main>
+
+  <!-- One post -->
+  <main class="wrap wrap--edit" id="editView" hidden>
+    <div class="edit-head">
+      <button class="btn btn--ghost" id="back" type="button">← All posts</button>
+      <span class="bar__spacer"></span>
+      <span class="status" id="status"></span>
+      <a class="btn btn--ghost" id="viewLive" target="_blank" rel="noopener" hidden>View on site ↗</a>
+      <button class="btn btn--primary" id="save" type="button">Publish</button>
+    </div>
+
+    <div class="grid">
+      <section class="main-col">
+        <input class="title-input" id="title" type="text" placeholder="Post title" />
+
+        <div class="toolbar" id="toolbar" role="toolbar" aria-label="Formatting">
+          <button type="button" data-block="h2" title="Heading">H2</button>
+          <button type="button" data-block="h3" title="Subheading">H3</button>
+          <button type="button" data-block="p" title="Normal paragraph">¶</button>
+          <span class="sep"></span>
+          <button type="button" data-cmd="bold" title="Bold (Ctrl+B)"><b>B</b></button>
+          <button type="button" data-cmd="italic" title="Italic (Ctrl+I)"><i>I</i></button>
+          <span class="sep"></span>
+          <button type="button" data-cmd="insertUnorderedList" title="Bulleted list">• List</button>
+          <button type="button" data-cmd="insertOrderedList" title="Numbered list">1. List</button>
+          <button type="button" data-block="blockquote" title="Quote">❝ Quote</button>
+          <span class="sep"></span>
+          <button type="button" id="linkBtn" title="Link (Ctrl+K)">🔗 Link</button>
+          <button type="button" data-cmd="unlink" title="Remove link">Unlink</button>
+          <button type="button" id="imageBtn" title="Insert a photo">🖼 Photo</button>
+          <button type="button" data-cmd="insertHorizontalRule" title="Divider line">―</button>
+          <span class="sep"></span>
+          <button type="button" data-cmd="removeFormat" title="Clear formatting">Clear</button>
+          <button type="button" data-cmd="undo" title="Undo (Ctrl+Z)">↶</button>
+          <button type="button" data-cmd="redo" title="Redo (Ctrl+Y)">↷</button>
+        </div>
+        <div class="prose" id="body" contenteditable="true" spellcheck="true"
+             data-placeholder="Write or paste the article here. Pasting from Word or Google Docs keeps headings, bold, lists and links."></div>
+        <p class="muted small" id="wordCount"></p>
+      </section>
+
+      <aside class="side-col">
+        <div class="card">
+          <h2>Publishing</h2>
+          <div class="field">
+            <label for="date">Date</label>
+            <input type="date" id="date" />
+          </div>
+          <label class="check"><input type="checkbox" id="draft" /> Draft (hidden from the site)</label>
+        </div>
+
+        <div class="card">
+          <h2>Cover photo</h2>
+          <div class="cover" id="cover"><span>No photo yet</span></div>
+          <input type="file" id="coverFile" accept="image/jpeg,image/png,image/webp" hidden />
+          <div class="row">
+            <button class="btn btn--ghost btn--sm" id="coverPick" type="button">Upload photo</button>
+            <button class="btn btn--ghost btn--sm" id="coverClear" type="button">Remove</button>
+          </div>
+          <div class="field">
+            <label for="imageAlt">Photo description <span class="help">for screen readers and Google</span></label>
+            <input type="text" id="imageAlt" />
+          </div>
+          <label class="check"><input type="checkbox" id="wide" /> Fill the blog card (crops the edges)</label>
+        </div>
+
+        <div class="card">
+          <h2>Blog filters</h2>
+          <p class="muted small">Which audience buttons on the blog page show this post.</p>
+          <div class="groups" id="groups"></div>
+        </div>
+
+        <div class="card">
+          <h2>Summary</h2>
+          <div class="field">
+            <label for="excerpt">Shown on the blog page <span class="help">leave empty to use the opening lines</span></label>
+            <textarea id="excerpt" rows="4"></textarea>
+          </div>
+          <div class="field">
+            <label for="slug">Web address</label>
+            <div class="slug"><span>/blog/</span><input type="text" id="slug" spellcheck="false" /></div>
+            <p class="muted small" id="slugNote"></p>
+          </div>
+        </div>
+
+        <button class="btn btn--danger btn--block" id="delete" type="button" hidden>Delete this post</button>
+      </aside>
+    </div>
+  </main>
+
+  <dialog id="dialog"><form method="dialog" id="dialogForm"></form></dialog>
+  <input type="file" id="inlineFile" accept="image/jpeg,image/png,image/webp" hidden />
+  <div class="toast" id="toast" hidden></div>
+
+  <script type="module" src="app.js?v=1"></script>
+</body>
+</html>

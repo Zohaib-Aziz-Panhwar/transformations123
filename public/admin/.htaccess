@@ -1,0 +1,30 @@
+# The blog editor. PHP handles its own sign-in; these are the surrounding guards.
+
+Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Passwords must never cross the wire unencrypted.
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # A <FilesMatch> here, not a bare Header: the site root caches .js and .css
+  # for a year inside its own <FilesMatch>, and only a section at this level is
+  # applied after it.
+  <FilesMatch ".">
+    Header always set Cache-Control "no-store"
+    Header always set X-Frame-Options "DENY"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "same-origin"
+    Header always set X-Robots-Tag "noindex, nofollow"
+  </FilesMatch>
+</IfModule>
+
+# Nothing private lives in this folder, but if a stray file ever did, it must
+# not be served as text.
+<FilesMatch "\.(json|log|bak|tmp|txt|ini)$">
+  Require all denied
+</FilesMatch>

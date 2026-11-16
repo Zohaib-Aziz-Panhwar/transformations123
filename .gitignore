@@ -3,3 +3,6 @@ dist/
 dist-preview*/
 .publish/
 public/assets/images/template.jpg
+
+# One-time code for creating the /admin/ login. Never commit.
+*.local.txt
