@@ -12,38 +12,6 @@
 
 const D = 'assets/downloads/';
 
-export const resumeSamples = {
-  slug: 'executive-resume-samples',
-  eyebrow: 'SAMPLE MATERIALS',
-  title: 'EXECUTIVE RESUME SAMPLES',
-  feature: 'assets/images/samples/executive-resume-samples.jpg',
-  lead: 'Examples of executive resumes developed for senior leaders pursuing leadership opportunities in the private sector, nonprofit organizations, and government.',
-  intro: [
-    'These materials are provided to help prospective clients understand the format, structure, branding, and level of detail commonly found in competitive executive resumes.',
-  ],
-  showsHeading: 'The samples demonstrate:',
-  shows: [
-    'Executive Branding',
-    'Career Summaries',
-    'Leadership Accomplishments',
-    'Quantifiable Results',
-    'Strategic Positioning',
-    'Modern Executive Resume Design',
-  ],
-  downloadsHeading: 'DOWNLOAD SAMPLE MATERIALS',
-  downloads: [
-    { title: 'Executive Resume Sample #1', file: D + 'EXAMPLE-EXECUTIVE-RESUME-2.pdf', kind: 'PDF', size: '308 KB' },
-    { title: 'Executive Resume Sample #2', file: D + 'EXECUTIVE-RESUME-SAMPLE.pdf', kind: 'PDF', size: '363 KB' },
-  ],
-  closing: {
-    title: 'INTERESTED IN STRENGTHENING YOUR EXECUTIVE BRAND?',
-    text: [
-      'Whether you’re pursuing a senior leadership position, transitioning from government or military service, advancing within your organization, or exploring new executive opportunities, I help leaders develop competitive executive resumes, LinkedIn profiles, personal branding materials, and interview strategies.',
-      'Schedule a complimentary consultation to discuss your career goals and determine whether my services may be a good fit.',
-    ],
-  },
-};
-
 export const sesSamples = {
   slug: 'ses-sample-materials',
   eyebrow: 'SAMPLE MATERIALS',

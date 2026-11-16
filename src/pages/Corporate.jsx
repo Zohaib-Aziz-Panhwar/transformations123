@@ -26,7 +26,7 @@ export default function Corporate() {
         <h3>EXECUTIVE<br />CAREER STRATEGY</h3>
         <Arrow />
       </Link>
-      <Link className="lp-card" to={resourcePaths.resumeSamples}>
+      <Link className="lp-card" to={resourcePaths.corporateSamples}>
         <h3>EXECUTIVE<br />RESUME SAMPLES</h3>
         <Arrow />
       </Link>

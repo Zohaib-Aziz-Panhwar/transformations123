@@ -12,7 +12,6 @@ const links = [
   // The two sample pages now sit under one menu.
   { label: 'RESUME SAMPLES', children: [
     { to: resourcePaths.sesSamples, label: 'SES Resume Samples' },
-    { to: resourcePaths.resumeSamples, label: 'Executive Resume Samples' },
     { to: resourcePaths.militarySamples, label: 'Military Transition Resume Samples' },
     { to: resourcePaths.governmentSamples, label: 'Government-to-Private-Sector Resume Samples' },
     { to: resourcePaths.corporateSamples, label: 'Corporate Executive Resume Samples' },

@@ -84,7 +84,6 @@ export const hubs = {
    WordPress site; the files and their pages are part of this site now, so
    these are ordinary routes. */
 export const resourcePaths = {
-  resumeSamples:  '/executive-resume-samples',
   sesSamples:     '/ses-sample-materials',
   resumesLibrary: '/resumes-library',
   militarySamples:   '/military-transition-resume-samples',

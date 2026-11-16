@@ -11,7 +11,6 @@ import Placeholder from './pages/Placeholder.jsx';
 import SesPackage from './pages/SesPackage.jsx';
 import Services from './pages/Services.jsx';
 import Blog from './pages/Blog.jsx';
-import SampleMaterials from './pages/SampleMaterials.jsx';
 import SesSampleGallery from './pages/SesSampleGallery.jsx';
 import ResumeGallery from './pages/ResumeGallery.jsx';
 import CareerCheck from './pages/CareerCheck.jsx';
@@ -19,7 +18,7 @@ import ResumesLibrary from './pages/ResumesLibrary.jsx';
 import Strategy from './pages/Strategy.jsx';
 import Book from './pages/Book.jsx';
 import Booked from './pages/Booked.jsx';
-import { resumeSamples, sesSamples, sesSampleGallery, militarySampleGallery, governmentSampleGallery, corporateSampleGallery } from './data/resources.js';
+import { sesSampleGallery, militarySampleGallery, governmentSampleGallery, corporateSampleGallery } from './data/resources.js';
 import BlogPost from './pages/BlogPost.jsx';
 import About from './pages/About.jsx';
 import Service from './pages/Service.jsx';
@@ -42,18 +41,18 @@ export default function App() {
         <Route path="/military-strategy" element={<Strategy slug="military-strategy" />} />
         <Route path="/executive-strategy" element={<Strategy slug="executive-strategy" />} />
 
-        <Route path="/executive-resume-samples" element={<SampleMaterials page={resumeSamples} />} />
-        {/* The address it was published at for a few days. */}
-        <Route path="/resume-samples" element={<Navigate to="/executive-resume-samples" replace />} />
+        {/* The Executive Resume Samples page was removed; its old addresses land on the corporate gallery. */}
+        <Route path="/executive-resume-samples" element={<Navigate to="/corporate-executive-resume-samples" replace />} />
+        <Route path="/resume-samples" element={<Navigate to="/corporate-executive-resume-samples" replace />} />
         <Route path="/ses-sample-materials" element={<SesSampleGallery page={sesSampleGallery} />} />
         <Route path="/military-transition-resume-samples" element={<ResumeGallery page={militarySampleGallery} />} />
         <Route path="/government-to-private-sector-resume-samples" element={<ResumeGallery page={governmentSampleGallery} />} />
         <Route path="/corporate-executive-resume-samples" element={<ResumeGallery page={corporateSampleGallery} />} />
         <Route path="/resumes-library" element={<ResumesLibrary />} />
         {/* The placeholder pages these replace, kept so older links still land. */}
-        <Route path="/military-samples" element={<Navigate to="/executive-resume-samples" replace />} />
-        <Route path="/government-samples" element={<Navigate to="/executive-resume-samples" replace />} />
-        <Route path="/executive-samples" element={<Navigate to="/executive-resume-samples" replace />} />
+        <Route path="/military-samples" element={<Navigate to="/military-transition-resume-samples" replace />} />
+        <Route path="/government-samples" element={<Navigate to="/government-to-private-sector-resume-samples" replace />} />
+        <Route path="/executive-samples" element={<Navigate to="/corporate-executive-resume-samples" replace />} />
         <Route path="/ses-package" element={<SesPackage />} />
         <Route path="/ses-samples" element={<Navigate to="/ses-sample-materials" replace />} />
         <Route path="/ses-articles" element={<Navigate to="/ses-strategy" replace />} />
