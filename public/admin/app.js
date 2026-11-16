@@ -401,6 +401,8 @@ function cleanPasted(html) {
         if (!keep) el.removeAttribute(a.name)
       }
       if (tag === 'IMG' && !/^(https:|\/)/.test(el.getAttribute('src') || '')) el.remove()
+      // Word bookmarks and table-of-contents targets are links with no address.
+      if (tag === 'A' && !el.getAttribute('href')) { el.replaceWith(...el.childNodes); continue }
       if (tag === 'A' && /^https?:/.test(el.getAttribute('href') || '') && !el.href.includes(location.host)) { el.target = '_blank'; el.rel = 'noopener' }
     }
   }
@@ -427,6 +429,153 @@ body.addEventListener('paste', (e) => {
 
 // Dropped files would otherwise be embedded as huge data: URLs.
 body.addEventListener('drop', (e) => { if (e.dataTransfer?.files?.length) { e.preventDefault(); toast('Use the Photo button to add pictures', true) } })
+
+// ---------------------------------------------------------- Word import ----
+
+/* Amy writes in Word. A .docx is converted in the browser (mammoth.js, loaded
+   only when needed), its photos are uploaded like any other, and the result
+   lands in the editor for her to check before pressing Publish. */
+
+function busy(text) {
+  $('busyText').textContent = text || ''
+  $('busy').hidden = !text
+}
+
+let mammothReady = null
+function loadMammoth() {
+  mammothReady ||= new Promise((resolve, reject) => {
+    const s = Object.assign(document.createElement('script'), { src: 'vendor/mammoth.browser.min.js?v=1.8.0' })
+    s.onload = () => resolve(window.mammoth)
+    s.onerror = () => { mammothReady = null; reject(new Error('The Word converter did not load. Check your connection and try again.')) }
+    document.head.append(s)
+  })
+  return mammothReady
+}
+
+const b64ToBlob = (b64, type) => {
+  const bin = atob(b64)
+  const bytes = new Uint8Array(bin.length)
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i)
+  return new Blob([bytes], { type })
+}
+
+/** Converts a .docx into { title, html, cover, coverAlt, photos, skipped }. */
+async function convertWord(file) {
+  const mammoth = await loadMammoth()
+  let n = 0, skipped = 0
+  const result = await mammoth.convertToHtml({ arrayBuffer: await file.arrayBuffer() }, {
+    styleMap: [
+      "p[style-name='Title'] => h1:fresh",
+      "p[style-name='Subtitle'] => h2:fresh",
+      "p[style-name='Quote'] => blockquote:fresh",
+      "p[style-name='Intense Quote'] => blockquote:fresh",
+    ],
+    convertImage: mammoth.images.imgElement(async (image) => {
+      const alt = image.altText || ''
+      try {
+        busy(`Uploading photo ${++n}…`)
+        const blob = b64ToBlob(await image.read('base64'), image.contentType)
+        const out = await api('upload', { body: { name: `${file.name.replace(/\.docx$/i, '')}-${n}`, dataUrl: await resize(blob) } })
+        return { src: out.url, alt }
+      } catch {
+        // Word's own drawing formats (EMF/WMF) cannot be shown on the web.
+        skipped++
+        return { src: '' }
+      }
+    }),
+  })
+
+  // Title, found before clean-up (which turns every Heading 1 into a section
+  // heading): Word's "Title" style or the first Heading 1; failing that, a
+  // short all-bold first line; failing that, the file name.
+  const raw = new DOMParser().parseFromString(result.value, 'text/html').body
+  let title = ''
+  const first = raw.firstElementChild
+  const h1 = raw.querySelector('h1')
+  if (h1) {
+    title = h1.textContent.trim()
+    h1.remove()
+  } else if (first?.tagName === 'P' && first.textContent.trim().length <= 140 &&
+             first.children.length === 1 && first.firstElementChild.tagName === 'STRONG' &&
+             first.textContent.trim() === first.firstElementChild.textContent.trim()) {
+    title = first.textContent.trim()
+    first.remove()
+  }
+  if (!title) title = file.name.replace(/\.docx$/i, '').replace(/[_]+/g, ' ').trim()
+
+  const doc = new DOMParser().parseFromString(cleanPasted(raw.innerHTML), 'text/html')
+  const root = doc.body
+
+  // A paragraph that only holds a photo becomes a figure, like the other posts.
+  root.querySelectorAll('p').forEach((p) => {
+    const imgs = p.querySelectorAll('img')
+    if (imgs.length && !p.textContent.trim()) {
+      const figs = [...imgs].map((img) => { const f = doc.createElement('figure'); f.append(img); return f })
+      p.replaceWith(...figs)
+    }
+  })
+
+  // Cover: the first photo. If it sits at the very top, take it out of the
+  // article so it is not shown twice.
+  let cover = '', coverAlt = ''
+  const firstImg = root.querySelector('img')
+  if (firstImg) {
+    cover = firstImg.getAttribute('src').split('/').pop()
+    coverAlt = firstImg.getAttribute('alt') || ''
+    const fig = firstImg.closest('figure')
+    if (fig && fig === root.firstElementChild) fig.remove()
+  }
+
+  return { title, html: root.innerHTML, cover, coverAlt, photos: n - skipped, skipped }
+}
+
+async function importWord(file, intoCurrent) {
+  if (!/\.docx$/i.test(file.name)) {
+    return toast('Please use a .docx file. In Word: File → Save As → Word Document (.docx).', true)
+  }
+  try {
+    busy('Reading the Word file…')
+    const out = await convertWord(file)
+    if (!intoCurrent) await openPost(null)
+    $('title').value = out.title
+    $('title').dispatchEvent(new Event('input', { bubbles: true }))
+    $('body').innerHTML = out.html
+    if (out.cover && (!current.post.image || !intoCurrent)) {
+      setCover(out.cover)
+      $('imageAlt').value = out.coverAlt || out.title
+    }
+    updateWordCount()
+    setDirty(true)
+    busy('')
+    const photos = out.photos ? ` with ${out.photos} photo${out.photos > 1 ? 's' : ''}` : ''
+    const warn = out.skipped ? ` ${out.skipped} picture${out.skipped > 1 ? 's' : ''} could not be used (Word drawings); add them with the Photo button.` : ''
+    toast(`Imported${photos}. Check it over, then press ${current.isNew ? 'Publish' : 'Save changes'}.${warn}`, !!out.skipped)
+    window.scrollTo(0, 0)
+  } catch (err) {
+    busy('')
+    toast(err.message || 'That Word file could not be read', true)
+  }
+}
+
+let importTarget = false
+$('importWord').addEventListener('click', () => { importTarget = false; $('wordFile').click() })
+$('importWordEdit').addEventListener('click', () => {
+  if ($('body').innerText.trim() && !confirm('Replace the title and article text with the Word document?')) return
+  importTarget = true
+  $('wordFile').click()
+})
+$('wordFile').addEventListener('change', (e) => {
+  const file = e.target.files[0]
+  e.target.value = ''
+  if (file) importWord(file, importTarget)
+})
+
+// A .docx dropped anywhere on the post list starts an import too.
+$('listView').addEventListener('dragover', (e) => e.preventDefault())
+$('listView').addEventListener('drop', (e) => {
+  const file = [...(e.dataTransfer?.files || [])].find((f) => /\.docx$/i.test(f.name))
+  if (file) { e.preventDefault(); importWord(file, false) }
+})
 
 // ------------------------------------------------------------- account ----
 

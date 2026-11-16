@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <title>Blog Editor — Transformations123</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" />
-  <link rel="stylesheet" href="editor.css?v=1" />
+  <link rel="stylesheet" href="editor.css?v=2" />
 </head>
 <body>
   <header class="bar">
@@ -22,6 +22,7 @@
     <div class="list-head">
       <h1>Posts</h1>
       <input type="search" id="search" placeholder="Search posts…" />
+      <button class="btn" id="importWord" type="button" title="Turn a Word document into a post">⬆ Import Word file</button>
       <button class="btn btn--primary" id="newPost" type="button">+ New post</button>
     </div>
     <p class="muted" id="count"></p>
@@ -34,6 +35,7 @@
       <button class="btn btn--ghost" id="back" type="button">← All posts</button>
       <span class="bar__spacer"></span>
       <span class="status" id="status"></span>
+      <button class="btn btn--ghost" id="importWordEdit" type="button" title="Replace this post's text with a Word document">⬆ Import Word file</button>
       <a class="btn btn--ghost" id="viewLive" target="_blank" rel="noopener" hidden>View on site ↗</a>
       <button class="btn btn--primary" id="save" type="button">Publish</button>
     </div>
@@ -119,8 +121,10 @@
 
   <dialog id="dialog"><form method="dialog" id="dialogForm"></form></dialog>
   <input type="file" id="inlineFile" accept="image/jpeg,image/png,image/webp" hidden />
+  <input type="file" id="wordFile" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden />
+  <div class="busy" id="busy" hidden><div><span class="spinner"></span><p id="busyText">Working…</p></div></div>
   <div class="toast" id="toast" hidden></div>
 
-  <script type="module" src="app.js?v=1"></script>
+  <script type="module" src="app.js?v=2"></script>
 </body>
 </html>
