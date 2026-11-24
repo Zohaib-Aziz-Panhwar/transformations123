@@ -22,10 +22,11 @@ const TIERS = [
     name: 'TIER 2: COMPREHENSIVE SES SUPPORT',
     featured: true,
     price: '$1,499',
+    tagline: 'For federal leaders who want SES interview coaching and/or stronger leadership stories.',
     items: [
       { pre: 'Everything in the ', b: 'Complete SES Application', rest: ' package' },
-      'Personalized SES interview coaching',
-      'Refinement of your strongest leadership stories',
+      'Personalized coaching for SES interviews',
+      'Refinement of your strongest leadership stories for interview answers',
       'LinkedIn profile optimization to highlight your executive experience',
     ],
   },
