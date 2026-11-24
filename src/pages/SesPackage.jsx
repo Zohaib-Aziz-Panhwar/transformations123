@@ -8,47 +8,36 @@ const A = import.meta.env.BASE_URL;
    `pre` (plain), `b` (bold), and `rest` (plain) so a phrase can be emphasised. */
 const TIERS = [
   {
-    name: 'TIER 1: SES STRATEGY & REVIEW',
-    tagline: 'For executives preparing their own applications.',
-    price: '$499',
-    items: [
-      'SES resume and application assessment',
-      '60-minute strategy consultation',
-      { b: 'ECQ and TQ', rest: ' alignment and leadership review' },
-      'Written recommendations',
-      '30-minute follow-up',
-      '1 revision',
-    ],
-  },
-  {
-    name: 'TIER 2: SES RESUME & CCAR NARRATIVES',
-    tagline: 'For executives seeking professional application writing.',
+    name: 'TIER 1: COMPLETE SES APPLICATION',
+    tagline: 'For federal leaders who want a complete, tailored application for one SES announcement.',
     price: '$999',
     items: [
-      'Discovery and strategy session',
-      'Tailored 2-page SES resume',
-      'Executive branding and positioning',
-      { b: 'ECQ and TQ', rest: ' assessment and strategy' },
-      'Five concise CCAR narratives',
-      'Enterprise-level accomplishments',
-      '3 revisions',
-      'Word and PDF files',
+      'Strategy session to review the announcement and identify your strongest leadership examples',
+      'Tailored two-page SES resume',
+      { pre: 'Leadership accomplishments aligned with the ', b: 'Executive Core Qualifications (ECQs)' },
+      { b: 'Technical Qualifications (TQ)', rest: ' narratives' },
     ],
   },
   {
-    name: 'TIER 3: COMPLETE SES APPLICATION',
+    name: 'TIER 2: COMPREHENSIVE SES SUPPORT',
     featured: true,
-    ribbon: 'MOST COMPREHENSIVE',
-    tagline: 'Comprehensive application and interview support.',
     price: '$1,499',
     items: [
-      'All Tier 2 services',
-      { b: 'Expanded CCAR narratives', rest: ', when required' },
-      { pre: 'Technical qualification ', b: '(TQ)', rest: ' narratives, when required' },
-      'Cover letter, if needed',
-      'LinkedIn profile optimization',
-      'SES interview guide and coaching session',
-      { b: '6 revisions' },
+      { pre: 'Everything in the ', b: 'Complete SES Application', rest: ' package' },
+      'Personalized SES interview coaching',
+      'Refinement of your strongest leadership stories',
+      'LinkedIn profile optimization to highlight your executive experience',
+    ],
+  },
+  {
+    name: 'TIER 3: SES EXECUTIVE TRANSITION',
+    price: '$1,999',
+    items: [
+      { pre: 'Everything in the ', b: 'Comprehensive SES Support', rest: ' package' },
+      'Assessment of how your federal leadership experience translates to the private sector',
+      'Identification of three realistic private-sector executive roles',
+      'A clear case for the value you bring to each role',
+      'Three targeted resumes for the private sector',
     ],
   },
 ];
@@ -71,21 +60,21 @@ function Item({ data }) {
 
 export default function SesPackage() {
   return (
-    <Layout title="SES Application Packages">
+    <Layout title="SES Application & Executive Transition Services">
       <section className="sesp-hero">
         <img className="sesp-hero-butterfly" src={`${A}assets/images/services/executive-positioning-butterfly.png`} alt="" aria-hidden="true" />
         <div className="sesp-hero-capitol" style={{ backgroundImage: `url(${A}assets/images/samples/ses-package-capitol.jpg)` }} aria-hidden="true" />
         <div className="sesp-hero-inner">
           <Link className="sesp-back" to="/ses">&larr; Back to SES Leaders</Link>
           <p className="sesp-eyebrow"><span>SES EXECUTIVE APPLICATION SERVICES</span></p>
-          <h1 className="sesp-title">SES APPLICATION PACKAGES</h1>
+          <h1 className="sesp-title">SES APPLICATION &amp; EXECUTIVE TRANSITION SERVICES</h1>
           <p className="sesp-sub">Strategic support for senior federal leaders pursuing SES opportunities.</p>
         </div>
       </section>
 
       <section className="sesp-body">
         <div className="container">
-          <h2 className="sesp-lead">Three service levels to meet your needs, from expert review to a complete SES application.</h2>
+          <h2 className="sesp-lead">Three packages, each starting with a complete SES application, with options to add interview coaching, LinkedIn optimization, and a targeted private-sector executive transition strategy.</h2>
 
           <div className="sesp-grid">
             {TIERS.map((tier) => (
@@ -93,23 +82,14 @@ export default function SesPackage() {
                 {tier.ribbon && <span className="sesp-ribbon">{tier.ribbon}</span>}
                 <div className="sesp-card-head">{tier.name}</div>
                 <div className="sesp-card-body">
-                  <p className="sesp-tagline">{tier.tagline}</p>
                   <div className="sesp-price">{tier.price}</div>
+                  {tier.tagline && <p className="sesp-tagline">{tier.tagline}</p>}
                   <ul className="sesp-items">
                     {tier.items.map((it, i) => <Item data={it} key={i} />)}
                   </ul>
                 </div>
               </article>
             ))}
-          </div>
-
-          <div className="sesp-upgrade">
-            <span className="sesp-upgrade-ic" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 4l7 7h-4v7H9v-7H5z" fill="currentColor" /></svg>
-            </span>
-            <p>
-              <strong className="sesp-upgrade-hd">UPGRADE &amp; SAVE:</strong> Start with the Strategy &amp; Review package and upgrade to a higher tier with <strong className="sesp-upgrade-off">$200 OFF</strong> the next tier.
-            </p>
           </div>
 
           <div className="sesp-cta-wrap">
