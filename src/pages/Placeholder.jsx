@@ -7,7 +7,7 @@ export default function Placeholder({ title, contact: isContact }) {
     <Layout title={title}>
       <section className="intro page-placeholder">
         <div className="container">
-          <h2 className="section-heading"><span>{title}</span></h2>
+          <h1 className="section-heading"><span>{title}</span></h1>
           {isContact ? (
             <div className="contact-box">
               <p className="intro-copy">Let&rsquo;s talk about your strategy. Reach Amy directly:</p>

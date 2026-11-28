@@ -1,0 +1,6 @@
+# Transformations123 robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://transformations123.com/sitemap.xml

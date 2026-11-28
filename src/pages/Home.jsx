@@ -46,6 +46,16 @@ export default function Home() {
             stand out from the noise, and secure opportunities that align{' '}<br />
             with impact and achievement.
           </p>
+          <p className="intro-copy">
+            Transformations123 is the executive career practice of Amy Sindicic, a Board-Certified
+            Career Coach and executive resume writer. I work with government leaders, Senior
+            Executive Service (SES) candidates, transitioning military officers, and corporate
+            executives who are ready for their next leadership role. Together we clarify your market
+            value, build a resume and LinkedIn profile that speak to the people who make hiring
+            decisions, and prepare you to interview with confidence. The goal is not just a stronger
+            document &mdash; it is a clear strategy that positions your experience for the
+            opportunities you actually want.
+          </p>
         </div>
       </section>
 
